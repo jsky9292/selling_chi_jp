@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매대행 마스터 가이드 2025 - 월 100만원 부업 완전정복</title>
+    <style>
+        :root {
+            --kakao-yellow: #FEE500;
+            --kakao-brown: #3A2929;
+            --kakao-black: #000000;
+            --kakao-light-yellow: #FFF9C4;
+            --kakao-dark-yellow: #F7D600;
+            --text-color: #333333;
+            --bg-color: #FFFFFF;
+            --border-color: #E6E6E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, var(--kakao-dark-yellow) 100%);
+            color: var(--kakao-brown);
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(254, 229, 0, 0.3);
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,255,255,0.1) 20px,
+                rgba(255,255,255,0.1) 40px
+            );
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .main-title {
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-subtitle {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-description {
+            font-size: 1.1em;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stats-bar {
+            background: var(--bg-color);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid var(--kakao-yellow);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: var(--kakao-brown);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .chapters-section {
+            margin: 50px 0;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--kakao-yellow);
+            border-radius: 2px;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .chapter-card {
+            background: var(--bg-color);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(254, 229, 0, 0.4);
+            border-color: var(--kakao-yellow);
+        }
+
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(254, 229, 0, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .chapter-card:hover::before {
+            left: 100%;
+        }
+
+        .chapter-number {
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .chapter-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 15px;
+        }
+
+        .chapter-description {
+            font-size: 1em;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .chapter-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .chapter-features li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .chapter-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--kakao-brown);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .page-count {
+            background: var(--kakao-light-yellow);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .start-reading-btn {
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .start-reading-btn:hover {
+            background: var(--kakao-dark-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(254, 229, 0, 0.5);
+        }
+
+        .progress-section {
+            background: var(--bg-color);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid var(--kakao-yellow);
+        }
+
+        .progress-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            background: #f0f0f0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--kakao-yellow), var(--kakao-dark-yellow));
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-weight: 600;
+            color: var(--kakao-brown);
+        }
+
+        .highlight-banner {
+            background: linear-gradient(135deg, var(--kakao-brown) 0%, #2D1F1F 100%);
+            color: var(--kakao-yellow);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-banner::before {
+            content: '💎';
+            font-size: 3em;
+            margin-right: 15px;
+        }
+
+        .highlight-text {
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .navigation-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 4px 15px rgba(254, 229, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(254, 229, 0, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-title {
+                font-size: 2.2em;
+            }
+            
+            .main-subtitle {
+                font-size: 1.2em;
+            }
+            
+            .chapters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .navigation-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-header">
+            <h1 class="main-title">구매대행 마스터 가이드 2025</h1>
+            <div class="main-subtitle">월 100만원 부업 완전정복 바이블</div>
+            <div class="main-description">
+                일본·중국 구매대행의 모든 것을 담은 실전 가이드<br>
+                초보자도 6개월 안에 월 수익 100만원 달성 가능!
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">130+</div>
+                    <div class="stat-label">총 페이지 수</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">완전한 파트</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">실전 템플릿</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">46,222</div>
+                    <div class="stat-label">실제 거래 데이터</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-title">학습 진행률</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">0% 완료 (0/5 파트)</div>
+        </div>
+
+        <div class="chapters-section">
+            <h2 class="section-title">📚 학습 커리큘럼</h2>
+            
+            <div class="chapters-grid">
+                <div class="chapter-card" onclick="openChapter(1)">
+                    <div class="chapter-number">1</div>
+                    <div class="chapter-title">플랫폼별 실전 꿀팁과 숨겨진 기능</div>
+                    <div class="chapter-description">
+                        야후옥션, 메르카리, 라쿠텐 등 주요 플랫폼의 숨겨진 기능과 실전에서만 통하는 꿀팁들을 공개합니다.
+                    </div>
+                    <ul class="chapter-features">
+                        <li>플랫폼별 특성과 최적 활용법</li>
+                        <li>46,222건 실제 거래 데이터 분석</li>
+                        <li>검색 최적화 고급 기법</li>
+                        <li>숨겨진 할인 혜택 활용법</li>
+                        <li>전문 용어 완전 정리</li>
+                    </ul>
+                    <div class="chapter-meta">
+                        <span class="page-count">약 25-30페이지</span>
+                        <a href="kakao_style_ebook_part1.html" class="start-reading-btn">읽기 시작</a>
+                    </div>
+                </div>
+
+                <div class="chapter-card" onclick="openChapter(2)">
+                    <div class="chapter-number">2</div>
+                    <div class="chapter-title">구체적 수익모델과 세금계산 실무</div>
+                    <div class="chapter-description">
+                        실제 수익 계산부터 세금 신고까지, 돈이 되는 구체적인 방법론을 단계별로 설명합니다.
+                    </div>
+                    <ul class="chapter-features">
+                        <li>월 100만원 수익 달성 로드맵</li>
+                        <li>상품별 수익률 계산법</li>
+                        <li>세금 신고 완전 가이드</li>
+                        <li>환율 변동 대응 전략</li>
+                        <li>리스크 관리 방법</li>
+                    </ul>
+                    <div class="chapter-meta">
+                        <span class="page-count">약 30-35페이지</span>
+                        <a href="kakao_style_ebook_part2.html" class="start-reading-btn">읽기 시작</a>
+                    </div>
+                </div>
+
+                <div class="chapter-card" onclick="openChapter(3)">
+                    <div class="chapter-number">3</div>
+                    <div class="chapter-title">고급 마케팅과 자동화 전략</div>
+                    <div class="chapter-description">
+                        단순 전매를 넘어선 고급 마케팅 전략과 업무 자동화로 효율성을 극대화하는 방법입니다.
+                    </div>
+                    <ul class="chapter-features">
+                        <li>SNS 마케팅 완전 정복</li>
+                        <li>자동화 도구 활용법</li>
+                        <li>브랜딩 구축 전략</li>
+                        <li>고객 관리 시스템</li>
+                        <li>스케일업 방법론</li>
+                    </ul>
+                    <div class="chapter-meta">
+                        <span class="page-count">약 25-30페이지</span>
+                        <a href="kakao_style_ebook_part3.html" class="start-reading-btn">읽기 시작</a>
+                    </div>
+                </div>
+
+                <div class="chapter-card" onclick="openChapter(4)">
+                    <div class="chapter-number">4</div>
+                    <div class="chapter-title">법무/세무 실무와 리스크 관리</div>
+                    <div class="chapter-description">
+                        구매대행 사업의 법적 이슈부터 세무 처리, 각종 리스크 대응까지 안전한 사업 운영 가이드입니다.
+                    </div>
+                    <ul class="chapter-features">
+                        <li>사업자등록 및 허가사항</li>
+                        <li>통관 및 관세 실무</li>
+                        <li>계약서 작성 가이드</li>
+                        <li>분쟁 해결 방법</li>
+                        <li>보험 및 안전장치</li>
+                    </ul>
+                    <div class="chapter-meta">
+                        <span class="page-count">약 20-25페이지</span>
+                        <a href="kakao_style_ebook_part4.html" class="start-reading-btn">읽기 시작</a>
+                    </div>
+                </div>
+
+                <div class="chapter-card" onclick="openChapter(5)">
+                    <div class="chapter-number">5</div>
+                    <div class="chapter-title">프로급 도구와 템플릿 모음</div>
+                    <div class="chapter-description">
+                        바로 활용 가능한 전문가 도구들과 완성형 템플릿 모음으로 업무 효율성을 극대화하세요.
+                    </div>
+                    <ul class="chapter-features">
+                        <li>필수 도구 모음집</li>
+                        <li>고객 응답 템플릿</li>
+                        <li>수익 계산 시트</li>
+                        <li>자동화 워크플로우</li>
+                        <li>스케일업 전략</li>
+                    </ul>
+                    <div class="chapter-meta">
+                        <span class="page-count">약 30-35페이지</span>
+                        <a href="ebook_complete_part5.html" class="start-reading-btn">읽기 시작</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-banner">
+            <div class="highlight-text">
+                이 가이드로 6개월 안에 월 100만원 부수입 달성!<br>
+                실전 경험을 바탕으로 한 검증된 노하우만 담았습니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button class="nav-btn" onclick="scrollToTop()" title="맨 위로">↑</button>
+        <button class="nav-btn" onclick="toggleBookmark()" title="북마크">★</button>
+    </div>
+
+    <script>
+        // 학습 진행률 관리
+        let completedChapters = JSON.parse(localStorage.getItem('completedChapters')) || [];
+        
+        function updateProgress() {
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const totalChapters = 5;
+            const completedCount = completedChapters.length;
+            const percentage = (completedCount / totalChapters) * 100;
+            
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = `${percentage.toFixed(0)}% 완료 (${completedCount}/${totalChapters} 파트)`;
+        }
+        
+        function openChapter(chapterNumber) {
+            // 챕터 완료 표시
+            if (!completedChapters.includes(chapterNumber)) {
+                completedChapters.push(chapterNumber);
+                localStorage.setItem('completedChapters', JSON.stringify(completedChapters));
+                updateProgress();
+            }
+            
+            // 해당 챕터로 이동 (실제로는 클릭 이벤트에서 a 태그가 처리)
+            console.log(`Chapter ${chapterNumber} opened`);
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function toggleBookmark() {
+            const isBookmarked = localStorage.getItem('ebookBookmarked') === 'true';
+            if (isBookmarked) {
+                localStorage.removeItem('ebookBookmarked');
+                alert('북마크가 해제되었습니다.');
+            } else {
+                localStorage.setItem('ebookBookmarked', 'true');
+                alert('북마크에 추가되었습니다.');
+            }
+        }
+        
+        // 페이지 로드 시 진행률 업데이트
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+            
+            // 북마크 상태 확인
+            const isBookmarked = localStorage.getItem('ebookBookmarked') === 'true';
+            if (isBookmarked) {
+                document.querySelector('.nav-btn[title="북마크"]').style.backgroundColor = '#FF6B35';
+            }
+        });
+        
+        // 스크롤 이벤트로 네비게이션 버튼 표시/숨김
+        window.addEventListener('scroll', function() {
+            const navButtons = document.querySelector('.navigation-buttons');
+            if (window.scrollY > 300) {
+                navButtons.style.opacity = '1';
+            } else {
+                navButtons.style.opacity = '0.7';
+            }
+        });
+        
+        // 터치 이벤트 지원 (모바일)
+        document.querySelectorAll('.chapter-card').forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>

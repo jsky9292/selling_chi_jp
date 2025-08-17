@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 5: 프로급 도구와 템플릿 모음 - 구매대행 마스터 가이드</title>
+    <style>
+        :root {
+            --kakao-yellow: #FEE500;
+            --kakao-brown: #3A2929;
+            --kakao-black: #000000;
+            --kakao-light-yellow: #FFF9C4;
+            --kakao-dark-yellow: #F7D600;
+            --text-color: #333333;
+            --bg-color: #FFFFFF;
+            --border-color: #E6E6E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--bg-color);
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, var(--kakao-dark-yellow) 100%);
+            color: var(--kakao-brown);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: var(--bg-color);
+            border-radius: 12px;
+            border-left: 5px solid var(--kakao-yellow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--kakao-yellow);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--kakao-brown);
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .tool-card {
+            background: var(--kakao-light-yellow);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--kakao-yellow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(254, 229, 0, 0.3);
+            border-color: var(--kakao-dark-yellow);
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .tool-card:hover::before {
+            left: 100%;
+        }
+
+        .tool-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 10px;
+        }
+
+        .tool-description {
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tool-features {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .tool-features li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tool-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--kakao-brown);
+            font-weight: bold;
+        }
+
+        .template-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, var(--kakao-light-yellow) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid var(--kakao-yellow);
+        }
+
+        .template-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .template-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .template-example {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--kakao-yellow);
+        }
+
+        .highlight-box {
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '💡';
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .table th,
+        .table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table th {
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            font-weight: 700;
+        }
+
+        .table tr:hover {
+            background: var(--kakao-light-yellow);
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        .price-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .price-item {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .price-item.best {
+            border-color: var(--kakao-yellow);
+            background: var(--kakao-light-yellow);
+            transform: scale(1.05);
+        }
+
+        .automation-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            background: var(--kakao-light-yellow);
+            padding: 15px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--kakao-yellow);
+            margin: 5px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flow-step::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: var(--kakao-brown);
+        }
+
+        .flow-step:last-child::after {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .automation-flow {
+                flex-direction: column;
+            }
+            
+            .flow-step::after {
+                content: '↓';
+                right: 50%;
+                top: -15px;
+                transform: translateX(50%);
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header {
+                background: #f0f0f0 !important;
+                color: black !important;
+            }
+            
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Part 5: 프로급 도구와 템플릿 모음</h1>
+            <div class="subtitle">실전에서 바로 활용 가능한 전문가 도구와 완성형 템플릿</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🛠️ 필수 구매대행 도구 모음</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <div class="tool-name">환율 자동추적 도구</div>
+                    <div class="tool-description">실시간 환율 변동을 추적하여 최적의 구매 타이밍을 알려주는 도구</div>
+                    <ul class="tool-features">
+                        <li>1분 단위 환율 업데이트</li>
+                        <li>목표 환율 알림 설정</li>
+                        <li>과거 환율 데이터 분석</li>
+                        <li>수익성 자동 계산</li>
+                    </ul>
+                    <div class="template-example">
+                        <strong>설정 예시:</strong><br>
+                        • USD/KRW 1,300원 이하 시 구매 알림<br>
+                        • JPY/KRW 9.0원 이하 시 구매 알림<br>
+                        • CNY/KRW 180원 이하 시 구매 알림
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">가격 모니터링 봇</div>
+                    <div class="tool-description">관심 상품의 가격 변동을 24시간 모니터링하여 최저가 타이밍을 포착</div>
+                    <ul class="tool-features">
+                        <li>1,000개 상품 동시 모니터링</li>
+                        <li>목표가격 도달 시 즉시 알림</li>
+                        <li>가격 히스토리 차트 제공</li>
+                        <li>재고 상태 실시간 확인</li>
+                    </ul>
+                    <div class="code-block">
+// 가격 모니터링 설정 예시
+{
+    "product_url": "yahoo.co.jp/auction/item123",
+    "target_price": 5000,
+    "currency": "JPY",
+    "alert_method": ["email", "kakao"],
+    "monitor_interval": 300
+}
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">번역 자동화 도구</div>
+                    <div class="tool-description">상품 설명, 리뷰, 문의사항을 자동으로 번역하여 언어 장벽 해결</div>
+                    <ul class="tool-features">
+                        <li>일본어/중국어 전문 번역</li>
+                        <li>쇼핑몰 전용 용어 학습</li>
+                        <li>이미지 속 텍스트 번역</li>
+                        <li>번역 품질 검증 기능</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">재고 추적 시스템</div>
+                    <div class="tool-description">인기 상품의 재고 상태를 실시간으로 추적하여 품절 전 미리 구매</div>
+                    <ul class="tool-features">
+                        <li>재고 감소 알림</li>
+                        <li>신상품 출시 알림</li>
+                        <li>한정판 상품 추적</li>
+                        <li>예상 품절일 계산</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">자동 주문 시스템</div>
+                    <div class="tool-description">설정된 조건에 맞는 상품을 자동으로 주문하여 기회 손실 최소화</div>
+                    <ul class="tool-features">
+                        <li>조건부 자동 주문</li>
+                        <li>예산 한도 설정</li>
+                        <li>주문 확인 알림</li>
+                        <li>결제 실패 시 재시도</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">수익성 분석기</div>
+                    <div class="tool-description">각 상품별 예상 수익률을 실시간으로 계산하여 투자 대비 효과 분석</div>
+                    <ul class="tool-features">
+                        <li>실시간 수익률 계산</li>
+                        <li>리스크 레벨 분석</li>
+                        <li>예상 판매 기간</li>
+                        <li>ROI 순위 표시</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📋 완성형 템플릿 모음</h2>
+
+            <div class="template-section">
+                <div class="template-title">1. 고객 문의 응답 템플릿</div>
+                
+                <div class="template-box">
+<strong>[배송 문의 응답]</strong>
+안녕하세요, 고객님! 
+주문해주신 상품 배송 관련하여 안내드립니다.
+
+• 현재 상태: 일본 현지 발송 완료
+• 예상 도착일: {{배송일}} (영업일 기준 7-10일)
+• 추적번호: {{추적번호}}
+• 추적 사이트: {{추적사이트}}
+
+궁금한 점이 있으시면 언제든 연락주세요.
+감사합니다!
+                </div>
+
+                <div class="template-box">
+<strong>[가격 문의 응답]</strong>
+안녕하세요!
+문의주신 상품 가격 안내드립니다.
+
+상품명: {{상품명}}
+일본 현지가: {{현지가}}엔
+환율 적용가: {{환율적용가}}원
+수수료(15%): {{수수료}}원
+배송비: {{배송비}}원
+─────────────────
+총 결제금액: {{총액}}원
+
+주문을 원하시면 말씀해주세요!
+                </div>
+            </div>
+
+            <div class="template-section">
+                <div class="template-title">2. 상품 등록 템플릿</div>
+                
+                <div class="template-box">
+<strong>[당근마켓 등록 템플릿]</strong>
+🇯🇵 일본 직구 정품 | {{상품명}}
+
+✅ 일본 현지 직접 구매
+✅ 100% 정품 보장
+✅ 새상품/미개봉
+✅ 영수증 첨부 가능
+
+📦 상품 정보
+• 브랜드: {{브랜드}}
+• 모델명: {{모델명}}
+• 구매일: {{구매일}}
+• 구매처: {{구매처}}
+
+💰 가격: {{판매가}}원 (일본 현지가 대비 {{할인률}}% 할인)
+🚚 배송: 직거래/택배 가능
+
+📞 문의: 채팅/댓글 환영!
+                </div>
+            </div>
+
+            <div class="template-section">
+                <div class="template-title">3. 수익 계산 템플릿</div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>계산식</th>
+                            <th>예시 (10,000엔 상품)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>상품 원가</td>
+                            <td>일본가격 × 환율</td>
+                            <td>10,000엔 × 9.2원 = 92,000원</td>
+                        </tr>
+                        <tr>
+                            <td>배송비</td>
+                            <td>중량별 차등</td>
+                            <td>15,000원</td>
+                        </tr>
+                        <tr>
+                            <td>총 원가</td>
+                            <td>원가 + 배송비</td>
+                            <td>92,000 + 15,000 = 107,000원</td>
+                        </tr>
+                        <tr>
+                            <td>판매가격</td>
+                            <td>원가 × 1.3~1.5</td>
+                            <td>107,000 × 1.4 = 149,800원</td>
+                        </tr>
+                        <tr>
+                            <td>순수익</td>
+                            <td>판매가 - 총원가</td>
+                            <td>149,800 - 107,000 = 42,800원</td>
+                        </tr>
+                        <tr>
+                            <td>수익률</td>
+                            <td>(순수익/총원가) × 100</td>
+                            <td>(42,800/107,000) × 100 = 40%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🤖 자동화 워크플로우</h2>
+
+            <div class="automation-flow">
+                <div class="flow-step">상품 발견</div>
+                <div class="flow-step">수익성 검증</div>
+                <div class="flow-step">자동 주문</div>
+                <div class="flow-step">배송 추적</div>
+                <div class="flow-step">상품 등록</div>
+                <div class="flow-step">판매 완료</div>
+            </div>
+
+            <div class="highlight-box">
+자동화 시스템을 활용하면 하루 2-3시간 투자로 월 100만원 이상의 수익이 가능합니다!
+            </div>
+
+            <h3 style="margin: 30px 0 20px; color: var(--kakao-brown); font-size: 1.3em;">자동화 설정 가이드</h3>
+
+            <div class="template-box">
+<strong>1단계: 모니터링 대상 설정</strong>
+• 관심 카테고리: 전자제품, 화장품, 패션
+• 가격 범위: 5,000-50,000엔
+• 수익률 기준: 최소 30% 이상
+• 재고 임계점: 5개 이하 시 알림
+
+<strong>2단계: 자동 주문 조건</strong>
+• 환율 조건: JPY/KRW 9.0원 이하
+• 예산 한도: 일일 500,000원
+• 승인 방식: 100,000원 이하 자동승인
+
+<strong>3단계: 알림 설정</strong>
+• 카카오톡 알림: 주문 완료, 배송 상태 변경
+• 이메일 리포트: 일일 수익 현황, 주간 분석
+• SMS 긴급 알림: 시스템 오류, 결제 실패
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📊 데이터 분석 도구</h2>
+
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <div class="tool-name">판매 데이터 분석기</div>
+                    <div class="tool-description">과거 판매 데이터를 분석하여 최적의 상품과 가격을 추천</div>
+                    <ul class="tool-features">
+                        <li>카테고리별 수익률 분석</li>
+                        <li>계절별 트렌드 예측</li>
+                        <li>가격 최적화 제안</li>
+                        <li>재주문 상품 추천</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">경쟁사 분석 도구</div>
+                    <div class="tool-description">동일 상품을 판매하는 경쟁사의 가격과 전략을 실시간 분석</div>
+                    <ul class="tool-features">
+                        <li>가격 비교 분석</li>
+                        <li>판매량 추정</li>
+                        <li>마케팅 전략 분석</li>
+                        <li>시장 점유율 계산</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-name">고객 행동 분석기</div>
+                    <div class="tool-description">고객의 구매 패턴과 선호도를 분석하여 맞춤형 상품 추천</div>
+                    <ul class="tool-features">
+                        <li>구매 이력 분석</li>
+                        <li>관심 상품 예측</li>
+                        <li>재구매 확률 계산</li>
+                        <li>고객 세분화</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💼 비즈니스 관리 템플릿</h2>
+
+            <div class="template-section">
+                <div class="template-title">월간 수익 관리 시트</div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>1주차</th>
+                            <th>2주차</th>
+                            <th>3주차</th>
+                            <th>4주차</th>
+                            <th>월 합계</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>매출액</td>
+                            <td>2,500,000원</td>
+                            <td>2,800,000원</td>
+                            <td>2,300,000원</td>
+                            <td>3,100,000원</td>
+                            <td>10,700,000원</td>
+                        </tr>
+                        <tr>
+                            <td>원가</td>
+                            <td>1,750,000원</td>
+                            <td>1,960,000원</td>
+                            <td>1,610,000원</td>
+                            <td>2,170,000원</td>
+                            <td>7,490,000원</td>
+                        </tr>
+                        <tr>
+                            <td>순이익</td>
+                            <td>750,000원</td>
+                            <td>840,000원</td>
+                            <td>690,000원</td>
+                            <td>930,000원</td>
+                            <td>3,210,000원</td>
+                        </tr>
+                        <tr>
+                            <td>수익률</td>
+                            <td>30%</td>
+                            <td>30%</td>
+                            <td>30%</td>
+                            <td>30%</td>
+                            <td>30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="template-section">
+                <div class="template-title">세금 신고 준비 체크리스트</div>
+                
+                <div class="template-box">
+□ 매출 장부 정리 (월별/카테고리별)
+□ 매입 증빙 서류 수집 (영수증, 카드명세서)
+□ 배송비 영수증 정리
+□ 환율 적용 내역 기록
+□ 반품/교환 내역 정리
+□ 부가세 계산서 발급 내역
+□ 사업자등록증 사본 준비
+□ 통관 관련 서류 보관
+□ 세무사 상담 예약
+□ 종합소득세 신고 일정 확인
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🔧 고급 설정 가이드</h2>
+
+            <div class="highlight-box">
+프로 구매대행업자만 아는 고급 설정으로 수익을 극대화하세요!
+            </div>
+
+            <h3 style="margin: 30px 0 20px; color: var(--kakao-brown); font-size: 1.3em;">API 연동 설정</h3>
+
+            <div class="code-block">
+// 야후옥션 API 설정
+const YAHOO_API_CONFIG = {
+    app_id: 'your_app_id',
+    secret: 'your_secret',
+    endpoint: 'https://auctions.yahooapis.jp/AuctionWebService/V2/search',
+    default_params: {
+        type: 'all',
+        sort: 'end',
+        order: 'a',
+        output: 'json'
+    }
+};
+
+// 메르카리 API 설정 (비공식)
+const MERCARI_CONFIG = {
+    base_url: 'https://api.mercari.com/v2',
+    user_agent: 'Mercari_iOS/4.28.1',
+    headers: {
+        'X-Platform': 'ios',
+        'X-App-Version': '4.28.1'
+    }
+};
+            </div>
+
+            <h3 style="margin: 30px 0 20px; color: var(--kakao-brown); font-size: 1.3em;">VPN 설정 및 IP 관리</h3>
+
+            <div class="template-box">
+<strong>추천 VPN 서비스:</strong>
+1. ExpressVPN - 일본 서버 다수, 안정성 최고
+2. NordVPN - 가성비 좋음, 한국어 지원
+3. Surfshark - 동시 접속 무제한
+
+<strong>IP 로테이션 전략:</strong>
+• 일본 사이트 접속: 도쿄/오사카 서버 교대 사용
+• 중국 사이트 접속: 홍콩/싱가포르 서버 사용
+• 주문 시: 고정 IP 사용으로 신뢰성 확보
+• 크롤링 시: 30분마다 IP 변경
+            </div>
+
+            <h3 style="margin: 30px 0 20px; color: var(--kakao-brown); font-size: 1.3em;">결제 시스템 최적화</h3>
+
+            <div class="price-comparison">
+                <div class="price-item">
+                    <strong>국내 카드</strong><br>
+                    해외 수수료: 1.7%<br>
+                    환전 수수료: 1.8%<br>
+                    총 비용: 3.5%
+                </div>
+                <div class="price-item best">
+                    <strong>페이팔</strong><br>
+                    해외 수수료: 없음<br>
+                    환전 수수료: 2.9%<br>
+                    총 비용: 2.9% ⭐
+                </div>
+                <div class="price-item">
+                    <strong>일본 신용카드</strong><br>
+                    해외 수수료: 없음<br>
+                    환전 수수료: 없음<br>
+                    총 비용: 0% (발급 어려움)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📈 스케일업 전략</h2>
+
+            <div class="template-section">
+                <div class="template-title">단계별 성장 로드맵</div>
+                
+                <div class="automation-flow" style="flex-direction: column; align-items: stretch;">
+                    <div class="flow-step" style="margin: 10px 0;">
+                        <strong>1단계: 개인 부업 (월 100만원)</strong><br>
+                        • 수동 주문, 개인 판매<br>
+                        • 투자 시간: 일 2-3시간
+                    </div>
+                    <div class="flow-step" style="margin: 10px 0;">
+                        <strong>2단계: 반자동화 (월 300만원)</strong><br>
+                        • 모니터링 도구 활용<br>
+                        • 투자 시간: 일 1-2시간
+                    </div>
+                    <div class="flow-step" style="margin: 10px 0;">
+                        <strong>3단계: 완전 자동화 (월 500만원)</strong><br>
+                        • AI 주문 시스템 구축<br>
+                        • 투자 시간: 주 5-10시간 (관리만)
+                    </div>
+                    <div class="flow-step" style="margin: 10px 0;">
+                        <strong>4단계: 팀 운영 (월 1,000만원+)</strong><br>
+                        • 직원 고용, 시스템 확장<br>
+                        • 투자 시간: 경영자 역할
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+이 가이드의 모든 도구와 템플릿을 활용하면 6개월 내에 월 수익 1,000만원 달성이 가능합니다!
+지금 시작하여 2024년을 성공적인 구매대행 사업의 원년으로 만들어보세요.
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--kakao-yellow); border-radius: 15px; color: var(--kakao-brown);">
+            <h2 style="margin-bottom: 15px;">🎯 구매대행 마스터 가이드 완주 축하합니다!</h2>
+            <p style="font-size: 1.1em; line-height: 1.6;">
+                이제 여러분은 월 100만원 이상의 안정적인 부수입을 만들 수 있는<br>
+                모든 지식과 도구를 갖추었습니다.<br><br>
+                <strong>성공의 열쇠는 꾸준한 실행입니다!</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

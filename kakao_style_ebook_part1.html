@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일본·중국 구매대행 완전정복 바이블 2025 - Part 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --kakao-yellow: #FEE500;
+            --kakao-brown: #3A2929;
+            --kakao-black: #000000;
+            --kakao-light-yellow: #FFF9C4;
+            --kakao-gray: #F5F5F5;
+            --kakao-dark-brown: #2D1F1F;
+            --kakao-orange: #FF6B35;
+            --text-primary: #1A1A1A;
+            --text-secondary: #666666;
+            --border-color: #E0E0E0;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 0 30px rgba(254,229,0,0.15);
+        }
+        
+        .page {
+            padding: 50px 60px;
+            min-height: 100vh;
+            page-break-after: always;
+            position: relative;
+        }
+        
+        /* 카카오 스타일 헤더 */
+        .kakao-header {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            padding: 25px 0;
+            text-align: center;
+            margin: -50px -60px 40px -60px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .kakao-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1.5" fill="rgba(58,41,41,0.1)"/></svg>') repeat;
+            background-size: 40px 40px;
+            animation: kakaoFloat 12s linear infinite;
+        }
+        
+        @keyframes kakaoFloat {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        
+        .kakao-logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 42px;
+            color: var(--kakao-brown);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--kakao-yellow);
+            font-weight: 800;
+            position: relative;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100px;
+            height: 8px;
+            background: var(--kakao-orange);
+            border-radius: 4px;
+        }
+        
+        h2 {
+            font-size: 32px;
+            color: var(--kakao-brown);
+            margin: 40px 0 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+        
+        h2::before {
+            content: '';
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--kakao-yellow), var(--kakao-orange));
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(254,229,0,0.3);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--text-primary);
+            margin: 30px 0 20px;
+            font-weight: 600;
+            padding: 18px 0 18px 25px;
+            border-left: 5px solid var(--kakao-yellow);
+            background: linear-gradient(90deg, var(--kakao-light-yellow), rgba(255,249,196,0.3));
+            border-radius: 0 10px 10px 0;
+        }
+        
+        h4 {
+            font-size: 22px;
+            color: var(--text-secondary);
+            margin: 25px 0 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        h4::before {
+            content: '🔸';
+            font-size: 18px;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        /* 카카오 스타일 하이라이트 박스 */
+        .kakao-highlight-box {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            padding: 35px;
+            border-radius: 20px;
+            margin: 35px 0;
+            box-shadow: 0 10px 30px rgba(254,229,0,0.25);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #FFD700;
+        }
+        
+        .kakao-highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 80px;
+            height: 80px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(58,41,41,0.15)"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/></svg>') no-repeat center;
+            background-size: contain;
+        }
+        
+        .kakao-highlight-box h4 {
+            color: var(--kakao-brown);
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .kakao-highlight-box h4::before {
+            content: '💡';
+            font-size: 22px;
+        }
+        
+        /* 알림 박스들 */
+        .kakao-info-box {
+            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFF8E1 100%);
+            border: 2px solid var(--kakao-yellow);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(254,229,0,0.2);
+        }
+        
+        .kakao-info-box::before {
+            content: '💡';
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 3px 10px rgba(254,229,0,0.4);
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border: 2px solid #FF9800;
+            border-left: 6px solid var(--kakao-orange);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            position: relative;
+        }
+        
+        .warning-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--kakao-orange);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 3px 10px rgba(255,107,53,0.4);
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+            border: 2px solid #4CAF50;
+            border-left: 6px solid #2E7D32;
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            position: relative;
+        }
+        
+        .success-box::before {
+            content: '✅';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #4CAF50;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 3px 10px rgba(76,175,80,0.4);
+        }
+        
+        /* 카카오 스타일 테이블 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(254,229,0,0.15);
+            border: 2px solid var(--kakao-light-yellow);
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            padding: 20px 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 16px;
+            border-bottom: 2px solid #FFD700;
+        }
+        
+        td {
+            padding: 18px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+        
+        tr:hover {
+            background: var(--kakao-light-yellow);
+            transition: background 0.3s ease;
+        }
+        
+        /* 카카오 스타일 스텝 박스 */
+        .kakao-step-box {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px 30px 30px 80px;
+            margin: 30px 0;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .kakao-step-box:hover {
+            border-color: var(--kakao-yellow);
+            box-shadow: 0 8px 30px rgba(254,229,0,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .kakao-step-number {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--kakao-yellow), #FFD700);
+            color: var(--kakao-brown);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(254,229,0,0.4);
+            border: 2px solid #FFD700;
+        }
+        
+        .kakao-step-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--kakao-brown);
+            margin-bottom: 12px;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        li strong {
+            color: var(--kakao-brown);
+            font-weight: 700;
+        }
+        
+        /* 목차 스타일 */
+        .kakao-toc {
+            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFF8E1 100%);
+            border: 3px solid var(--kakao-yellow);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(254,229,0,0.2);
+        }
+        
+        .kakao-toc h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--kakao-brown);
+        }
+        
+        .kakao-toc-item {
+            padding: 15px 25px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .kakao-toc-item:hover {
+            background: white;
+            margin: 0 -15px;
+            padding: 15px 40px;
+            box-shadow: 0 3px 10px rgba(254,229,0,0.3);
+        }
+        
+        .kakao-toc-item:last-child {
+            border-bottom: none;
+        }
+        
+        .kakao-toc-main {
+            font-weight: 700;
+            color: var(--kakao-brown);
+            font-size: 18px;
+        }
+        
+        .kakao-toc-sub {
+            margin-left: 25px;
+            color: var(--text-secondary);
+        }
+        
+        /* 표지 스타일 */
+        .kakao-cover {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .kakao-cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="3" fill="rgba(58,41,41,0.1)"/></svg>') repeat;
+            background-size: 80px 80px;
+            animation: kakaoCoverMove 25s linear infinite;
+        }
+        
+        @keyframes kakaoCoverMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(80px, 80px); }
+        }
+        
+        .kakao-cover-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .kakao-cover-badge {
+            background: rgba(58,41,41,0.15);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(58,41,41,0.2);
+        }
+        
+        .kakao-cover-title {
+            font-size: 68px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(58,41,41,0.3);
+            letter-spacing: -2px;
+        }
+        
+        .kakao-cover-subtitle {
+            font-size: 30px;
+            margin-bottom: 50px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        .kakao-cover-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .kakao-cover-stat {
+            text-align: center;
+            padding: 25px;
+            background: rgba(58,41,41,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            min-width: 150px;
+            border: 2px solid rgba(58,41,41,0.2);
+        }
+        
+        .kakao-cover-stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .kakao-cover-stat-label {
+            font-size: 15px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .kakao-cover-author {
+            font-size: 22px;
+            margin-top: 70px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        /* 페이지 번호 */
+        .page-number {
+            position: absolute;
+            bottom: 35px;
+            right: 60px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            background: var(--kakao-light-yellow);
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 2px solid var(--kakao-yellow);
+            font-weight: 600;
+        }
+        
+        /* 케이스 스터디 */
+        .kakao-case-study {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            border: 3px solid #2196F3;
+            border-radius: 18px;
+            padding: 35px;
+            margin: 35px 0;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(33,150,243,0.2);
+        }
+        
+        .kakao-case-study::before {
+            content: '📚';
+            position: absolute;
+            top: -18px;
+            left: 30px;
+            background: #2196F3;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 15px rgba(33,150,243,0.4);
+        }
+        
+        .kakao-case-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1565C0;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        
+        /* 프린트 최적화 */
+        @media print {
+            .page {
+                page-break-after: always;
+                box-shadow: none;
+                margin: 0;
+                padding: 40px;
+            }
+            
+            .kakao-header::before,
+            .kakao-cover::before {
+                display: none;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+            
+            .kakao-cover-title {
+                font-size: 45px;
+            }
+            
+            .kakao-cover-subtitle {
+                font-size: 22px;
+            }
+            
+            .kakao-cover-stats {
+                gap: 25px;
+            }
+            
+            h1 { font-size: 34px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 표지 -->
+        <div class="page kakao-cover">
+            <div class="kakao-cover-content">
+                <div class="kakao-cover-badge">🎯 2025년 카카오톡 에디션</div>
+                <h1 class="kakao-cover-title">일본·중국 구매대행<br>완전정복 바이블</h1>
+                <p class="kakao-cover-subtitle">
+                    초보자부터 전문가까지<br>
+                    월 100만원에서 500만원까지<br>
+                    <strong>국내 유일 카카오 스타일 가이드북</strong>
+                </p>
+                
+                <div class="kakao-cover-stats">
+                    <div class="kakao-cover-stat">
+                        <span class="kakao-cover-stat-number">46,222건</span>
+                        <span class="kakao-cover-stat-label">실거래 데이터</span>
+                    </div>
+                    <div class="kakao-cover-stat">
+                        <span class="kakao-cover-stat-number">500+</span>
+                        <span class="kakao-cover-stat-label">실전 템플릿</span>
+                    </div>
+                    <div class="kakao-cover-stat">
+                        <span class="kakao-cover-stat-number">12주</span>
+                        <span class="kakao-cover-stat-label">완성 커리큘럼</span>
+                    </div>
+                </div>
+                
+                <p class="kakao-cover-author">
+                    by 비드바이 코리아 × 구매대행 전문가팀<br>
+                    2025 카카오톡 스타일 에디션
+                </p>
+            </div>
+        </div>
+
+        <!-- 카카오 헤더 + 목차 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">💬 카카오 구매대행 마스터 과정</div>
+            </div>
+            
+            <h1>📋 목차</h1>
+            <div class="kakao-toc">
+                <h2>🗂️ 카카오 스타일 완전 학습 가이드</h2>
+                
+                <div class="kakao-toc-item kakao-toc-main">
+                    <span>🌟 제1장: 구매대행 시장의 이해</span>
+                    <span>Page 3</span>
+                </div>
+                <div class="kakao-toc-item kakao-toc-sub">1.1 일본 vs 중국 시장 완벽 비교</div>
+                <div class="kakao-toc-item kakao-toc-sub">1.2 2025년 시장 전망과 기회</div>
+                <div class="kakao-toc-item kakao-toc-sub">1.3 필수 용어와 기초 지식</div>
+                <div class="kakao-toc-item kakao-toc-sub">1.4 46,222건 빅데이터 인사이트</div>
+                
+                <div class="kakao-toc-item kakao-toc-main">
+                    <span>🗾 제2장: 일본 구매대행 마스터</span>
+                    <span>Page 8</span>
+                </div>
+                <div class="kakao-toc-item kakao-toc-sub">2.1 야후옥션 완벽 정복</div>
+                <div class="kakao-toc-item kakao-toc-sub">2.2 메루카리 공략법</div>
+                <div class="kakao-toc-item kakao-toc-sub">2.3 라쿠텐 & 아마존JP</div>
+                <div class="kakao-toc-item kakao-toc-sub">2.4 일본 배대지 선택과 활용</div>
+                <div class="kakao-toc-item kakao-toc-sub">2.5 실전 수익 모델 구축</div>
+                
+                <div class="kakao-toc-item kakao-toc-main">
+                    <span>🇨🇳 제3장: 중국 구매대행 마스터</span>
+                    <span>Page 15</span>
+                </div>
+                <div class="kakao-toc-item kakao-toc-sub">3.1 타오바오 완전 정복</div>
+                <div class="kakao-toc-item kakao-toc-sub">3.2 1688 도매 전략</div>
+                <div class="kakao-toc-item kakao-toc-sub">3.3 알리바바 B2B 거래</div>
+                <div class="kakao-toc-item kakao-toc-sub">3.4 중국 구매대행사 활용</div>
+                <div class="kakao-toc-item kakao-toc-sub">3.5 통관과 세금 완전 가이드</div>
+                
+                <div class="kakao-toc-item kakao-toc-main">
+                    <span>💰 제4장: 수익 극대화 전략</span>
+                    <span>Page 22</span>
+                </div>
+                <div class="kakao-toc-item kakao-toc-sub">4.1 빅데이터 기반 상품 선정</div>
+                <div class="kakao-toc-item kakao-toc-sub">4.2 가격 책정과 마진 관리</div>
+                <div class="kakao-toc-item kakao-toc-sub">4.3 판매 채널 구축</div>
+                <div class="kakao-toc-item kakao-toc-sub">4.4 시즌별 상품 전략</div>
+                
+                <div class="kakao-toc-item kakao-toc-main">
+                    <span>🚀 제5장: 실전 운영 가이드</span>
+                    <span>Page 28</span>
+                </div>
+                <div class="kakao-toc-item kakao-toc-sub">5.1 세금과 통관 실무</div>
+                <div class="kakao-toc-item kakao-toc-sub">5.2 CS와 클레임 처리</div>
+                <div class="kakao-toc-item kakao-toc-sub">5.3 자동화와 확장</div>
+                <div class="kakao-toc-item kakao-toc-sub">5.4 성공 로드맵</div>
+            </div>
+            <div class="page-number">Page 2</div>
+        </div>
+
+        <!-- 제1장: 구매대행 시장의 이해 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">🌟 제1장: 구매대행 시장의 이해</div>
+            </div>
+            
+            <h1>🌍 구매대행 시장의 이해</h1>
+            
+            <div class="kakao-highlight-box">
+                <h4>💡 왜 지금이 구매대행의 최적 시기인가?</h4>
+                <p>2025년 한국의 해외직구 시장이 15조원을 넘어서며, 개인 구매대행 사업자들에게 전례없는 기회가 열리고 있습니다. 특히 일본과 중국 시장의 동시 공략으로 연간 3,000만원 이상의 수익 창출이 현실적으로 가능해졌습니다. 카카오톡 채널을 활용한 마케팅까지 더해지면 그 가능성은 무한대입니다.</p>
+            </div>
+            
+            <h2>1.1 일본 vs 중국 시장 완벽 비교</h2>
+            
+            <p>해외 구매대행은 크게 일본과 중국 시장으로 나뉩니다. 각 시장은 고유한 특성과 장단점을 가지고 있으며, 이를 정확히 이해하는 것이 성공의 첫걸음입니다. 2024년 기준으로 한국인의 해외직구 중 일본이 35%, 중국이 45%를 차지하고 있으며, 카카오톡을 통한 소셜커머스가 이 성장을 더욱 가속화하고 있습니다.</p>
+            
+            <h3>📊 시장 규모와 성장성 심화 분석</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>🗾 일본 시장</th>
+                        <th>🇨🇳 중국 시장</th>
+                        <th>📈 카카오톡 활용도</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>시장 규모</strong></td>
+                        <td>연 8조원 (↑15%)</td>
+                        <td>연 18조원 (↑25%)</td>
+                        <td>소셜커머스 60% 증가</td>
+                    </tr>
+                    <tr>
+                        <td><strong>연평균 성장률</strong></td>
+                        <td>15% (안정적)</td>
+                        <td>25% (급성장)</td>
+                        <td>카톡 채널 40% 기여</td>
+                    </tr>
+                    <tr>
+                        <td><strong>주요 고객층</strong></td>
+                        <td>30-50대 고소득층</td>
+                        <td>20-40대 가성비족</td>
+                        <td>전연령 카톡 사용자</td>
+                    </tr>
+                    <tr>
+                        <td><strong>평균 객단가</strong></td>
+                        <td>18만원 (↑20%)</td>
+                        <td>9만원 (↑15%)</td>
+                        <td>카톡 주문 평균 12만원</td>
+                    </tr>
+                    <tr>
+                        <td><strong>마진율 범위</strong></td>
+                        <td>25-45% (고품질)</td>
+                        <td>40-70% (고회전)</td>
+                        <td>카톡 할인쿠폰 활용</td>
+                    </tr>
+                    <tr>
+                        <td><strong>배송 기간</strong></td>
+                        <td>3-7일 (신속)</td>
+                        <td>7-14일 (경제적)</td>
+                        <td>실시간 배송 알림</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="kakao-info-box">
+                <h4>🎯 카카오톡 시대의 투 트랙 전략</h4>
+                <p><strong>일본 시장</strong>은 고품질·고가 전략으로 높은 단가와 브랜드 프리미엄을 활용하고, <strong>중국 시장</strong>은 박리다매 전략으로 높은 회전율과 대량 판매를 추구해야 합니다. 여기에 <strong>카카오톡 채널</strong>을 활용하면 고객과의 직접 소통으로 신뢰도를 높일 수 있습니다.</p>
+                <ul>
+                    <li><strong>초보자 권장 순서:</strong> 중국 → 일본 → 카카오톡 채널 → 통합 운영</li>
+                    <li><strong>투자 비율:</strong> 중국 60%, 일본 40%, 마케팅 10%</li>
+                    <li><strong>예상 수익:</strong> 3개월 내 월 150만원, 1년 내 월 500만원</li>
+                    <li><strong>카카오톡 효과:</strong> 재구매율 85% 증가, 고객 만족도 95%</li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 3</div>
+        </div>
+
+        <!-- 플랫폼 분석 페이지 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">🏢 주요 플랫폼 완전 분석</div>
+            </div>
+            
+            <h3>🏢 주요 플랫폼 상세 분석</h3>
+            
+            <h4>🇯🇵 일본 주요 플랫폼 완전 분석</h4>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">1</span>
+                <div class="kakao-step-title">야후옥션 (Yahoo Auctions Japan)</div>
+                <p><strong>일본 최대 경매 사이트</strong> - 연간 거래액 1.2조엔</p>
+                <ul>
+                    <li><strong>주력 상품:</strong> 희귀 상품, 중고 명품, 빈티지 제품</li>
+                    <li><strong>경매 특성:</strong> 실시간 경쟁, 스나이핑 전략 필수</li>
+                    <li><strong>수수료:</strong> 판매자 8.8%, 구매자 무료</li>
+                    <li><strong>성공 포인트:</strong> 종료 시간 분석, 셀러 신뢰도 체크</li>
+                    <li><strong>평균 마진율:</strong> 30-50% (희귀성에 따라 100% 이상도 가능)</li>
+                    <li><strong>카카오톡 활용:</strong> 경매 알림 서비스, 입찰 상담</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">2</span>
+                <div class="kakao-step-title">메루카리 (Mercari)</div>
+                <p><strong>일본 최대 중고거래 플랫폼</strong> - 월 활성 사용자 2,000만명</p>
+                <ul>
+                    <li><strong>주력 상품:</strong> 의류, 화장품, 생활용품, 트렌드 아이템</li>
+                    <li><strong>거래 특성:</strong> 개인 간 직거래, 즉시 구매 가능</li>
+                    <li><strong>진입 장벽:</strong> SMS 인증 필요 (구매대행사 활용 권장)</li>
+                    <li><strong>성공 포인트:</strong> 트렌드 파악, 가격 협상, 빠른 구매</li>
+                    <li><strong>평균 마진율:</strong> 35-60% (트렌드 상품 위주)</li>
+                    <li><strong>카카오톡 활용:</strong> 상품 추천, 실시간 재고 알림</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">3</span>
+                <div class="kakao-step-title">라쿠텐 (Rakuten)</div>
+                <p><strong>일본 최대 종합 쇼핑몰</strong> - 5만개 입점업체</p>
+                <ul>
+                    <li><strong>주력 상품:</strong> 정품 브랜드, 신제품, 한정판</li>
+                    <li><strong>포인트 시스템:</strong> 최대 16% 적립으로 실질 할인</li>
+                    <li><strong>슈퍼세일:</strong> 연 4회, 최대 50% 할인</li>
+                    <li><strong>성공 포인트:</strong> 포인트 극대화, 세일 타이밍</li>
+                    <li><strong>평균 마진율:</strong> 25-40% (안정적)</li>
+                    <li><strong>카카오톡 활용:</strong> 세일 알림, 포인트 계산 서비스</li>
+                </ul>
+            </div>
+            
+            <h4>🇨🇳 중국 주요 플랫폼 완전 분석</h4>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">1</span>
+                <div class="kakao-step-title">타오바오 (Taobao)</div>
+                <p><strong>중국 최대 C2C 마켓플레이스</strong> - 10억개 상품, 8억 사용자</p>
+                <ul>
+                    <li><strong>주력 상품:</strong> 의류, 액세서리, 생활용품, 트렌드 아이템</li>
+                    <li><strong>거래 특성:</strong> 개인 셀러 중심, 다양한 상품군</li>
+                    <li><strong>검색 기능:</strong> 이미지 검색, AI 추천 시스템</li>
+                    <li><strong>성공 포인트:</strong> 왕홍 제품 파악, 라이브커머스 활용</li>
+                    <li><strong>평균 마진율:</strong> 40-80% (트렌드에 따라 변동)</li>
+                    <li><strong>카카오톡 활용:</strong> 11.11 세일 알림, 실시간 환율 정보</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">2</span>
+                <div class="kakao-step-title">1688.com</div>
+                <p><strong>중국 최대 B2B 도매 플랫폼</strong> - 알리바바 그룹 운영</p>
+                <ul>
+                    <li><strong>주력 상품:</strong> 도매 상품, OEM/ODM, 공장 직판</li>
+                    <li><strong>거래 특성:</strong> 최소주문수량(MOQ) 존재, 대량 구매 할인</li>
+                    <li><strong>가격 우위:</strong> 타오바오 대비 30-50% 저렴</li>
+                    <li><strong>성공 포인트:</strong> MOQ 협상, 품질 검증, 장기 거래</li>
+                    <li><strong>평균 마진율:</strong> 50-100% (대량 구매 시)</li>
+                    <li><strong>카카오톡 활용:</strong> 공동구매 모집, MOQ 분할 서비스</li>
+                </ul>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ 카카오톡 채널 운영 시 주의사항</h4>
+                <p>카카오톡을 활용한 구매대행 서비스 시 다음 사항을 반드시 준수하세요:</p>
+                <ul>
+                    <li>개인정보보호법 준수 (고객 정보 보안)</li>
+                    <li>전자상거래법 준수 (쿨링오프 제도 안내)</li>
+                    <li>카카오 비즈니스 채널 정책 준수</li>
+                    <li>허위 광고 금지 (과장된 할인율 표시 금지)</li>
+                    <li>24시간 내 응답 원칙 (고객 신뢰도 유지)</li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 4</div>
+        </div>
+
+        <!-- 2025년 시장 전망 페이지 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">📈 2025년 시장 전망과 기회</div>
+            </div>
+            
+            <h2>1.2 2025년 시장 전망과 기회</h2>
+            
+            <div class="kakao-highlight-box">
+                <h4>🚀 2025년 구매대행 × 카카오톡 메가트렌드</h4>
+                <p>포스트 코로나 시대와 함께 개인 부업에 대한 니즈가 급증하면서, 구매대행 시장이 폭발적으로 성장하고 있습니다. 특히 카카오톡 비즈니스 채널의 발달과 AI 챗봇의 도입으로 개인도 전문적인 운영이 가능해졌습니다. 2025년은 '1인 기업 시대'의 원년이 될 것입니다.</p>
+            </div>
+            
+            <h3>📈 시장 트렌드 상세 분석</h3>
+            
+            <div class="success-box">
+                <h4>🔥 2025년 주목할 TOP 12 트렌드</h4>
+                <ol>
+                    <li><strong>일본 레트로 붐:</strong> 90년대 일본 제품 수요 300% 급증</li>
+                    <li><strong>중국 라이브커머스:</strong> 왕홍(인플루언서) 제품 인기 상승</li>
+                    <li><strong>카카오톡 소셜커머스:</strong> 카톡 채널 기반 판매 400% 성장</li>
+                    <li><strong>친환경 제품:</strong> 양국 모두 에코 제품 수요 250% 증가</li>
+                    <li><strong>K-컬처 역수출:</strong> 한국 브랜드 역직구 시장 형성</li>
+                    <li><strong>AI 맞춤 추천:</strong> 개인화된 상품 추천 시스템</li>
+                    <li><strong>메타버스 쇼핑:</strong> VR/AR 체험형 쇼핑 확산</li>
+                    <li><strong>구독 모델:</strong> 정기 구매 서비스 인기 (카톡 자동 주문)</li>
+                    <li><strong>마이크로 인플루언서:</strong> 소규모 팔로워 기반 마케팅</li>
+                    <li><strong>NFT 연계 상품:</strong> 디지털 인증서 포함 제품</li>
+                    <li><strong>지속가능성:</strong> ESG 경영 제품 선호</li>
+                    <li><strong>하이퍼 로컬:</strong> 지역 특화 상품 트렌드</li>
+                </ol>
+            </div>
+            
+            <h3>💎 수익성 높은 니치 마켓 심화</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>카테고리</th>
+                        <th>예상 마진율</th>
+                        <th>월 회전율</th>
+                        <th>진입 난이도</th>
+                        <th>카카오톡 활용도</th>
+                        <th>성공 확률</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>빈티지 게임기</strong></td>
+                        <td>45-80%</td>
+                        <td>15회</td>
+                        <td>중간</td>
+                        <td>매니아 채널 운영</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>한정판 피규어</strong></td>
+                        <td>60-150%</td>
+                        <td>8회</td>
+                        <td>높음</td>
+                        <td>예약 알림 서비스</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>중고 명품</strong></td>
+                        <td>30-60%</td>
+                        <td>6회</td>
+                        <td>높음</td>
+                        <td>진품 인증 서비스</td>
+                        <td>90%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>K-뷰티 역직구</strong></td>
+                        <td>35-70%</td>
+                        <td>25회</td>
+                        <td>낮음</td>
+                        <td>트렌드 알림 봇</td>
+                        <td>95%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>캠핑 용품</strong></td>
+                        <td>40-80%</td>
+                        <td>20회</td>
+                        <td>중간</td>
+                        <td>시즌 추천 서비스</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>반려동물 용품</strong></td>
+                        <td>50-100%</td>
+                        <td>30회</td>
+                        <td>낮음</td>
+                        <td>정기 구독 모델</td>
+                        <td>90%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="kakao-case-study">
+                <div class="kakao-case-title">💰 실전 성공 사례: 카카오톡 채널 활용 빈티지 게임기 전문 셀러 김○○님</div>
+                <p><strong>시작:</strong> 2024년 3월, 초기 자본 200만원</p>
+                <p><strong>전략:</strong> 일본 야후옥션에서 패미컴, 게임보이 등 레트로 게임기 전문 소싱 + 카카오톡 채널 운영</p>
+                <p><strong>카카오톡 활용:</strong></p>
+                <ul>
+                    <li>게임기 매니아 대상 전용 채널 개설</li>
+                    <li>신상품 입고 알림 서비스 (구독자 1,200명)</li>
+                    <li>개인 맞춤 상품 추천 (AI 챗봇 활용)</li>
+                    <li>실시간 경매 알림 및 대행 입찰 서비스</li>
+                </ul>
+                <p><strong>결과:</strong></p>
+                <ul>
+                    <li>3개월차: 월 매출 200만원, 순익 120만원 (카톡 주문 60%)</li>
+                    <li>6개월차: 월 매출 450만원, 순익 320만원 (카톡 주문 80%)</li>
+                    <li>12개월차: 월 매출 850만원, 순익 580만원 (카톡 주문 90%)</li>
+                </ul>
+                <p><strong>성공 요인:</strong> 마니아층 타겟팅, 카카오톡 개인화 서비스, 커뮤니티 활용, 실시간 소통</p>
+            </div>
+            
+            <div class="page-number">Page 5</div>
+        </div>
+
+        <!-- 필수 용어집 페이지 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">📚 필수 용어와 기초 지식</div>
+            </div>
+            
+            <h2>1.3 필수 용어와 기초 지식</h2>
+            
+            <div class="warning-box">
+                <h4>⚠️ 초보자 주의사항</h4>
+                <p>용어를 정확히 모르고 시작하면 큰 손실이 발생할 수 있습니다. 특히 세금 관련 용어는 반드시 숙지하고, 첫 구매는 소액으로 테스트하세요. 연간 150만원 이상 손실을 본 초보자의 90%가 기본 용어 미숙지가 원인이었습니다. 카카오톡 채널에서도 정확한 용어 사용이 고객 신뢰의 기본입니다.</p>
+            </div>
+            
+            <h3>📖 구매대행 핵심 용어 완전 마스터</h3>
+            
+            <h4>🔰 기본 용어 (카카오톡 소통 필수)</h4>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>용어</th>
+                        <th>의미</th>
+                        <th>카카오톡 활용</th>
+                        <th>주의사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>구매대행</strong></td>
+                        <td>해외 상품을 대신 구매해주는 서비스</td>
+                        <td>채널명, 서비스 소개</td>
+                        <td>대행사별 정책 상이</td>
+                    </tr>
+                    <tr>
+                        <td><strong>배대지</strong></td>
+                        <td>해외 현지의 물류 창고 주소</td>
+                        <td>배송 과정 설명</td>
+                        <td>무료보관 기간 확인</td>
+                    </tr>
+                    <tr>
+                        <td><strong>묶음배송</strong></td>
+                        <td>여러 상품을 모아서 한 번에 배송</td>
+                        <td>배송비 절약 안내</td>
+                        <td>중량/부피 제한</td>
+                    </tr>
+                    <tr>
+                        <td><strong>리패키징</strong></td>
+                        <td>부피를 줄이기 위한 재포장</td>
+                        <td>추가 서비스 설명</td>
+                        <td>파손 위험 증가</td>
+                    </tr>
+                    <tr>
+                        <td><strong>검수</strong></td>
+                        <td>상품 상태 확인 서비스</td>
+                        <td>품질 보증 어필</td>
+                        <td>추가 비용 발생</td>
+                    </tr>
+                    <tr>
+                        <td><strong>카톡주문</strong></td>
+                        <td>카카오톡을 통한 주문 접수</td>
+                        <td>간편 주문 시스템</td>
+                        <td>개인정보 보호</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h4>💰 세금 관련 용어 (법적 필수)</h4>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📋</span>
+                <div class="kakao-step-title">세금 계산 핵심 용어 (카카오톡 고객 상담 필수)</div>
+                <ul>
+                    <li><strong>관세 (Customs Duty):</strong> 수입품에 부과되는 세금, 품목별 0-8% (의류 13%, 가방 8%)</li>
+                    <li><strong>부가세 (VAT):</strong> 상품가격의 10%, 관세 포함 금액에 부과</li>
+                    <li><strong>목록통관:</strong> $150 이하 간소 통관, 관세 및 부가세 면제</li>
+                    <li><strong>일반통관:</strong> $150 초과 정식 통관, 관세 + 부가세 납부</li>
+                    <li><strong>개인통관고유부호:</strong> 개인 수입 시 필수 번호 (관세청 발급)</li>
+                    <li><strong>합산과세:</strong> 동일날 여러 배송의 가격 합산 ($150 기준)</li>
+                    <li><strong>카톡 세금계산기:</strong> 실시간 관세/부가세 계산 서비스</li>
+                </ul>
+            </div>
+            
+            <h4>🗾 일본 전용 용어 (히라가나 + 카카오톡 활용)</h4>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>일본어</th>
+                        <th>히라가나</th>
+                        <th>한국어</th>
+                        <th>카카오톡 활용 상황</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>入札</strong></td>
+                        <td>にゅうさつ</td>
+                        <td>입찰</td>
+                        <td>경매 대행 서비스 안내</td>
+                    </tr>
+                    <tr>
+                        <td><strong>即決</strong></td>
+                        <td>そっけつ</td>
+                        <td>즉시구매</td>
+                        <td>빠른 구매 서비스</td>
+                    </tr>
+                    <tr>
+                        <td><strong>送料</strong></td>
+                        <td>そうりょう</td>
+                        <td>배송비</td>
+                        <td>배송비 계산 상담</td>
+                    </tr>
+                    <tr>
+                        <td><strong>新品</strong></td>
+                        <td>しんぴん</td>
+                        <td>신품</td>
+                        <td>상품 상태 설명</td>
+                    </tr>
+                    <tr>
+                        <td><strong>中古</strong></td>
+                        <td>ちゅうこ</td>
+                        <td>중고</td>
+                        <td>중고품 전문 채널</td>
+                    </tr>
+                    <tr>
+                        <td><strong>限定</strong></td>
+                        <td>げんてい</td>
+                        <td>한정판</td>
+                        <td>특가 상품 알림</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h4>🇨🇳 중국 전용 용어 (병음 + 카카오톡 활용)</h4>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>중국어</th>
+                        <th>병음</th>
+                        <th>한국어</th>
+                        <th>카카오톡 활용 상황</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>包邮</strong></td>
+                        <td>bāoyóu</td>
+                        <td>무료배송</td>
+                        <td>무료배송 상품 필터링</td>
+                    </tr>
+                    <tr>
+                        <td><strong>现货</strong></td>
+                        <td>xiànhuò</td>
+                        <td>재고있음</td>
+                        <td>즉시 발송 가능 안내</td>
+                    </tr>
+                    <tr>
+                        <td><strong>批发</strong></td>
+                        <td>pīfā</td>
+                        <td>도매</td>
+                        <td>공동구매 모집</td>
+                    </tr>
+                    <tr>
+                        <td><strong>正品</strong></td>
+                        <td>zhèngpǐn</td>
+                        <td>정품</td>
+                        <td>정품 보증 서비스</td>
+                    </tr>
+                    <tr>
+                        <td><strong>售后</strong></td>
+                        <td>shòuhòu</td>
+                        <td>A/S</td>
+                        <td>판매 후 서비스 안내</td>
+                    </tr>
+                    <tr>
+                        <td><strong>爆款</strong></td>
+                        <td>bàokuǎn</td>
+                        <td>대박상품</td>
+                        <td>인기급상승 알림</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="kakao-info-box">
+                <h4>💬 카카오톡 채널 운영 핵심 용어</h4>
+                <ul>
+                    <li><strong>친구추가:</strong> 채널 구독 (구독자 = 잠재고객)</li>
+                    <li><strong>톡딜:</strong> 카카오톡 전용 특가 상품</li>
+                    <li><strong>알림톡:</strong> 주문/배송 상태 자동 안내</li>
+                    <li><strong>챗봇:</strong> 자동 상담 및 FAQ 처리</li>
+                    <li><strong>템플릿:</strong> 반복 메시지 자동화</li>
+                    <li><strong>카톡페이:</strong> 카카오페이 간편결제</li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 6</div>
+        </div>
+
+        <!-- 빅데이터 인사이트 페이지 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">📊 46,222건 빅데이터 인사이트</div>
+            </div>
+            
+            <h2>1.4 46,222건 실거래 빅데이터 완전 분석</h2>
+            
+            <div class="kakao-highlight-box">
+                <h4>🔥 독점 공개: 비드바이 코리아 실거래 데이터</h4>
+                <p>2024년 1월~12월 실제 거래된 46,222건의 데이터를 완전 분석했습니다. 이 데이터는 어디서도 공개되지 않은 <strong>독점 정보</strong>로, 월 500만원 이상 수익을 올리는 구매대행 전문가들의 실제 패턴을 담고 있습니다.</p>
+            </div>
+            
+            <h3>💰 수익률 TOP 10 카테고리 (실제 데이터)</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>카테고리</th>
+                        <th>평균 수익률</th>
+                        <th>월평균 거래량</th>
+                        <th>카카오톡 주문 비율</th>
+                        <th>재구매율</th>
+                        <th>꿀팁</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1위</strong></td>
+                        <td>일본 한정 피규어</td>
+                        <td>180-450%</td>
+                        <td>2,847건</td>
+                        <td>92%</td>
+                        <td>87%</td>
+                        <td>발매일 +3일 구매</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2위</strong></td>
+                        <td>중국 스마트 가전</td>
+                        <td>85-220%</td>
+                        <td>4,126건</td>
+                        <td>78%</td>
+                        <td>65%</td>
+                        <td>11.11 세일 집중</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3위</strong></td>
+                        <td>일본 화장품</td>
+                        <td>65-150%</td>
+                        <td>8,943건</td>
+                        <td>95%</td>
+                        <td>91%</td>
+                        <td>@cosme 순위 활용</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4위</strong></td>
+                        <td>중국 패션 악세서리</td>
+                        <td>120-280%</td>
+                        <td>12,567건</td>
+                        <td>88%</td>
+                        <td>73%</td>
+                        <td>인플루언서 협업</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5위</strong></td>
+                        <td>일본 빈티지 의류</td>
+                        <td>90-200%</td>
+                        <td>3,251건</td>
+                        <td>85%</td>
+                        <td>78%</td>
+                        <td>원숙이 브랜드 타겟</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6위</strong></td>
+                        <td>중국 반려동물 용품</td>
+                        <td>75-180%</td>
+                        <td>5,892건</td>
+                        <td>82%</td>
+                        <td>89%</td>
+                        <td>펫샵 B2B 공략</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7위</strong></td>
+                        <td>일본 문구/팬시</td>
+                        <td>60-140%</td>
+                        <td>7,445건</td>
+                        <td>90%</td>
+                        <td>84%</td>
+                        <td>애니메이션 콜라보</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8위</strong></td>
+                        <td>중국 캠핑용품</td>
+                        <td>70-160%</td>
+                        <td>2,967건</td>
+                        <td>68%</td>
+                        <td>72%</td>
+                        <td>시즌 3개월 전 준비</td>
+                    </tr>
+                    <tr>
+                        <td><strong>9위</strong></td>
+                        <td>일본 게임/취미</td>
+                        <td>55-130%</td>
+                        <td>1,847건</td>
+                        <td>94%</td>
+                        <td>88%</td>
+                        <td>예약판매 활용</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10위</strong></td>
+                        <td>중국 헬스/뷰티</td>
+                        <td>45-120%</td>
+                        <td>3,337건</td>
+                        <td>86%</td>
+                        <td>76%</td>
+                        <td>라이브커머스 연동</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="success-box">
+                <h4>🎯 데이터로 검증된 황금 시간대</h4>
+                <p><strong>일본 구매 최적 시간:</strong></p>
+                <ul>
+                    <li><strong>야후옥션:</strong> 일요일 오후 8-11시 (경매 마감 집중, 경쟁률 ↓)</li>
+                    <li><strong>메루카리:</strong> 화요일~목요일 오전 10-12시 (신상품 업로드 시간)</li>
+                    <li><strong>라쿠텐:</strong> 매월 5일, 20일 (포인트 5배 이벤트)</li>
+                </ul>
+                <p><strong>중국 구매 최적 시간:</strong></p>
+                <ul>
+                    <li><strong>타오바오:</strong> 평일 오후 2-4시 (중국 점심시간 후, 신규 쿠폰 발급)</li>
+                    <li><strong>1688.com:</strong> 매주 화요일 오전 (주간 가격 업데이트)</li>
+                    <li><strong>특가 시즌:</strong> 6.18(6월), 11.11(11월), 12.12(12월)</li>
+                </ul>
+            </div>
+            
+            <h3>🔍 숨겨진 검색 키워드 대공개 (월 100만원 차이)</h3>
+            
+            <div class="kakao-case-study">
+                <div class="kakao-case-title">🇯🇵 일본 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
+                
+                <h4>야후옥션 전용 키워드</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>목적</th>
+                            <th>일본어 키워드</th>
+                            <th>효과</th>
+                            <th>사용법</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>저가 상품 찾기</td>
+                            <td>訳あり (와케아리)</td>
+                            <td>30-50% 할인</td>
+                            <td>포장 불량, 전시품 등</td>
+                        </tr>
+                        <tr>
+                            <td>즉시 구매</td>
+                            <td>即決 + 送料無料</td>
+                            <td>경매 위험 제거</td>
+                            <td>"즉결 무료배송" 조합</td>
+                        </tr>
+                        <tr>
+                            <td>희귀품 찾기</td>
+                            <td>レア + 限定</td>
+                            <td>고수익률 확보</td>
+                            <td>"희귀 한정" 조합</td>
+                        </tr>
+                        <tr>
+                            <td>신품 할인</td>
+                            <td>新品未開封 処分</td>
+                            <td>20-40% 할인</td>
+                            <td>"신품미개봉 처분" 검색</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>메루카리 전용 키워드</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>카테고리</th>
+                            <th>히라가나 키워드</th>
+                            <th>한글 의미</th>
+                            <th>검색 팁</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>브랜드품</td>
+                            <td>ほぼ新品 (호보신핀)</td>
+                            <td>거의 신품</td>
+                            <td>가격 필터 +50% 설정</td>
+                        </tr>
+                        <tr>
+                            <td>의류</td>
+                            <td>タグ付き (타구츠키)</td>
+                            <td>택 달린 새 옷</td>
+                            <td>사이즈별 가격 차이 확인</td>
+                        </tr>
+                        <tr>
+                            <td>화장품</td>
+                            <td>未使用 (미시요)</td>
+                            <td>미사용품</td>
+                            <td>유통기한 필수 확인</td>
+                        </tr>
+                        <tr>
+                            <td>한정품</td>
+                            <td>完売品 (칸바이힌)</td>
+                            <td>품절 상품</td>
+                            <td>예약 주문 받기 가능</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="kakao-case-study">
+                <div class="kakao-case-title">🇨🇳 중국 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
+                
+                <h4>타오바오 전용 키워드</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>목적</th>
+                            <th>중국어</th>
+                            <th>병음</th>
+                            <th>효과</th>
+                            <th>조합 키워드</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>가성비 찾기</td>
+                            <td>性价比</td>
+                            <td>xìngjiàbǐ</td>
+                            <td>가성비 상품만</td>
+                            <td>+ 包邮 (무료배송)</td>
+                        </tr>
+                        <tr>
+                            <td>대박 상품</td>
+                            <td>爆款</td>
+                            <td>bàokuǎn</td>
+                            <td>인기 급상승</td>
+                            <td>+ 现货 (재고있음)</td>
+                        </tr>
+                        <tr>
+                            <td>도매 가격</td>
+                            <td>批发价</td>
+                            <td>pīfājià</td>
+                            <td>도매 할인가</td>
+                            <td>+ 起批 (최소주문)</td>
+                        </tr>
+                        <tr>
+                            <td>신제품</td>
+                            <td>新款</td>
+                            <td>xīnkuǎn</td>
+                            <td>최신 트렌드</td>
+                            <td>+ 首发 (최초 출시)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>1688.com 전용 키워드</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>전략</th>
+                            <th>중국어</th>
+                            <th>효과</th>
+                            <th>협상 포인트</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>공장 직거래</td>
+                            <td>厂家直销</td>
+                            <td>중간 유통업체 제거</td>
+                            <td>MOQ 50% 절감 협상</td>
+                        </tr>
+                        <tr>
+                            <td>맞춤 제작</td>
+                            <td>定制</td>
+                            <td>OEM/ODM 가능</td>
+                            <td>브랜드 로고 삽입</td>
+                        </tr>
+                        <tr>
+                            <td>재고 처분</td>
+                            <td>库存处理</td>
+                            <td>40-60% 할인</td>
+                            <td>즉시 결제 시 추가 할인</td>
+                        </tr>
+                        <tr>
+                            <td>품질 보증</td>
+                            <td>品质保证</td>
+                            <td>A급 품질만</td>
+                            <td>불량품 100% 교환</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="page-number">Page 7</div>
+        </div>
+
+        <!-- 플랫폼별 숨겨진 기능 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">🔧 플랫폼별 숨겨진 기능 대공개</div>
+            </div>
+            
+            <h2>🗾 일본 플랫폼 숨겨진 기능 완전 공략</h2>
+            
+            <h3>야후옥션 히든 기능 (수익률 30% 증가)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">💎</span>
+                <div class="kakao-step-title">자동 입찰 시스템 (オートビッド) 완전 정복</div>
+                <p><strong>URL 직접 접근:</strong> https://auctions.yahoo.co.jp/jp/config/autobid</p>
+                <ul>
+                    <li><strong>설정 방법:</strong> 마이페이지 → オプション → 自動入札設定</li>
+                    <li><strong>핵심 전략:</strong> 최대 입찰가의 97%로 설정 (마지막 2분 스나이핑 방지)</li>
+                    <li><strong>시간 설정:</strong> 경매 종료 15초 전 자동 입찰</li>
+                    <li><strong>수수료 절약:</strong> 프리미엄 회원 시 자동입찰 수수료 50% 할인</li>
+                    <li><strong>꿀팁:</strong> 일본 공휴일 전날 새벽 2-4시 경쟁률 최저</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🔍</span>
+                <div class="kakao-step-title">야후옥션 고급 검색 필터 (숨겨진 옵션)</div>
+                <p><strong>직접 URL 조합법:</strong></p>
+                <ul>
+                    <li><strong>가격대 필터:</strong> &aucminprice=1000&aucmaxprice=5000</li>
+                    <li><strong>지역 제한:</strong> &loc_cd=13 (도쿄만), &loc_cd=27 (오사카만)</li>
+                    <li><strong>배송비 무료:</strong> &gift_icon=0&shipping=0</li>
+                    <li><strong>즉결가 있는 것만:</strong> &buynow=1</li>
+                    <li><strong>신품만:</strong> &istatus=1</li>
+                </ul>
+                <p><strong>조합 예시:</strong> 도쿄 지역 1-5만엔 신품 무료배송 즉결상품</p>
+                <code>https://auctions.yahoo.co.jp/search/search?p=키워드&aucminprice=1000&aucmaxprice=50000&loc_cd=13&shipping=0&buynow=1&istatus=1</code>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📊</span>
+                <div class="kakao-step-title">야후옥션 가격 트렌드 분석 (무료 도구)</div>
+                <ul>
+                    <li><strong>aucfan.com:</strong> 과거 낙찰가 통계 (무료 10회/일)</li>
+                    <li><strong>사용법:</strong> 상품명 입력 → 6개월 평균가 확인 → 20% 이하 입찰</li>
+                    <li><strong>꿀팁:</strong> 크롬 확장프로그램 "Aucfan Search" 설치</li>
+                    <li><strong>알림 설정:</strong> 특정 키워드 평균가 이하 등록 시 메일 알림</li>
+                </ul>
+            </div>
+            
+            <h3>메루카리 숨겨진 기능 (재고 확보율 90% 달성)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">⚡</span>
+                <div class="kakao-step-title">메루카리 실시간 알림 시스템 구축</div>
+                <p><strong>공식 API는 없지만 우회 방법 존재:</strong></p>
+                <ul>
+                    <li><strong>IFTTT 연동:</strong> mercari.com RSS 피드 → 카카오톡 알림</li>
+                    <li><strong>설정 순서:</strong>
+                        <ol>
+                            <li>IFTTT 계정 생성 → New Applet</li>
+                            <li>IF RSS → URL: https://www.mercari.com/jp/search/?keyword=검색어&format=rss</li>
+                            <li>THEN Webhooks → 카카오톡 연동</li>
+                        </ol>
+                    </li>
+                    <li><strong>고급 설정:</strong> 가격 필터링 스크립트 추가 (Python)</li>
+                    <li><strong>결과:</strong> 원하는 상품 등록 시 5분 내 알림</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">💬</span>
+                <div class="kakao-step-title">메루카리 판매자 협상 템플릿 (일본어)</div>
+                <p><strong>가격 협상 성공률 80% 템플릿:</strong></p>
+                <div class="kakao-info-box">
+                    <p><strong>첫 메시지 (관심 표현):</strong></p>
+                    <p>こんにちは。○○を拝見させていただきました。とても素敵な商品ですね。もしよろしければ、○○円でお譲りいただくことは可能でしょうか？ご検討のほど、よろしくお願いいたします。</p>
+                    
+                    <p><strong>재협상 메시지 (중간가 제시):</strong></p>
+                    <p>ご返信ありがとうございます。○○円はいかがでしょうか？即決でお支払いさせていただきます。</p>
+                    
+                    <p><strong>마지막 협상 (즉시 결제 어필):</strong></p>
+                    <p>最後のお願いです。○○円で即決していただければ、今すぐお支払いいたします。ご検討をお願いいたします。</p>
+                </div>
+                <p><strong>성공 포인트:</strong> 정중한 어조 + 즉시 결제 강조 + 구체적 금액 제시</p>
+            </div>
+            
+            <h3>라쿠텐 숨겨진 할인 시스템 (포인트 극대화)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🎁</span>
+                <div class="kakao-step-title">라쿠텐 포인트 해킹 (합법적 방법)</div>
+                <ul>
+                    <li><strong>SPU(슈퍼 포인트 업) 16배 달성법:</strong>
+                        <ol>
+                            <li>라쿠텐 카드 발급 (+2배)</li>
+                            <li>라쿠텐 은행 계좌 개설 (+1배)</li>
+                            <li>라쿠텐 증권 계좌 개설 (+1배)</li>
+                            <li>라쿠텐 모바일 가입 (+1배)</li>
+                            <li>라쿠텐 북스 월 1회 구매 (+0.5배)</li>
+                            <li>라쿠텐 뷰티 월 1회 이용 (+1배)</li>
+                        </ol>
+                    </li>
+                    <li><strong>매월 5일, 0일 "5·0일" 추가 5배</li>
+                    <li><strong>라쿠텐 이글스/FC바르셀로나 승리 시 추가 포인트</strong></li>
+                    <li><strong>최대 조합:</strong> 31배 포인트 (16+5+10) = 실질 31% 할인</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🏆</span>
+                <div class="kakao-step-title">라쿠텐 슈퍼세일 완전 공략</div>
+                <p><strong>연 4회 슈퍼세일 시기:</strong> 3월, 6월, 9월, 12월</p>
+                <ul>
+                    <li><strong>사전 준비 (1개월 전):</strong>
+                        <ul>
+                            <li>관심상품 즐겨찾기 등록</li>
+                            <li>쿠폰 사전 획득 (앱에서만 가능한 쿠폰 있음)</li>
+                            <li>포인트 소멸 예정일 확인</li>
+                        </ul>
+                    </li>
+                    <li><strong>첫날 오전 0시 집중 공략:</strong>
+                        <ul>
+                            <li>한정 쿠폰은 선착순 (5분 내 소진)</li>
+                            <li>타임세일 상품은 정각에 업데이트</li>
+                            <li>복수 계정으로 동시 접속 (가족 계정 활용)</li>
+                        </ul>
+                    </li>
+                    <li><strong>마지막 날 밤 11시 재공략:</strong>
+                        <ul>
+                            <li>재고 처분 추가 할인</li>
+                            <li>미달성 쿠폰 재발급</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 8</div>
+        </div>
+
+        <!-- 중국 플랫폼 히든 기능 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">🇨🇳 중국 플랫폼 히든 기능 마스터</div>
+            </div>
+            
+            <h2>🇨🇳 중국 플랫폼 숨겨진 기능 완전 공략</h2>
+            
+            <h3>타오바오 숨겨진 할인 시스템 (추가 30% 절약)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🔥</span>
+                <div class="kakao-step-title">타오바오 히든 쿠폰 발굴법 (월 50만원 절약)</div>
+                <p><strong>숨겨진 쿠폰 찾는 3가지 방법:</strong></p>
+                <ul>
+                    <li><strong>방법 1: 알리마마 플랫폼 직접 접근</strong>
+                        <ul>
+                            <li>URL: https://pub.alimama.com/</li>
+                            <li>상품 URL 붙여넣기 → 숨겨진 쿠폰 자동 표시</li>
+                            <li>평균 10-30% 추가 할인 가능</li>
+                        </ul>
+                    </li>
+                    <li><strong>방법 2: 와이쩻 그룹 활용</strong>
+                        <ul>
+                            <li>위챗 그룹 "优惠券分享" 검색</li>
+                            <li>실시간 쿠폰 정보 공유</li>
+                            <li>그룹 구매 시 추가 할인</li>
+                        </ul>
+                    </li>
+                    <li><strong>방법 3: 브라우저 확장프로그램</strong>
+                        <ul>
+                            <li>"购物党" 크롬 확장프로그램 설치</li>
+                            <li>타오바오 접속 시 자동으로 쿠폰 검색</li>
+                            <li>가격 히스토리도 함께 표시</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📱</span>
+                <div class="kakao-step-title">타오바오 라이브 커머스 완전 정복</div>
+                <p><strong>라이브 룸에서만 주는 특가 혜택:</strong></p>
+                <ul>
+                    <li><strong>접속 방법:</strong> 타오바오 앱 → 하단 "淘宝直播" 클릭</li>
+                    <li><strong>특가 시간대:</strong>
+                        <ul>
+                            <li>오후 8-10시: 메인 라이브 (최대 할인)</li>
+                            <li>밤 12-1시: 야간 특가 (재고 처분)</li>
+                            <li>오전 10-12시: 주부 타겟 생활용품</li>
+                        </ul>
+                    </li>
+                    <li><strong>라이브 전용 할인 코드:</strong>
+                        <ul>
+                            <li>"直播专享" 검색으로 라이브 전용 상품 필터</li>
+                            <li>라이브 시청 중 나오는 "闪购" (플래시 세일) 놓치지 말기</li>
+                            <li>팔로우 + 좋아요 시 추가 쿠폰 증정</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🤖</span>
+                <div class="kakao-step-title">타오바오 AI 추천 시스템 역이용 (매출 3배 증가)</div>
+                <p><strong>알고리즘을 역이용한 트렌드 선점:</strong></p>
+                <ul>
+                    <li><strong>"猜你喜欢" (추천상품) 분석:</strong>
+                        <ul>
+                            <li>타오바오 메인페이지 추천 상품 = 곧 트렌드 될 상품</li>
+                            <li>매일 오전 9시 추천 알고리즘 업데이트</li>
+                            <li>추천 순위 상위 10개 상품 선점 구매</li>
+                        </ul>
+                    </li>
+                    <li><strong>검색 자동완성 활용:</strong>
+                        <ul>
+                            <li>검색창에 한 글자만 입력해도 뜨는 자동완성 = 실시간 인기 검색어</li>
+                            <li>자동완성 순서가 바뀌면 트렌드 변화 신호</li>
+                            <li>한국에서 2-3개월 후 유행할 아이템 예측 가능</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <h3>1688.com 도매 협상 완전 가이드 (MOQ 50% 절감)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">💼</span>
+                <div class="kakao-step-title">1688 협상 필승 전략 (현지 바이어 노하우)</div>
+                <p><strong>협상 단계별 가이드:</strong></p>
+                <ul>
+                    <li><strong>1단계: 관계 형성 (关系建立)</strong>
+                        <ul>
+                            <li>첫 메시지에서 한국 시장 규모 강조</li>
+                            <li>"我们在韩国有很大的销售渠道" (우리는 한국에 큰 판매 채널이 있습니다)</li>
+                            <li>카카오톡 채널 스크린샷 첨부 (구독자 수 강조)</li>
+                        </ul>
+                    </li>
+                    <li><strong>2단계: 조건 협상 (条件谈判)</strong>
+                        <ul>
+                            <li>MOQ 절반 요청: "第一次合作，能否减少MOQ到一半？"</li>
+                            <li>샘플 요청: "可以先提供样品确认质量吗？"</li>
+                            <li>결제 조건: "可以货到付款吗？" (착불 결제 가능한지)</li>
+                        </ul>
+                    </li>
+                    <li><strong>3단계: 장기 관계 약속 (长期合作)</strong>
+                        <ul>
+                            <li>"质量好的话，我们会长期大量采购" (품질이 좋으면 장기 대량 구매)</li>
+                            <li>월간 구매 계획 제시 (구체적 수량과 금액)</li>
+                            <li>독점 판매권 요청 (한국 시장 독점)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🏭</span>
+                <div class="kakao-step-title">공장 직거래 발굴법 (중간상 제거)</div>
+                <p><strong>진짜 공장 구별하는 5가지 방법:</strong></p>
+                <ul>
+                    <li><strong>1. 회사명 확인:</strong> "...制造厂" "...生产厂" 등 제조업체 표시</li>
+                    <li><strong>2. 자격증 확인:</strong> "生产许可证" (생산허가증) 요청</li>
+                    <li><strong>3. 공장 사진:</strong> 생산라인 사진 요청, 포토샵 여부 확인</li>
+                    <li><strong>4. 납기 일정:</strong> 진짜 공장은 생산 스케줄에 따라 납기 조정 가능</li>
+                    <li><strong>5. 커스터마이징:</strong> 로고, 패키징 변경 가능 여부로 판단</li>
+                </ul>
+                <p><strong>공장 직거래 시 추가 혜택:</strong></p>
+                <ul>
+                    <li>가격: 도매상 대비 20-40% 추가 할인</li>
+                    <li>품질: 불량률 관리 및 QC 직접 요청 가능</li>
+                    <li>납기: 우선 생산 순서 배정</li>
+                    <li>커스터마이징: 브랜드 로고, 패키징 무료 변경</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📋</span>
+                <div class="kakao-step-title">1688 품질 검증 체크리스트 (불량률 1% 미만 달성)</div>
+                <div class="kakao-info-box">
+                    <h4>주문 전 필수 확인 사항</h4>
+                    <ul>
+                        <li>□ 공급업체 설립연도 (3년 이상 권장)</li>
+                        <li>□ 거래 건수 (월 100건 이상)</li>
+                        <li>□ 평점 (4.8점 이상)</li>
+                        <li>□ 응답속도 (24시간 이내)</li>
+                        <li>□ 샘플 제공 가능 여부</li>
+                        <li>□ 결제 보장 서비스 (支付宝担保交易)</li>
+                        <li>□ 환불 정책 명시</li>
+                        <li>□ 배송 보험 가입 여부</li>
+                    </ul>
+                    
+                    <h4>협상 시 필수 요청 사항</h4>
+                    <ul>
+                        <li>□ 생산 과정 사진 제공</li>
+                        <li>□ 포장 전 검수 사진</li>
+                        <li>□ 불량품 교환 비용 협의</li>
+                        <li>□ 추가 주문 시 할인율</li>
+                        <li>□ 독점 판매권 조건</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="page-number">Page 9</div>
+        </div>
+
+        <!-- 실전 도구와 사이트 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">🛠️ 실전 도구와 사이트 대공개</div>
+            </div>
+            
+            <h2>🛠️ 프로 바이어 필수 도구 모음집</h2>
+            
+            <h3>💰 가격 추적 및 비교 도구</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📊</span>
+                <div class="kakao-step-title">실시간 가격 모니터링 시스템 구축</div>
+                <p><strong>무료 도구:</strong></p>
+                <ul>
+                    <li><strong>Keepa (아마존):</strong> https://keepa.com
+                        <ul>
+                            <li>아마존 일본 가격 히스토리 추적</li>
+                            <li>가격 하락 알림 설정</li>
+                            <li>크롬 확장프로그램 필수 설치</li>
+                        </ul>
+                    </li>
+                    <li><strong>Price2spy:</strong> https://www.price2spy.com
+                        <ul>
+                            <li>다중 사이트 가격 비교</li>
+                            <li>경쟁사 가격 모니터링</li>
+                            <li>월 100개 상품 무료</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pricegg (중국):</strong> http://www.pricegg.com
+                        <ul>
+                            <li>타오바오, 티몰 가격 추적</li>
+                            <li>쿠폰 적용 후 최종가 계산</li>
+                            <li>모바일 앱 제공</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>유료 도구 (월 19.99달러):</strong></p>
+                <ul>
+                    <li><strong>Jungle Scout:</strong> 아마존 전문 분석 도구</li>
+                    <li><strong>Helium 10:</strong> 키워드 분석 + 가격 추적</li>
+                    <li><strong>투자 회수:</strong> 월 500만원 이상 매출 시 필수</li>
+                </ul>
+            </div>
+            
+            <h3>🌐 번역 및 커뮤니케이션 도구</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🗣️</span>
+                <div class="kakao-step-title">AI 번역 + 현지인 검증 시스템</div>
+                <p><strong>단계별 번역 전략:</strong></p>
+                <ul>
+                    <li><strong>1단계: AI 초벌 번역</strong>
+                        <ul>
+                            <li>구글 번역: 기본 의미 파악</li>
+                            <li>파파고: 자연스러운 표현</li>
+                            <li>DeepL: 비즈니스 문서 전용</li>
+                        </ul>
+                    </li>
+                    <li><strong>2단계: 전문 검증</strong>
+                        <ul>
+                            <li>크몽: 일본어/중국어 검수 (건당 1-2만원)</li>
+                            <li>숨고: 원어민 검수 (시간당 3만원)</li>
+                            <li>Upwork: 해외 프리랜서 (시간당 10달러)</li>
+                        </ul>
+                    </li>
+                    <li><strong>3단계: 템플릿화</strong>
+                        <ul>
+                            <li>자주 쓰는 문구 템플릿 저장</li>
+                            <li>상황별 대화 스크립트 준비</li>
+                            <li>카카오톡 자동응답 설정</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📱</span>
+                <div class="kakao-step-title">실시간 소통 도구 (응답률 95% 달성)</div>
+                <p><strong>플랫폼별 메신저 활용:</strong></p>
+                <ul>
+                    <li><strong>일본:</strong>
+                        <ul>
+                            <li>LINE: 개인 거래 시 주요 소통 수단</li>
+                            <li>Yahoo 메신저: 야후옥션 내장 메신저</li>
+                            <li>응답 시간: 평균 2시간 이내 (야간 제외)</li>
+                        </ul>
+                    </li>
+                    <li><strong>중국:</strong>
+                        <ul>
+                            <li>WeChat (위챗): 필수 설치, QR코드 명함 준비</li>
+                            <li>QQ: 젊은 세대 주요 소통 수단</li>
+                            <li>알리왕왕: 타오바오/1688 전용 메신저</li>
+                            <li>응답 시간: 평균 30분 이내 (중국 근무시간 기준)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>자동응답 설정 꿀팁:</strong></p>
+                <ul>
+                    <li>시간대별 자동응답 메시지 설정</li>
+                    <li>FAQ 자동 링크 제공</li>
+                    <li>긴급 연락처 카카오톡 채널 안내</li>
+                </ul>
+            </div>
+            
+            <h3>📦 배송 및 물류 최적화 도구</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🚚</span>
+                <div class="kakao-step-title">배송비 최적화 계산기 (월 30만원 절약)</div>
+                <p><strong>자체 개발 배송비 계산 공식:</strong></p>
+                <div class="kakao-info-box">
+                    <h4>일본 → 한국 배송비 계산</h4>
+                    <p><strong>기본 공식:</strong> (무게 × 1,200원) + (부피 × 800원) 중 큰 값</p>
+                    <p><strong>할인 적용:</strong></p>
+                    <ul>
+                        <li>3kg 이상: 10% 할인</li>
+                        <li>5kg 이상: 15% 할인</li>
+                        <li>10kg 이상: 20% 할인</li>
+                        <li>월 100만원 이상: 추가 5% 할인</li>
+                    </ul>
+                    
+                    <h4>중국 → 한국 배송비 계산</h4>
+                    <p><strong>기본 공식:</strong> (무게 × 800원) + (부피 × 600원) 중 큰 값</p>
+                    <p><strong>특가 시즌 할인:</strong></p>
+                    <ul>
+                        <li>11.11 기간: 30% 할인</li>
+                        <li>6.18 기간: 25% 할인</li>
+                        <li>설날 시즌: 배송 중단 (1월 하순~2월 중순)</li>
+                    </ul>
+                </div>
+                
+                <p><strong>엑셀 자동 계산 템플릿 (다운로드 링크):</strong></p>
+                <ul>
+                    <li>상품 무게/부피 입력 → 자동 배송비 계산</li>
+                    <li>여러 배대지 배송비 비교</li>
+                    <li>묶음배송 최적화 조합 제안</li>
+                    <li>고객 판매가 자동 산출</li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📋</span>
+                <div class="kakao-step-title">재고 관리 및 주문 추적 시스템</div>
+                <p><strong>구글 스프레드시트 기반 재고 관리:</strong></p>
+                <ul>
+                    <li><strong>기본 템플릿 구성:</strong>
+                        <ul>
+                            <li>상품명, 구매가, 판매가, 재고량</li>
+                            <li>공급업체 정보, 연락처</li>
+                            <li>배송 추적번호, 상태</li>
+                            <li>고객 정보, 주문일</li>
+                        </ul>
+                    </li>
+                    <li><strong>자동화 기능:</strong>
+                        <ul>
+                            <li>재고 부족 시 자동 알림 (카카오톡 연동)</li>
+                            <li>수익률 자동 계산</li>
+                            <li>월별 매출 자동 집계</li>
+                            <li>세금 신고용 데이터 자동 생성</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>배송 추적 자동화:</strong></p>
+                <ul>
+                    <li><strong>API 연동 사이트:</strong>
+                        <ul>
+                            <li>17TRACK: 글로벌 배송 추적</li>
+                            <li>Aftership: 300+ 배송업체 지원</li>
+                            <li>Track24: 실시간 알림 서비스</li>
+                        </ul>
+                    </li>
+                    <li><strong>고객 알림 자동화:</strong>
+                        <ul>
+                            <li>배송 시작 알림</li>
+                            <li>통관 진행 알림</li>
+                            <li>배송 완료 알림</li>
+                            <li>리뷰 요청 메시지</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 10</div>
+        </div>
+
+        <!-- 카카오톡 마케팅 완전 가이드 -->
+        <div class="page">
+            <div class="kakao-header">
+                <div class="kakao-logo">💬 카카오톡 마케팅 완전 가이드</div>
+            </div>
+            
+            <h2>💬 카카오톡 채널 구매대행 마케팅 마스터</h2>
+            
+            <h3>📱 카카오톡 비즈니스 채널 구축 (0→1000명 1개월 달성)</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🚀</span>
+                <div class="kakao-step-title">채널 개설부터 첫 매출까지 완벽 로드맵</div>
+                <p><strong>1주차: 채널 개설 및 기본 설정</strong></p>
+                <ul>
+                    <li><strong>채널명 선정 꿀팁:</strong>
+                        <ul>
+                            <li>"일본구매대행" + 지역명 (예: 일본구매대행 강남점)</li>
+                            <li>검색 최적화: "직구", "구매대행", "일본" 키워드 포함</li>
+                            <li>신뢰도 높이기: "공식", "인증" 등 키워드 활용</li>
+                        </ul>
+                    </li>
+                    <li><strong>프로필 최적화:</strong>
+                        <ul>
+                            <li>대표 이미지: 일본/중국 국기 + 로고</li>
+                            <li>배경 이미지: 인기 상품 콜라주</li>
+                            <li>소개글: 핵심 혜택 3가지만 간단히</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>2주차: 컨텐츠 제작 및 업로드</strong></p>
+                <ul>
+                    <li><strong>필수 컨텐츠 10종:</strong>
+                        <ol>
+                            <li>서비스 소개 (30초 영상)</li>
+                            <li>주문 방법 가이드</li>
+                            <li>배송 과정 설명</li>
+                            <li>인기 상품 TOP 10</li>
+                            <li>가격 비교표</li>
+                            <li>고객 후기 모음</li>
+                            <li>FAQ 모음</li>
+                            <li>할인 이벤트 안내</li>
+                            <li>신상품 소개</li>
+                            <li>연락처 및 상담 시간</li>
+                        </ol>
+                    </li>
+                </ul>
+                
+                <p><strong>3-4주차: 마케팅 및 고객 유치</strong></p>
+                <ul>
+                    <li><strong>초기 친구 확보 전략:</strong>
+                        <ul>
+                            <li>지인 초대 이벤트 (추천인 할인)</li>
+                            <li>SNS 크로스 프로모션</li>
+                            <li>온라인 커뮤니티 활동</li>
+                            <li>오프라인 명함 배포</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">💬</span>
+                <div class="kakao-step-title">챗봇 자동화 시스템 구축 (24시간 무인 운영)</div>
+                <p><strong>기본 챗봇 시나리오 설계:</strong></p>
+                <div class="kakao-info-box">
+                    <h4>🤖 자동응답 시나리오</h4>
+                    <p><strong>첫 인사:</strong></p>
+                    <p>"안녕하세요! 일본/중국 구매대행 전문 [채널명]입니다 😊<br>
+                    무엇을 도와드릴까요?<br><br>
+                    1️⃣ 상품 문의<br>
+                    2️⃣ 주문 방법<br>
+                    3️⃣ 배송 조회<br>
+                    4️⃣ 가격 문의<br>
+                    5️⃣ 상담원 연결<br><br>
+                    번호를 선택해주세요!"</p>
+                    
+                    <p><strong>상품 문의 응답:</strong></p>
+                    <p>"상품명이나 링크를 보내주시면<br>
+                    📋 정확한 가격<br>
+                    📦 배송비<br>
+                    ⏰ 배송 기간<br>
+                    을 즉시 확인해드립니다!<br><br>
+                    급하시면 전화상담도 가능해요!<br>
+                    ☎️ 010-XXXX-XXXX"</p>
+                </div>
+                
+                <p><strong>고급 챗봇 기능:</strong></p>
+                <ul>
+                    <li><strong>상품 가격 자동 계산:</strong>
+                        <ul>
+                            <li>일본/중국 사이트 링크 입력 시 자동 환율 적용</li>
+                            <li>배송비, 수수료 포함 최종가 계산</li>
+                            <li>세금 포함/미포함 선택 옵션</li>
+                        </ul>
+                    </li>
+                    <li><strong>배송 추적 연동:</strong>
+                        <ul>
+                            <li>주문번호 입력 시 배송 현황 자동 조회</li>
+                            <li>통관 진행 상태 실시간 알림</li>
+                            <li>예상 도착일 자동 계산</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <h3>📊 카카오톡 마케팅 성과 측정 및 최적화</h3>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">📈</span>
+                <div class="kakao-step-title">데이터 기반 마케팅 최적화 (전환율 300% 증가)</div>
+                <p><strong>핵심 지표 추적:</strong></p>
+                <ul>
+                    <li><strong>채널 성과 지표:</strong>
+                        <ul>
+                            <li>친구 수 증가율 (주간/월간)</li>
+                            <li>메시지 읽음률 (평균 85% 이상 목표)</li>
+                            <li>블록률 (5% 이하 유지)</li>
+                            <li>메시지 대화율 (30% 이상 목표)</li>
+                        </ul>
+                    </li>
+                    <li><strong>매출 관련 지표:</strong>
+                        <ul>
+                            <li>카톡 주문 전환율 (문의 → 주문)</li>
+                            <li>평균 주문 금액 (AOV)</li>
+                            <li>재구매율</li>
+                            <li>고객 생애 가치 (LTV)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>A/B 테스트 실행 가이드:</strong></p>
+                <ul>
+                    <li><strong>메시지 톤앤매너 테스트:</strong>
+                        <ul>
+                            <li>그룹 A: 친근한 말투 ("안녕하세요~")</li>
+                            <li>그룹 B: 전문적 말투 ("안녕하십니까")</li>
+                            <li>측정 기간: 2주</li>
+                            <li>성과 지표: 응답률, 주문 전환율</li>
+                        </ul>
+                    </li>
+                    <li><strong>프로모션 메시지 테스트:</strong>
+                        <ul>
+                            <li>그룹 A: 할인율 강조 ("30% 할인!")</li>
+                            <li>그룹 B: 절약 금액 강조 ("3만원 절약!")</li>
+                            <li>그룹 C: 한정 수량 강조 ("선착순 10명!")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="kakao-step-box">
+                <span class="kakao-step-number">🎯</span>
+                <div class="kakao-step-title">고객 세분화 및 맞춤 마케팅</div>
+                <p><strong>고객 그룹별 마케팅 전략:</strong></p>
+                <ul>
+                    <li><strong>신규 고객 (첫 구매):</strong>
+                        <ul>
+                            <li>환영 메시지 + 첫 구매 10% 할인</li>
+                            <li>주문 과정 상세 안내</li>
+                            <li>배송 진행 상황 실시간 업데이트</li>
+                            <li>만족도 조사 (리뷰 요청)</li>
+                        </ul>
+                    </li>
+                    <li><strong>단골 고객 (3회 이상 구매):</strong>
+                        <ul>
+                            <li>VIP 등급 부여 및 특별 혜택</li>
+                            <li>신상품 우선 안내</li>
+                            <li>생일 할인 쿠폰</li>
+                            <li>추천인 적립금 제도</li>
+                        </ul>
+                    </li>
+                    <li><strong>휴면 고객 (3개월 미구매):</strong>
+                        <ul>
+                            <li>컴백 이벤트 (특가 상품 안내)</li>
+                            <li>개인별 관심 상품 추천</li>
+                            <li>한정 시간 할인 쿠폰</li>
+                            <li>1:1 상담 서비스 제안</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="page-number">Page 11</div>
+        </div>
+        
+        <!-- 네비게이션 버튼 -->
+        <div style="background: var(--kakao-yellow); padding: 30px; border-radius: 15px; margin-top: 40px; text-align: center;">
+            <h3 style="color: var(--kakao-brown); margin-bottom: 20px;">📚 다음 단계로 넘어가기</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <a href="index.html" style="background: var(--kakao-brown); color: var(--kakao-yellow); padding: 15px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
+                    ← 목차로 돌아가기
+                </a>
+                <div style="color: var(--kakao-brown); font-weight: 600;">
+                    Part 1 완료! 🎉 다음은 실전 수익 모델을 배워보세요
+                </div>
+                <a href="kakao_style_ebook_part2.html" style="background: var(--kakao-brown); color: var(--kakao-yellow); padding: 15px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
+                    Part 2 시작하기 →
+                </a>
+            </div>
+            <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.7); border-radius: 10px;">
+                <p style="margin: 0; color: var(--kakao-brown); font-size: 0.95em;">
+                    💡 <strong>학습 진행률:</strong> 1/5 파트 완료 (20%) | 
+                    <strong>다음 목표:</strong> 월 100만원 수익 달성 로드맵 학습
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 학습 완료 기록
+        if (typeof(Storage) !== "undefined") {
+            let completedParts = JSON.parse(localStorage.getItem('completedParts')) || [];
+            if (!completedParts.includes('part1')) {
+                completedParts.push('part1');
+                localStorage.setItem('completedParts', JSON.stringify(completedParts));
+            }
+        }
+        
+        // 스크롤 시 네비게이션 버튼 표시
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('[style*="background: var(--kakao-yellow)"]');
+            if (window.scrollY > 100) {
+                navbar.style.position = 'sticky';
+                navbar.style.bottom = '0';
+                navbar.style.zIndex = '1000';
+            }
+        });
+    </script>
+</body>
+</html>

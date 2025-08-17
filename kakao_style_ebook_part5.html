@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매대행 완전정복 가이드 Part 5 - 프로급 도구편</title>
+    <style>
+        :root {
+            --kakao-yellow: #FEE500;
+            --kakao-brown: #3A2929;
+            --kakao-black: #000000;
+            --kakao-light-yellow: #FFF9C4;
+            --kakao-gray: #F5F5F5;
+            --kakao-dark-gray: #9E9E9E;
+            --kakao-orange: #FF6B35;
+            --tool-purple: #673AB7;
+            --data-indigo: #3F51B5;
+            --script-teal: #009688;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(254, 229, 0, 0.3);
+        }
+
+        .header h1 {
+            color: var(--kakao-brown);
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header .subtitle {
+            color: var(--kakao-brown);
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 6px solid var(--kakao-yellow);
+        }
+
+        .tool-section {
+            border-left: 6px solid var(--tool-purple);
+        }
+
+        .data-section {
+            border-left: 6px solid var(--data-indigo);
+        }
+
+        .script-section {
+            border-left: 6px solid var(--script-teal);
+        }
+
+        .section h2 {
+            color: var(--kakao-brown);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--kakao-yellow);
+        }
+
+        .section h3 {
+            color: var(--kakao-brown);
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            background: var(--kakao-light-yellow);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border: 2px solid var(--tool-purple);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(103, 58, 183, 0.3);
+        }
+
+        .template-box {
+            background: #F8F9FA;
+            border: 2px solid #DEE2E6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Consolas', monospace;
+            position: relative;
+        }
+
+        .template-box::before {
+            content: "💾 템플릿";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .code-snippet {
+            background: #2D2D2D;
+            color: #F8F8F2;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-snippet::before {
+            content: "⚡ 코드";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--script-teal);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border: 2px solid var(--kakao-yellow);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(254, 229, 0, 0.3);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(254, 229, 0, 0.4);
+        }
+
+        .checklist {
+            background: var(--kakao-light-yellow);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+        }
+
+        .checklist li {
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            background: var(--kakao-yellow);
+            color: var(--kakao-brown);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .resource-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .resource-table th {
+            background: var(--data-indigo);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .resource-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .resource-table tr:nth-child(even) {
+            background: #F8F9FA;
+        }
+
+        .price-tag {
+            background: var(--kakao-orange);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .free-tag {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .premium-tag {
+            background: #FF9800;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .final-section {
+            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            color: var(--kakao-brown);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(254, 229, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--kakao-brown);
+            color: white;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>구매대행 완전정복 가이드</h1>
+            <div class="subtitle">Part 5: 프로급 도구편 - 실무 템플릿과 자동화 도구 모음집</div>
+        </div>
+
+        <!-- 엑셀 템플릿 모음집 -->
+        <div class="section">
+            <h2>📊 실무 엑셀 템플릿 모음집 (즉시 사용 가능)</h2>
+            
+            <h3>💰 수익 관리 템플릿</h3>
+            
+            <div class="template-box">
+                <h4>🧮 구매대행 수익 자동계산기</h4>
+                <pre>
+=== 구매대행 수익 자동계산기 ===
+
+■ 입력 영역
+상품가격 (현지화폐): [A2]
+환율: [B2]
+배송비 (현지): [C2]
+관세율 (%): [D2]
+수수료율 (%): [E2]
+
+■ 자동 계산 공식
+=ROUNDUP(A2*B2,-2)                    // 원화 환산 상품가격
+=ROUNDUP(C2*B2,-2)                    // 원화 환산 배송비
+=(A2*B2)*(D2/100)*1.1                 // 관세+부가세
+=(A2*B2)*(E2/100)                     // 구매대행 수수료
+=SUM(F2:I2)                          // 고객 총 지불금액
+=I2-(A2*B2+G2)                       // 순수익
+
+■ 손익분기점 분석
+월 고정비: [L2]
+목표 순이익: [M2]
+필요 주문수: =ROUNDUP((L2+M2)/J2,0)
+
+■ 시뮬레이션 (월 100건 기준)
+총 매출: =K2*100
+총 매입: =(F2+G2)*100
+총 수수료: =I2*100
+순이익: =J2*100
+                </pre>
+                <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
+            </div>
+
+            <div class="template-box">
+                <h4>📈 월별 손익분석 대시보드</h4>
+                <pre>
+=== 월별 손익분석 템플릿 ===
+
+■ 기본 정보 입력
+월: [A1]
+총 주문건수: [B1]
+총 매출액: [C1]
+총 매입액: [D1]
+
+■ 매출 구조 분석
+- 일본 매출: [E1] (비율: =E1/C1)
+- 중국 매출: [F1] (비율: =F1/C1)
+- 기타 매출: [G1] (비율: =G1/C1)
+
+■ 고정비 관리
+임대료: [H1]
+인건비: [I1]
+광고비: [J1]
+통신비: [K1]
+기타 경비: [L1]
+총 고정비: =SUM(H1:L1)
+
+■ 핵심 지표 계산
+평균 객단가: =C1/B1
+순이익률: =(C1-D1-M1)/C1*100
+ROI: =(C1-D1-M1)/D1*100
+
+■ 차트용 데이터 (자동 생성)
+매출 트렌드: =SPARKLINE(C1:C12)
+수익률 트렌드: =SPARKLINE(N1:N12)
+                </pre>
+                <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
+            </div>
+
+            <div class="template-box">
+                <h4>🎯 목표 달성 추적기</h4>
+                <pre>
+=== 월별 목표 달성 추적 템플릿 ===
+
+■ 목표 설정
+연간 매출 목표: [A1]
+월별 매출 목표: =A1/12
+일별 매출 목표: =B1/30
+
+■ 실적 입력 (일별)
+날짜: [A2:A32]
+일 매출: [B2:B32]
+누적 매출: =SUM($B$2:B2)
+목표 대비 달성률: =C2/(ROW(A2)*$C$1)*100
+
+■ 예상 성과 (자동 계산)
+현재까지 평균: =AVERAGE(B2:B32)
+이대로 갈 경우 월말 예상: =E2*30
+목표 달성을 위한 남은 일 평균: =($B$1-$D$32)/(31-DAY(TODAY()))
+
+■ 경고 시스템
+=IF(F33<B1,"⚠️ 목표 미달 위험","✅ 목표 달성 가능")
+
+■ 진행률 시각화
+진행 막대: =REPT("█",INT(D32/B1*20))&REPT("░",20-INT(D32/B1*20))
+퍼센트: =TEXT(D32/B1,"0%")
+                </pre>
+                <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
+            </div>
+
+            <h3>📦 재고 관리 템플릿</h3>
+            
+            <div class="template-box">
+                <h4>📋 스마트 재고 관리 시스템</h4>
+                <pre>
+=== 재고 관리 마스터 템플릿 ===
+
+■ 상품 기본정보
+상품코드: [A2]
+상품명: [B2]
+카테고리: [C2]
+공급업체: [D2]
+구매가격: [E2]
+판매가격: [F2]
+수익률: =(F2-E2)/E2*100
+
+■ 재고 현황
+현재재고: [H2]
+최소재고: [I2]
+최대재고: [J2]
+안전재고: [K2]
+발주점: [L2]
+
+■ 판매 데이터
+일평균 판매: [M2]
+주평균 판매: [N2]
+월평균 판매: [O2]
+회전율: =O2/H2
+
+■ 자동 알림 시스템
+재고 상태: =IF(H2<=I2,"🔴 긴급발주",IF(H2<=L2,"🟡 발주필요","🟢 정상"))
+예상 품절일: =H2/M2
+권장 발주량: =MAX(J2-H2,0)
+
+■ ABC 분석
+매출 기여도: [S2] (3개월 총매출)
+누적 기여도: =SUM($S$2:S2)/SUM($S$2:$S$1000)*100
+ABC 등급: =IF(T2<=70,"A",IF(T2<=90,"B","C"))
+
+■ 발주 추천
+=IF(AND(H2<=L2,P2="A"),K2,IF(AND(H2<=L2,P2="B"),K2*0.7,IF(H2<=I2,K2*0.5,0)))
+                </pre>
+                <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
+            </div>
+
+            <h3>👥 고객 관리 템플릿</h3>
+            
+            <div class="template-box">
+                <h4>🎯 고객 세분화 및 LTV 분석</h4>
+                <pre>
+=== 고객 관리 CRM 템플릿 ===
+
+■ 고객 기본정보
+고객ID: [A2]
+고객명: [B2]
+연락처: [C2]
+이메일: [D2]
+가입일: [E2]
+최근구매일: [F2]
+
+■ 구매 이력 분석
+총 구매횟수: [G2]
+총 구매금액: [H2]
+평균 구매금액: =H2/G2
+구매 주기: =NETWORKDAYS(E2,F2)/G2
+
+■ 고객 세그먼트
+RFM 점수: 
+- Recency: =IF(TODAY()-F2<=30,5,IF(TODAY()-F2<=90,3,1))
+- Frequency: =IF(G2>=10,5,IF(G2>=5,3,1))
+- Monetary: =IF(H2>=1000000,5,IF(H2>=500000,3,1))
+- 총점: =L2+M2+N2
+
+고객등급: =IF(O2>=12,"VIP",IF(O2>=9,"Gold",IF(O2>=6,"Silver","Bronze")))
+
+■ LTV 계산
+평균 구매 주기 (일): =K2
+연간 예상 구매횟수: =365/Q2
+연간 예상 구매금액: =R2*I2
+고객 생애가치 (3년): =S2*3
+
+■ 마케팅 액션
+추천 액션: =IF(P2="VIP","개인맞춤 서비스",IF(P2="Gold","프리미엄 혜택",IF(P2="Silver","할인 쿠폰","재방문 유도")))
+                </pre>
+                <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
+            </div>
+        </div>
+
+        <!-- 프로급 도구 모음 -->
+        <div class="section tool-section">
+            <h2>🛠️ 프로급 도구 모음 (무료/유료 통합 가이드)</h2>
+            
+            <h3>💻 필수 업무 도구</h3>
+            
+            <div class="feature-grid">
+                <div class="tool-card">
+                    <h4>🌐 웹 크롤링 도구</h4>
+                    <p><strong>Octoparse</strong> <span class="free-tag">무료</span></p>
+                    <p>일본/중국 사이트 상품정보 자동 수집</p>
+                    <ul>
+                        <li>코딩 없이 GUI로 크롤링</li>
+                        <li>가격 변동 모니터링</li>
+                        <li>재고 현황 자동 체크</li>
+                        <li>클라우드 실행 지원</li>
+                    </ul>
+                    <p><strong>설정 가이드:</strong> 30분 완성</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>📊 데이터 분석 도구</h4>
+                    <p><strong>Google Analytics</strong> <span class="free-tag">무료</span></p>
+                    <p>웹사이트 방문자 분석의 필수 도구</p>
+                    <ul>
+                        <li>실시간 방문자 추적</li>
+                        <li>구매 전환율 분석</li>
+                        <li>고객 행동 패턴 파악</li>
+                        <li>마케팅 ROI 측정</li>
+                    </ul>
+                    <p><strong>설치:</strong> 15분 / <strong>숙련:</strong> 1주일</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>💬 고객소통 도구</h4>
+                    <p><strong>카카오 비즈니스</strong> <span class="premium-tag">유료</span></p>
+                    <p>월 19,800원부터 시작하는 전문 서비스</p>
+                    <ul>
+                        <li>톡딜 상품 등록</li>
+                        <li>알림톡 자동 발송</li>
+                        <li>챗봇 자동 응답</li>
+                        <li>고객 DB 관리</li>
+                    </ul>
+                    <p><strong>ROI:</strong> 첫 달부터 투자 대비 300% 회수</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>📦 물류 관리 도구</h4>
+                    <p><strong>ShipStation</strong> <span class="price-tag">$9/월</span></p>
+                    <p>글로벌 배송 통합 관리의 끝판왕</p>
+                    <ul>
+                        <li>300+ 배송업체 연동</li>
+                        <li>배송 라벨 자동 생성</li>
+                        <li>추적 자동화</li>
+                        <li>고객 알림 자동화</li>
+                    </ul>
+                    <p><strong>절약 효과:</strong> 월 100시간 업무 단축</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>💰 환율 관리 도구</h4>
+                    <p><strong>XE Currency</strong> <span class="free-tag">무료</span></p>
+                    <p>실시간 환율 추적과 알림</p>
+                    <ul>
+                        <li>180개국 환율 지원</li>
+                        <li>환율 알림 설정</li>
+                        <li>과거 데이터 차트</li>
+                        <li>API 연동 가능</li>
+                    </ul>
+                    <p><strong>절약 효과:</strong> 월 3-5% 환율 차익 확보</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🎨 디자인 도구</h4>
+                    <p><strong>Canva Pro</strong> <span class="price-tag">$12/월</span></p>
+                    <p>전문 디자이너 없이도 퀄리티 높은 디자인</p>
+                    <ul>
+                        <li>100만+ 템플릿</li>
+                        <li>브랜드 키트 관리</li>
+                        <li>팀 협업 기능</li>
+                        <li>동영상 편집</li>
+                    </ul>
+                    <p><strong>대체 효과:</strong> 디자이너 외주비 월 200만원 절약</p>
+                </div>
+            </div>
+
+            <h3>🔧 도구 설정 완벽 가이드</h3>
+            
+            <div class="code-snippet">
+                <h4>Google Analytics 4 완벽 설정 코드</h4>
+                <pre>
+<!-- 구매대행 전용 GA4 설정 -->
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    // 커스텀 매개변수
+    custom_map: {
+      'product_category': 'category',
+      'purchase_country': 'country',
+      'order_value': 'value'
+    }
+  });
+
+  // 구매 이벤트 추적
+  function trackPurchase(orderData) {
+    gtag('event', 'purchase', {
+      transaction_id: orderData.orderId,
+      value: orderData.value,
+      currency: 'KRW',
+      items: [{
+        item_id: orderData.productId,
+        item_name: orderData.productName,
+        category: orderData.category,
+        quantity: orderData.quantity,
+        price: orderData.price
+      }]
+    });
+  }
+
+  // 상품 조회 이벤트
+  function trackProductView(product) {
+    gtag('event', 'view_item', {
+      currency: 'KRW',
+      value: product.price,
+      items: [{
+        item_id: product.id,
+        item_name: product.name,
+        category: product.category,
+        price: product.price
+      }]
+    });
+  }
+
+  // 장바구니 추가 이벤트
+  function trackAddToCart(product) {
+    gtag('event', 'add_to_cart', {
+      currency: 'KRW',
+      value: product.price,
+      items: [{
+        item_id: product.id,
+        item_name: product.name,
+        category: product.category,
+        quantity: 1,
+        price: product.price
+      }]
+    });
+  }
+&lt;/script&gt;
+                </pre>
+            </div>
+
+            <div class="checklist">
+                <h4>🎯 GA4 설정 완료 체크리스트</h4>
+                <ul>
+                    <li>Google Analytics 계정 생성 및 속성 설정</li>
+                    <li>웹사이트에 추적 코드 설치</li>
+                    <li>전자상거래 측정 활성화</li>
+                    <li>맞춤 이벤트 설정 (상품 조회, 구매 등)</li>
+                    <li>전환 목표 설정 (구매, 문의 등)</li>
+                    <li>오디언스 세그먼트 생성</li>
+                    <li>맞춤 보고서 대시보드 구축</li>
+                    <li>Google Search Console 연동</li>
+                    <li>데이터 내보내기 자동화 설정</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 자동화 스크립트 모음 -->
+        <div class="section script-section">
+            <h2>⚡ 자동화 스크립트 모음 (복사해서 바로 사용)</h2>
+            
+            <h3>🐍 Python 자동화 스크립트</h3>
+            
+            <div class="code-snippet">
+                <h4>🔍 일본 사이트 가격 모니터링 봇</h4>
+                <pre>
+import requests
+from bs4 import BeautifulSoup
+import time
+import smtplib
+from email.mime.text import MIMEText
+import json
+
+class JapanPriceMonitor:
+    def __init__(self):
+        self.target_products = [
+            {
+                'name': '상품명',
+                'url': 'https://example.co.jp/product/123',
+                'target_price': 5000,  # 목표가격 (엔)
+                'css_selector': '.price'
+            }
+        ]
+        
+    def get_price(self, url, selector):
+        """웹사이트에서 가격 정보 추출"""
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        
+        try:
+            response = requests.get(url, headers=headers)
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            price_element = soup.select_one(selector)
+            if price_element:
+                # 일본 가격 텍스트에서 숫자 추출
+                price_text = price_element.text.strip()
+                price = int(''.join(filter(str.isdigit, price_text)))
+                return price
+            else:
+                return None
+                
+        except Exception as e:
+            print(f"가격 조회 오류: {e}")
+            return None
+    
+    def send_alert(self, product_name, current_price, target_price):
+        """목표가격 달성 시 알림 발송"""
+        sender_email = "your_email@gmail.com"
+        sender_password = "your_app_password"
+        receiver_email = "alert@yourdomain.com"
+        
+        subject = f"🚨 가격 알림: {product_name}"
+        body = f"""
+        상품명: {product_name}
+        현재가격: ¥{current_price:,}
+        목표가격: ¥{target_price:,}
+        절약금액: ¥{target_price - current_price:,}
+        
+        지금 바로 구매하세요!
+        """
+        
+        msg = MIMEText(body)
+        msg['Subject'] = subject
+        msg['From'] = sender_email
+        msg['To'] = receiver_email
+        
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.send_message(msg)
+            server.quit()
+            print(f"알림 발송 완료: {product_name}")
+        except Exception as e:
+            print(f"알림 발송 실패: {e}")
+    
+    def monitor_prices(self):
+        """가격 모니터링 실행"""
+        while True:
+            for product in self.target_products:
+                print(f"체크 중: {product['name']}")
+                
+                current_price = self.get_price(
+                    product['url'], 
+                    product['css_selector']
+                )
+                
+                if current_price:
+                    print(f"현재가격: ¥{current_price:,}")
+                    
+                    if current_price <= product['target_price']:
+                        self.send_alert(
+                            product['name'],
+                            current_price,
+                            product['target_price']
+                        )
+                
+                time.sleep(10)  # 10초 대기
+            
+            time.sleep(3600)  # 1시간 주기로 체크
+
+# 실행
+if __name__ == "__main__":
+    monitor = JapanPriceMonitor()
+    monitor.monitor_prices()
+                </pre>
+            </div>
+
+            <div class="code-snippet">
+                <h4>💸 환율 자동 모니터링 및 알림</h4>
+                <pre>
+import requests
+import time
+from datetime import datetime
+import json
+
+class ExchangeRateMonitor:
+    def __init__(self):
+        self.api_key = "YOUR_API_KEY"  # exchangerate-api.com
+        self.base_url = "https://v6.exchangerate-api.com/v6"
+        self.target_rates = {
+            'JPY': {'target': 9.5, 'direction': 'below'},  # 엔화 9.5원 이하
+            'CNY': {'target': 185, 'direction': 'below'}    # 위안 185원 이하
+        }
+        
+    def get_exchange_rates(self):
+        """실시간 환율 조회"""
+        url = f"{self.base_url}/{self.api_key}/latest/KRW"
+        
+        try:
+            response = requests.get(url)
+            data = response.json()
+            
+            if data['result'] == 'success':
+                # KRW 기준이므로 역수 계산
+                rates = {}
+                rates['JPY'] = 1 / data['conversion_rates']['JPY']  # 1엔당 원화
+                rates['CNY'] = 1 / data['conversion_rates']['CNY']  # 1위안당 원화
+                
+                return rates
+            else:
+                print("환율 조회 실패")
+                return None
+                
+        except Exception as e:
+            print(f"환율 조회 오류: {e}")
+            return None
+    
+    def check_targets(self, current_rates):
+        """목표 환율 달성 체크"""
+        alerts = []
+        
+        for currency, current_rate in current_rates.items():
+            if currency in self.target_rates:
+                target_info = self.target_rates[currency]
+                target_rate = target_info['target']
+                direction = target_info['direction']
+                
+                if direction == 'below' and current_rate <= target_rate:
+                    alerts.append({
+                        'currency': currency,
+                        'current': current_rate,
+                        'target': target_rate,
+                        'message': f"{currency} 환율이 목표치에 도달했습니다!"
+                    })
+                elif direction == 'above' and current_rate >= target_rate:
+                    alerts.append({
+                        'currency': currency,
+                        'current': current_rate,
+                        'target': target_rate,
+                        'message': f"{currency} 환율이 목표치를 초과했습니다!"
+                    })
+        
+        return alerts
+    
+    def send_kakao_alert(self, message):
+        """카카오톡 알림 발송 (카카오 비즈니스 API 필요)"""
+        # 카카오 비즈니스 API 구현
+        pass
+    
+    def log_rates(self, rates):
+        """환율 데이터 로깅"""
+        log_data = {
+            'timestamp': datetime.now().isoformat(),
+            'rates': rates
+        }
+        
+        # CSV 파일로 저장
+        with open('exchange_rates.json', 'a') as f:
+            f.write(json.dumps(log_data) + '\n')
+    
+    def run_monitor(self):
+        """환율 모니터링 시작"""
+        print("환율 모니터링 시작...")
+        
+        while True:
+            current_rates = self.get_exchange_rates()
+            
+            if current_rates:
+                print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]")
+                print(f"JPY: {current_rates['JPY']:.2f}원")
+                print(f"CNY: {current_rates['CNY']:.2f}원")
+                
+                # 환율 로깅
+                self.log_rates(current_rates)
+                
+                # 목표 환율 체크
+                alerts = self.check_targets(current_rates)
+                
+                for alert in alerts:
+                    print(f"🚨 {alert['message']}")
+                    print(f"현재: {alert['current']:.2f}원")
+                    print(f"목표: {alert['target']:.2f}원")
+                    # 실제 알림 발송
+                    # self.send_kakao_alert(alert['message'])
+            
+            # 10분마다 체크
+            time.sleep(600)
+
+# 실행
+if __name__ == "__main__":
+    monitor = ExchangeRateMonitor()
+    monitor.run_monitor()
+                </pre>
+            </div>
+
+            <div class="code-snippet">
+                <h4>📱 카카오톡 자동 메시지 발송</h4>
+                <pre>
+import requests
+import json
+from datetime import datetime, timedelta
+
+class KakaoBusinessBot:
+    def __init__(self, api_key, sender_key):
+        self.api_key = api_key
+        self.sender_key = sender_key
+        self.base_url = "https://kapi.kakao.com/v2/api/talk/memo"
+    
+    def send_order_confirmation(self, customer_info, order_info):
+        """주문 확인 알림톡 발송"""
+        template_object = {
+            "object_type": "text",
+            "text": f"""
+🛒 주문이 확인되었습니다!
+
+주문번호: {order_info['order_id']}
+상품명: {order_info['product_name']}
+수량: {order_info['quantity']}개
+결제금액: {order_info['total_amount']:,}원
+
+📦 배송정보
+예상 배송일: {order_info['estimated_delivery']}
+배송지: {customer_info['address']}
+
+궁금한 점이 있으시면 언제든 문의해주세요!
+            """.strip(),
+            "link": {
+                "web_url": f"https://yoursite.com/order/{order_info['order_id']}"
+            }
+        }
+        
+        return self._send_message(template_object)
+    
+    def send_shipping_notice(self, tracking_info):
+        """배송 시작 알림"""
+        template_object = {
+            "object_type": "text",
+            "text": f"""
+🚚 상품이 발송되었습니다!
+
+주문번호: {tracking_info['order_id']}
+택배사: {tracking_info['courier']}
+운송장번호: {tracking_info['tracking_number']}
+
+배송조회: {tracking_info['tracking_url']}
+
+곧 받아보실 수 있어요! 😊
+            """.strip(),
+            "link": {
+                "web_url": tracking_info['tracking_url']
+            }
+        }
+        
+        return self._send_message(template_object)
+    
+    def send_delivery_complete(self, order_id):
+        """배송 완료 알림"""
+        template_object = {
+            "object_type": "text",
+            "text": f"""
+✅ 배송이 완료되었습니다!
+
+주문번호: {order_id}
+
+상품은 잘 받으셨나요?
+후기를 남겨주시면 다음 주문 시 할인 혜택을 드려요!
+
+후기 작성하기: https://yoursite.com/review/{order_id}
+            """.strip(),
+            "link": {
+                "web_url": f"https://yoursite.com/review/{order_id}"
+            }
+        }
+        
+        return self._send_message(template_object)
+    
+    def send_promotion_message(self, customer_segments):
+        """세그먼트별 프로모션 메시지"""
+        messages = {
+            'vip': """
+🌟 VIP 고객님만을 위한 특별 혜택!
+
+일본 신상품 30% 할인 + 무료배송
+유효기간: 오늘부터 7일간
+
+지금 바로 확인하세요!
+            """,
+            'regular': """
+💝 감사의 마음을 담아 특가 이벤트!
+
+인기 상품 20% 할인
+5만원 이상 구매 시 무료배송
+
+놓치지 마세요!
+            """,
+            'new': """
+🎉 신규 고객 환영 이벤트!
+
+첫 주문 25% 할인 + 적립금 5,000원
+카카오 친구 추가 완료 감사합니다!
+
+지금 바로 쇼핑하세요!
+            """
+        }
+        
+        for segment, customers in customer_segments.items():
+            message_text = messages.get(segment, messages['regular'])
+            
+            template_object = {
+                "object_type": "text",
+                "text": message_text.strip(),
+                "link": {
+                    "web_url": f"https://yoursite.com/event/{segment}"
+                }
+            }
+            
+            for customer in customers:
+                self._send_message(template_object, customer['kakao_id'])
+    
+    def _send_message(self, template_object, receiver_id=None):
+        """실제 메시지 발송"""
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+        
+        data = {
+            "template_object": json.dumps(template_object)
+        }
+        
+        if receiver_id:
+            data["receiver_uuids"] = json.dumps([receiver_id])
+        
+        try:
+            response = requests.post(self.base_url, headers=headers, data=data)
+            return response.json()
+        except Exception as e:
+            print(f"메시지 발송 오류: {e}")
+            return None
+
+# 사용 예시
+bot = KakaoBusinessBot("YOUR_API_KEY", "YOUR_SENDER_KEY")
+
+# 주문 확인 메시지
+order_data = {
+    'order_id': 'ORD20241201001',
+    'product_name': '일본 화장품 세트',
+    'quantity': 2,
+    'total_amount': 85000,
+    'estimated_delivery': '2024-12-05'
+}
+
+customer_data = {
+    'name': '김고객',
+    'address': '서울시 강남구 테헤란로 123'
+}
+
+bot.send_order_confirmation(customer_data, order_data)
+                </pre>
+            </div>
+        </div>
+
+        <!-- 데이터 분석 대시보드 -->
+        <div class="section data-section">
+            <h2>📊 데이터 분석 대시보드 구축 가이드</h2>
+            
+            <h3>📈 매출 분석 대시보드</h3>
+            
+            <div class="template-box">
+                <h4>💼 Google Data Studio 대시보드 설정</h4>
+                <pre>
+=== 구매대행 전용 대시보드 구성 ===
+
+■ 1페이지: 경영진 요약 대시보드
+┌─────────────────────────────────────┐
+│ KPI 카드 (4개)                      │
+│ [총매출] [순이익] [주문수] [객단가]   │
+├─────────────────────────────────────┤
+│ 월별 매출 트렌드 (라인 차트)         │
+├─────────────────────────────────────┤
+│ 국가별 매출 비율 (파이 차트)         │
+│ [일본 60%] [중국 35%] [기타 5%]     │
+├─────────────────────────────────────┤
+│ 상위 10개 상품 (테이블)              │
+└─────────────────────────────────────┘
+
+■ 2페이지: 마케팅 성과 분석
+┌─────────────────────────────────────┐
+│ 채널별 유입 현황                     │
+│ [카카오톡][인스타][네이버][기타]      │
+├─────────────────────────────────────┤
+│ 전환 퍼널 분석                       │
+│ 방문→관심→장바구니→결제             │
+├─────────────────────────────────────┤
+│ 고객 획득 비용 (CAC)                │
+│ 생애가치 (LTV)                      │
+└─────────────────────────────────────┘
+
+■ 3페이지: 운영 현황 모니터링
+┌─────────────────────────────────────┐
+│ 주문 처리 현황 (실시간)              │
+│ [대기][처리중][배송중][완료]         │
+├─────────────────────────────────────┤
+│ 재고 현황 알림                       │
+│ [품절위험][발주필요][정상]           │
+├─────────────────────────────────────┤
+│ 고객 문의 현황                       │
+│ [미답변][답변중][완료]              │
+└─────────────────────────────────────┘
+
+■ 데이터 소스 연결
+- Google Analytics (웹사이트 데이터)
+- Google Sheets (매출 데이터)
+- BigQuery (통합 데이터)
+- 카카오 비즈니스 API
+
+■ 자동 업데이트 설정
+- 실시간: 주문 현황, 재고 알림
+- 매시간: 매출 데이터
+- 매일: 마케팅 성과
+- 매주: 종합 리포트
+                </pre>
+                <a href="#" class="download-btn">📊 대시보드 템플릿 다운로드</a>
+            </div>
+
+            <h3>🎯 고객 분석 도구</h3>
+            
+            <div class="code-snippet">
+                <h4>👥 고객 세그먼테이션 SQL 쿼리</h4>
+                <pre>
+-- 구매대행 고객 RFM 분석 쿼리
+WITH customer_metrics AS (
+  SELECT 
+    customer_id,
+    customer_name,
+    -- Recency: 최근 구매일로부터 경과 일수
+    DATE_DIFF(CURRENT_DATE(), MAX(order_date), DAY) as recency_days,
+    
+    -- Frequency: 총 구매 횟수
+    COUNT(DISTINCT order_id) as frequency,
+    
+    -- Monetary: 총 구매 금액
+    SUM(order_amount) as monetary,
+    
+    -- 추가 메트릭
+    AVG(order_amount) as avg_order_value,
+    MIN(order_date) as first_purchase_date,
+    MAX(order_date) as last_purchase_date
+    
+  FROM orders
+  WHERE order_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH)
+  GROUP BY customer_id, customer_name
+),
+
+rfm_scores AS (
+  SELECT *,
+    -- R Score (낮을수록 좋음)
+    CASE 
+      WHEN recency_days <= 30 THEN 5
+      WHEN recency_days <= 90 THEN 4
+      WHEN recency_days <= 180 THEN 3
+      WHEN recency_days <= 365 THEN 2
+      ELSE 1
+    END as r_score,
+    
+    -- F Score (높을수록 좋음)
+    CASE 
+      WHEN frequency >= 20 THEN 5
+      WHEN frequency >= 10 THEN 4
+      WHEN frequency >= 5 THEN 3
+      WHEN frequency >= 3 THEN 2
+      ELSE 1
+    END as f_score,
+    
+    -- M Score (높을수록 좋음)
+    CASE 
+      WHEN monetary >= 5000000 THEN 5  -- 500만원 이상
+      WHEN monetary >= 2000000 THEN 4  -- 200만원 이상
+      WHEN monetary >= 1000000 THEN 3  -- 100만원 이상
+      WHEN monetary >= 500000 THEN 2   -- 50만원 이상
+      ELSE 1
+    END as m_score
+    
+  FROM customer_metrics
+),
+
+customer_segments AS (
+  SELECT *,
+    CONCAT(r_score, f_score, m_score) as rfm_code,
+    
+    -- 세그먼트 분류
+    CASE 
+      WHEN r_score >= 4 AND f_score >= 4 AND m_score >= 4 THEN 'Champions'
+      WHEN r_score >= 3 AND f_score >= 3 AND m_score >= 3 THEN 'Loyal Customers'
+      WHEN r_score >= 4 AND f_score <= 2 THEN 'New Customers'
+      WHEN r_score <= 2 AND f_score >= 3 THEN 'At Risk'
+      WHEN r_score <= 2 AND f_score <= 2 THEN 'Lost Customers'
+      WHEN r_score >= 3 AND f_score <= 2 AND m_score >= 3 THEN 'Big Spenders'
+      ELSE 'Others'
+    END as segment,
+    
+    -- 추천 액션
+    CASE 
+      WHEN r_score >= 4 AND f_score >= 4 AND m_score >= 4 THEN '개인 맞춤 서비스 제공'
+      WHEN r_score >= 3 AND f_score >= 3 AND m_score >= 3 THEN '로열티 프로그램 안내'
+      WHEN r_score >= 4 AND f_score <= 2 THEN '온보딩 프로그램 진행'
+      WHEN r_score <= 2 AND f_score >= 3 THEN '재구매 유도 이벤트'
+      WHEN r_score <= 2 AND f_score <= 2 THEN '윈백 캠페인 진행'
+      ELSE '기본 마케팅'
+    END as recommended_action
+    
+  FROM rfm_scores
+)
+
+-- 최종 결과 출력
+SELECT 
+  segment,
+  COUNT(*) as customer_count,
+  ROUND(AVG(monetary), 0) as avg_clv,
+  ROUND(AVG(frequency), 1) as avg_frequency,
+  ROUND(AVG(recency_days), 0) as avg_recency
+FROM customer_segments
+GROUP BY segment
+ORDER BY customer_count DESC;
+
+-- 개별 고객 정보 (마케팅 액션용)
+SELECT 
+  customer_id,
+  customer_name,
+  segment,
+  rfm_code,
+  monetary,
+  frequency,
+  recency_days,
+  recommended_action,
+  -- 다음 구매 예상일
+  DATE_ADD(last_purchase_date, 
+    INTERVAL CAST(365/frequency AS INT64) DAY) as predicted_next_purchase
+FROM customer_segments
+ORDER BY monetary DESC, frequency DESC;
+                </pre>
+            </div>
+
+            <h3>🏆 경쟁사 분석 도구</h3>
+            
+            <div class="tool-card">
+                <h4>🔍 SimilarWeb을 활용한 경쟁사 분석</h4>
+                <p><span class="premium-tag">Pro $199/월</span></p>
+                
+                <div class="checklist">
+                    <h4>📊 분석 항목</h4>
+                    <ul>
+                        <li><strong>트래픽 분석:</strong> 월 방문자 수, 페이지뷰, 체류시간</li>
+                        <li><strong>유입 채널:</strong> 검색, 직접, SNS, 광고 비율</li>
+                        <li><strong>인기 페이지:</strong> 가장 많이 방문하는 상품/카테고리</li>
+                        <li><strong>키워드 분석:</strong> 검색 유입 키워드 TOP 100</li>
+                        <li><strong>광고 전략:</strong> 구글/페이스북 광고 크리에이티브</li>
+                        <li><strong>모바일 vs 데스크톱:</strong> 디바이스별 사용 패턴</li>
+                        <li><strong>지역별 트래픽:</strong> 주요 고객층 지역 분석</li>
+                    </ul>
+                </div>
+                
+                <p><strong>무료 대안:</strong> Google Trends, Alexa (기본), Ubersuggest</p>
+            </div>
+        </div>
+
+        <!-- 완전한 리소스 가이드 -->
+        <div class="section">
+            <h2>📚 완전한 리소스 가이드 (평생 활용 가능)</h2>
+            
+            <h3>🌐 필수 웹사이트 북마크</h3>
+            
+            <table class="resource-table">
+                <thead>
+                    <tr>
+                        <th>카테고리</th>
+                        <th>사이트명</th>
+                        <th>URL</th>
+                        <th>용도</th>
+                        <th>업데이트 주기</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3"><strong>환율 정보</strong></td>
+                        <td>XE.com</td>
+                        <td>xe.com</td>
+                        <td>실시간 환율</td>
+                        <td>실시간</td>
+                    </tr>
+                    <tr>
+                        <td>네이버 금융</td>
+                        <td>finance.naver.com</td>
+                        <td>한국 기준 환율</td>
+                        <td>실시간</td>
+                    </tr>
+                    <tr>
+                        <td>한국은행</td>
+                        <td>bok.or.kr</td>
+                        <td>기준환율, 고시환율</td>
+                        <td>일 1회</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><strong>관세 정보</strong></td>
+                        <td>관세청</td>
+                        <td>customs.go.kr</td>
+                        <td>관세율 조회</td>
+                        <td>수시</td>
+                    </tr>
+                    <tr>
+                        <td>UNI-PASS</td>
+                        <td>unipass.customs.go.kr</td>
+                        <td>통관 정보</td>
+                        <td>실시간</td>
+                    </tr>
+                    <tr>
+                        <td>FTA 포털</td>
+                        <td>fta.go.kr</td>
+                        <td>FTA 특혜관세</td>
+                        <td>수시</td>
+                    </tr>
+                    <tr>
+                        <td>관세법령정보포털</td>
+                        <td>law.customs.go.kr</td>
+                        <td>관세법 정보</td>
+                        <td>수시</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>시장 조사</strong></td>
+                        <td>Google Trends</td>
+                        <td>trends.google.com</td>
+                        <td>트렌드 분석</td>
+                        <td>실시간</td>
+                    </tr>
+                    <tr>
+                        <td>네이버 쇼핑인사이트</td>
+                        <td>shoppinginsight.naver.com</td>
+                        <td>쇼핑 트렌드</td>
+                        <td>주간</td>
+                    </tr>
+                    <tr>
+                        <td>11번가 트렌드</td>
+                        <td>11st.co.kr/browsing/MallPlan</td>
+                        <td>상품 트렌드</td>
+                        <td>월간</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><strong>번역 도구</strong></td>
+                        <td>Google 번역</td>
+                        <td>translate.google.com</td>
+                        <td>기본 번역</td>
+                        <td>지속적 개선</td>
+                    </tr>
+                    <tr>
+                        <td>파파고</td>
+                        <td>papago.naver.com</td>
+                        <td>한중일 전문</td>
+                        <td>지속적 개선</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>📖 추천 도서 및 교육 과정</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>📚 필수 도서</h4>
+                    <ul style="text-align: left;">
+                        <li><strong>「전자상거래법 실무」</strong><br>법문사, 2024</li>
+                        <li><strong>「관세법 해설」</strong><br>관세청, 2024</li>
+                        <li><strong>「디지털 마케팅 실전 가이드」</strong><br>한빛미디어, 2024</li>
+                        <li><strong>「데이터 분석 실무」</strong><br>위키북스, 2024</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🎓 온라인 교육</h4>
+                    <ul style="text-align: left;">
+                        <li><strong>구글 애널리틱스 자격증</strong><br>Google Academy</li>
+                        <li><strong>페이스북 마케팅 자격증</strong><br>Facebook Blueprint</li>
+                        <li><strong>관세사 1차 강의</strong><br>에듀윌, 해커스</li>
+                        <li><strong>Python 데이터 분석</strong><br>Coursera, Udemy</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>👥 커뮤니티</h4>
+                    <ul style="text-align: left;">
+                        <li><strong>직구 마스터 카페</strong><br>네이버 카페</li>
+                        <li><strong>구매대행 사업자 모임</strong><br>카카오톡 오픈채팅</li>
+                        <li><strong>전자상거래협회</strong><br>공식 홈페이지</li>
+                        <li><strong>무역업 종사자 모임</strong><br>LinkedIn 그룹</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📱 필수 앱</h4>
+                    <ul style="text-align: left;">
+                        <li><strong>하나은행 글로벌</strong><br>해외송금 앱</li>
+                        <li><strong>17TRACK</strong><br>배송추적 앱</li>
+                        <li><strong>XE Currency</strong><br>환율 앱</li>
+                        <li><strong>Google Translate</strong><br>실시간 번역</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>🔄 지속적 업데이트 정보</h3>
+            
+            <div class="checklist">
+                <h4>📅 정기 체크 스케줄</h4>
+                <ul>
+                    <li><strong>매일:</strong> 환율, 경쟁사 가격, 재고 현황</li>
+                    <li><strong>매주:</strong> 마케팅 성과, 고객 피드백, 트렌드 변화</li>
+                    <li><strong>매월:</strong> 법규 변경사항, 새로운 도구 출시, 교육 과정</li>
+                    <li><strong>분기:</strong> 비즈니스 모델 점검, 시장 분석, 전략 수정</li>
+                    <li><strong>반기:</strong> 도구 업그레이드, 프로세스 개선, 인력 충원</li>
+                    <li><strong>연간:</strong> 사업 계획 수립, 목표 재설정, 시스템 전면 점검</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 최종 마무리 섹션 -->
+        <div class="final-section">
+            <h2>🎉 축하합니다! 구매대행 마스터 과정 완주!</h2>
+            
+            <p style="font-size: 1.2em; margin: 20px 0;">
+                총 5개 파트, 250페이지 분량의 완전한 구매대행 바이블을 모두 학습하셨습니다.<br>
+                이제 여러분은 <strong>월 1억 매출</strong>을 달성할 수 있는 모든 지식과 도구를 갖추었습니다!
+            </p>
+
+            <div class="feature-grid" style="margin: 30px 0;">
+                <div class="feature-card">
+                    <h4>📋 체크리스트</h4>
+                    <p>30일 실행 계획대로<br>단계별 진행</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🛠️ 도구 활용</h4>
+                    <p>제공된 템플릿과<br>자동화 도구 적극 활용</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📊 데이터 추적</h4>
+                    <p>매일 성과를 측정하고<br>지속적으로 개선</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🤝 네트워킹</h4>
+                    <p>커뮤니티에 참여하고<br>정보를 공유</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 10px; margin: 30px 0;">
+                <h3>🚀 다음 단계: 실행!</h3>
+                <p><strong>첫 30일 목표:</strong> 월 매출 500만원 달성</p>
+                <p><strong>3개월 목표:</strong> 월 매출 2,000만원 달성</p>
+                <p><strong>1년 목표:</strong> 월 매출 1억원 달성</p>
+            </div>
+
+            <p style="font-size: 1.1em; font-weight: bold;">
+                🎯 목표를 향해 첫 발을 내딛으세요!<br>
+                여러분의 성공을 진심으로 응원합니다! 💪
+            </p>
+        </div>
+
+        <div class="footer">
+            <h3>구매대행 완전정복 가이드 - 완결편</h3>
+            <p>Part 1부터 Part 5까지, 구매대행 마스터가 되는 완전한 여정</p>
+            <p style="margin-top: 20px; opacity: 0.8;">
+                🏆 Total 250+ Pages | 💎 Premium Templates | ⚡ Automation Scripts<br>
+                © 2024 구매대행 마스터 가이드. 월 1억 매출 달성을 위한 완전한 로드맵.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
