@@ -2203,23 +2203,152 @@
         </div>
         
         <!-- 네비게이션 버튼 -->
-        <div style="background: var(--kakao-yellow); padding: 30px; border-radius: 15px; margin-top: 40px; text-align: center;">
-            <h3 style="color: var(--kakao-brown); margin-bottom: 20px;">📚 다음 단계로 넘어가기</h3>
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                <a href="index.html" style="background: var(--kakao-brown); color: var(--kakao-yellow); padding: 15px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
-                    ← 목차로 돌아가기
+        <style>
+            .nav-footer {
+                background: var(--kakao-yellow);
+                padding: 15px;
+                border-radius: 10px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            
+            .nav-footer h3 {
+                color: var(--kakao-brown);
+                margin-bottom: 10px;
+                font-size: 1em;
+            }
+            
+            .nav-buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .nav-btn {
+                background: var(--kakao-brown);
+                color: var(--kakao-yellow);
+                padding: 8px 15px;
+                border-radius: 20px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.85em;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-btn:hover {
+                background: var(--kakao-dark-brown);
+                transform: scale(1.05);
+            }
+            
+            .nav-center {
+                color: var(--kakao-brown);
+                font-weight: 500;
+                font-size: 0.8em;
+                display: none;
+            }
+            
+            .progress-info {
+                margin-top: 10px;
+                padding: 8px;
+                background: rgba(255,255,255,0.7);
+                border-radius: 8px;
+            }
+            
+            .progress-info p {
+                margin: 0;
+                color: var(--kakao-brown);
+                font-size: 0.75em;
+            }
+            
+            /* 모바일 최적화 */
+            @media (max-width: 768px) {
+                .nav-footer {
+                    padding: 8px;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0;
+                    border-radius: 15px 15px 0 0;
+                    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                    z-index: 1000;
+                }
+                
+                .nav-footer h3 {
+                    display: none;
+                }
+                
+                .nav-buttons {
+                    justify-content: space-around;
+                    margin-bottom: 0;
+                    gap: 8px;
+                }
+                
+                .nav-btn {
+                    padding: 6px 12px;
+                    font-size: 0.75em;
+                    border-radius: 15px;
+                }
+                
+                .nav-center {
+                    display: none;
+                }
+                
+                .progress-info {
+                    display: none;
+                }
+                
+                /* 콘텐츠가 네비게이션에 가려지지 않도록 여백 추가 */
+                body {
+                    padding-bottom: 60px;
+                }
+            }
+            
+            /* 태블릿 최적화 */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .nav-footer {
+                    padding: 20px;
+                }
+                
+                .nav-center {
+                    display: block;
+                }
+            }
+            
+            /* 데스크톱 */
+            @media (min-width: 1025px) {
+                .nav-center {
+                    display: block;
+                    font-size: 0.9em;
+                }
+                
+                .nav-footer {
+                    padding: 25px;
+                }
+            }
+        </style>
+        
+        <div class="nav-footer">
+            <h3>📚 다음 단계로 넘어가기</h3>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">
+                    ← 목차
                 </a>
-                <div style="color: var(--kakao-brown); font-weight: 600;">
-                    Part 1 완료! 🎉 다음은 실전 수익 모델을 배워보세요
+                <div class="nav-center">
+                    Part 1 완료! 🎉
                 </div>
-                <a href="kakao_style_ebook_part2.html" style="background: var(--kakao-brown); color: var(--kakao-yellow); padding: 15px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
-                    Part 2 시작하기 →
+                <a href="kakao_style_ebook_part2.html" class="nav-btn">
+                    Part 2 →
                 </a>
             </div>
-            <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.7); border-radius: 10px;">
-                <p style="margin: 0; color: var(--kakao-brown); font-size: 0.95em;">
-                    💡 <strong>학습 진행률:</strong> 1/5 파트 완료 (20%) | 
-                    <strong>다음 목표:</strong> 월 100만원 수익 달성 로드맵 학습
+            <div class="progress-info">
+                <p>
+                    💡 <strong>진행률:</strong> 1/5 (20%) | <strong>다음:</strong> 수익 모델 학습
                 </p>
             </div>
         </div>
