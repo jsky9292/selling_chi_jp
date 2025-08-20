@@ -1,0 +1,155 @@
+            <div class="info-box">
+                <h4>🏪 라쿠텐 (楽天市場)</h4>
+                <ul>
+                    <li><strong>시장점유율:</strong> 약 28%</li>
+                    <li><strong>점포수:</strong> 약 57,000개</li>
+                    <li><strong>특징:</strong> 포인트 적립률 최대 16배 (SPU 프로그램)</li>
+                    <li><strong>주력상품:</strong> 브랜드 정품, 식품, 가전</li>
+                    <li><strong>평균 배송:</strong> 2-5일</li>
+                </ul>
+                
+                <h5>라쿠텐 포인트 극대화 전략</h5>
+                <table>
+                    <tr>
+                        <th>조건</th>
+                        <th>포인트 배율</th>
+                        <th>달성 방법</th>
+                    </tr>
+                    <tr>
+                        <td>기본 구매</td>
+                        <td>1배</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>라쿠텐 카드 사용</td>
+                        <td>+2배</td>
+                        <td>라쿠텐 카드 발급</td>
+                    </tr>
+                    <tr>
+                        <td>라쿠텐 은행</td>
+                        <td>+1배</td>
+                        <td>계좌 개설 + 카드 연결</td>
+                    </tr>
+                    <tr>
+                        <td>라쿠텐 증권</td>
+                        <td>+1배</td>
+                        <td>월 500엔 이상 투자</td>
+                    </tr>
+                    <tr>
+                        <td>앱 구매</td>
+                        <td>+0.5배</td>
+                        <td>라쿠텐 앱 사용</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="info-box">
+                <h4>🔨 야후 옥션 (ヤフオク)</h4>
+                <ul>
+                    <li><strong>월 이용자:</strong> 약 1,800만명</li>
+                    <li><strong>출품수:</strong> 상시 6,500만개 이상</li>
+                    <li><strong>수수료:</strong> 낙찰가의 8.8% (프리미엄 회원)</li>
+                    <li><strong>특징:</strong> 희귀템, 중고품, 한정판</li>
+                    <li><strong>경매 전략:</strong> 종료 5분전 입찰 집중</li>
+                </ul>
+                
+                <h5>야후옥션 입찰 필승 전략</h5>
+                <ol>
+                    <li>스나이핑 도구 활용 (Gixen, JBidwatcher)</li>
+                    <li>평일 22-24시 종료 상품 타겟</li>
+                    <li>입찰 단위 파악 (현재가의 5-10%)</li>
+                    <li>자동연장 고려 (종료 5분전 입찰시 5분 연장)</li>
+                    <li>즉시구매가 활용 (정가의 70-80% 수준)</li>
+                </ol>
+            </div>
+            
+            <div class="info-box">
+                <h4>📱 메루카리 (メルカリ)</h4>
+                <ul>
+                    <li><strong>월 활성 사용자:</strong> 약 2,300만명</li>
+                    <li><strong>판매 수수료:</strong> 10%</li>
+                    <li><strong>특징:</strong> C2C 중고거래, 즉시구매</li>
+                    <li><strong>인기 카테고리:</strong> 패션, 코스메틱, 게임</li>
+                    <li><strong>가격 협상:</strong> 10-20% 할인 가능</li>
+                </ul>
+            </div>
+            
+            <h3>3.1.2 일본 상품 소싱 베스트 카테고리</h3>
+            
+            <div class="case-study">
+                <h4>💰 수익률 TOP 10 카테고리 (2024년 기준)</h4>
+                <ol>
+                    <li><strong>피규어/프라모델:</strong> 평균 마진 15-25%</li>
+                    <li><strong>빈티지 의류:</strong> 평균 마진 10-20%</li>
+                    <li><strong>브랜드 코스메틱:</strong> 평균 마진 10-20%</li>
+                    <li><strong>한정판 스니커즈:</strong> 평균 마진 15-30%</li>
+                    <li><strong>레트로 게임:</strong> 평균 마진 20-35%</li>
+                    <li><strong>카메라/렌즈:</strong> 평균 마진 10-20%</li>
+                    <li><strong>전통 공예품:</strong> 평균 마진 15-25%</li>
+                    <li><strong>애니메이션 굿즈:</strong> 평균 마진 12-20%</li>
+                    <li><strong>일본 과자/식품:</strong> 평균 마진 25-30%</li>
+                    <li><strong>문구/잡화:</strong> 평균 마진 15-22%</li>
+                </ol>
+            </div>
+            
+            <h2>3.2 일본 배송대행 서비스 완벽 가이드</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>배대지</th>
+                        <th>기본료</th>
+                        <th>무게당</th>
+                        <th>특징</th>
+                        <th>추천대상</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A사 배대지</td>
+                        <td>450엔</td>
+                        <td>125엔/kg</td>
+                        <td>빠른 처리, 실시간 추적</td>
+                        <td>초보자-중급자</td>
+                    </tr>
+                    <tr>
+                        <td>JPGOODBUY</td>
+                        <td>500엔</td>
+                        <td>140엔/kg</td>
+                        <td>60일 무료보관</td>
+                        <td>대량구매자</td>
+                    </tr>
+                    <tr>
+                        <td>웨비쿠</td>
+                        <td>550엔</td>
+                        <td>130엔/kg</td>
+                        <td>실시간 견적</td>
+                        <td>초보자</td>
+                    </tr>
+                    <tr>
+                        <td>몰테일</td>
+                        <td>600엔</td>
+                        <td>120엔/kg</td>
+                        <td>검품 서비스</td>
+                        <td>고가상품</td>
+                    </tr>
+                    <tr>
+                        <td>오마이집</td>
+                        <td>480엔</td>
+                        <td>135엔/kg</td>
+                        <td>소량 특화</td>
+                        <td>소량구매자</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning-box">
+                <h4>⚠️ 일본 구매시 주의사항</h4>
+                <ul>
+                    <li>소비세 10% (식품 8%) 별도</li>
+                    <li>도쿄/오사카 외 지역 배송비 추가</li>
+                    <li>중고품은 반품 불가가 원칙</li>
+                    <li>PSE 마크 없는 전자제품 통관 불가</li>
+                    <li>식품은 유통기한 3개월 이상 필수</li>
+                </ul>
+            </div>
