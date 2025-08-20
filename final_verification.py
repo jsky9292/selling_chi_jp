@@ -29,7 +29,7 @@ def verify_file(file_path):
         
         for pattern, msg in company_checks:
             if pattern.lower() in content.lower():
-                issues.append(f"⚠️ {msg}: {pattern}")
+                issues.append(f"[WARNING] {msg}: {pattern}")
         
         # 2. 비현실적인 수익률 체크
         profit_patterns = [
@@ -46,11 +46,11 @@ def verify_file(file_path):
                 try:
                     value = int(match.group(1))
                     if label in ['수익률', '마진율', '순이익률'] and value > 40:
-                        issues.append(f"⚠️ 비현실적 {label}: {value}%")
+                        issues.append(f"[WARNING] 비현실적 {label}: {value}%")
                     elif label == 'ROAS' and value > 400:
-                        issues.append(f"⚠️ 비현실적 ROAS: {value}%")
+                        issues.append(f"[WARNING] 비현실적 ROAS: {value}%")
                     elif label == '전환율' and value > 10:
-                        issues.append(f"⚠️ 비현실적 전환율: {value}%")
+                        issues.append(f"[WARNING] 비현실적 전환율: {value}%")
                 except:
                     pass
         
@@ -67,7 +67,7 @@ def verify_file(file_path):
                     revenue = int(match.group(1))
                     profit = int(match.group(2))
                     if profit > revenue * 0.4:  # 수익이 매출의 40% 초과
-                        issues.append(f"⚠️ 비현실적 수익: 매출 {revenue}만원, 수익 {profit}만원")
+                        issues.append(f"[WARNING] 비현실적 수익: 매출 {revenue}만원, 수익 {profit}만원")
                 except:
                     pass
         
@@ -87,7 +87,7 @@ def verify_file(file_path):
         
         for wrong, correct in typo_checks:
             if wrong in content:
-                issues.append(f"📝 오타: '{wrong}' → '{correct}'로 수정 필요")
+                issues.append(f"[TYPO] 오타: '{wrong}' -> '{correct}'로 수정 필요")
         
         # 5. 일관성 체크
         inconsistency_checks = [
@@ -98,13 +98,13 @@ def verify_file(file_path):
         
         for wrong, correct in inconsistency_checks:
             if wrong in content and correct not in content:
-                issues.append(f"📝 띄어쓰기: '{wrong}' → '{correct}'로 통일 필요")
+                issues.append(f"[TYPO] 띄어쓰기: '{wrong}' -> '{correct}'로 통일 필요")
         
         # 6. 숫자 데이터 신뢰성 체크
         if '1000만원' in content and '3000만원' in content:
             context = content[content.find('1000만원'):content.find('1000만원')+200]
             if '수익' in context or '이익' in context:
-                issues.append(f"⚠️ 수익 데이터 재확인 필요")
+                issues.append(f"[WARNING] 수익 데이터 재확인 필요")
         
         # 결과 출력
         if issues:
@@ -117,7 +117,7 @@ def verify_file(file_path):
             return True, []
             
     except Exception as e:
-        print(f"  ❌ 오류: {e}")
+        print(f"  [ERROR] 오류: {e}")
         return False, [str(e)]
 
 def main():
@@ -159,23 +159,23 @@ def main():
     print("=" * 60)
     
     if files_with_issues:
-        print(f"\n⚠️ 문제가 발견된 파일: {len(files_with_issues)}개")
+        print(f"\n[WARNING] 문제가 발견된 파일: {len(files_with_issues)}개")
         for filename in files_with_issues:
-            print(f"\n📁 {filename}:")
+            print(f"\n[FILE] {filename}:")
             for issue in all_issues[filename]:
                 print(f"    {issue}")
         
-        print("\n❗ Git 업로드 전 위 문제들을 수정해야 합니다.")
+        print("\n[!] Git 업로드 전 위 문제들을 수정해야 합니다.")
     else:
-        print("\n✅ 모든 파일이 검증을 통과했습니다!")
-        print("📤 Git에 업로드 가능합니다.")
+        print("\n[OK] 모든 파일이 검증을 통과했습니다!")
+        print("[OK] Git에 업로드 가능합니다.")
     
     print("\n" + "=" * 60)
     print("최종 업로드 파일 목록:")
     print("=" * 60)
     for filename in files_to_check:
         if os.path.exists(os.path.join(base_path, filename)):
-            status = "✅" if filename not in files_with_issues else "⚠️"
+            status = "[OK]" if filename not in files_with_issues else "[WARNING]"
             print(f"{status} {filename}")
 
 if __name__ == "__main__":
