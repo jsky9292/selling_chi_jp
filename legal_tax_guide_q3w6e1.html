@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>구매대행 완전정복 가이드 Part 4 - 법무/세무 실무편</title>
     <style>
         :root {
@@ -1353,6 +1353,177 @@
             
             th, td {
                 padding: 10px 8px !important;
+            }
+        }
+
+        /* 모바일 화면 깨짐 방지 */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* 모바일 반응형 개선 */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+            
+            .container {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .page {
+                padding: 20px 15px !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow-x: hidden !important;
+            }
+            
+            h1 {
+                font-size: 24px !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            h2 {
+                font-size: 20px !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            h3 {
+                font-size: 18px !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            h4 {
+                font-size: 16px !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            p, li, td, th {
+                font-size: 14px !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* 테이블 스크롤 가능하게 */
+            .table-wrapper {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                max-width: 100% !important;
+                margin: 10px 0 !important;
+            }
+            
+            table {
+                min-width: auto !important;
+                font-size: 12px !important;
+            }
+            
+            th, td {
+                padding: 5px !important;
+                font-size: 12px !important;
+            }
+            
+            /* 코드 블록 스크롤 */
+            pre, code {
+                overflow-x: auto !important;
+                max-width: 100% !important;
+                font-size: 12px !important;
+                word-wrap: normal !important;
+            }
+            
+            /* 박스 요소들 너비 제한 */
+            .kakao-highlight-box,
+            .kakao-info-box,
+            .warning-box,
+            .success-box,
+            .tip-box,
+            .highlight-box,
+            .info-box,
+            .checklist,
+            .profit-card,
+            .platform-card,
+            .step-item {
+                max-width: 100% !important;
+                margin: 10px 0 !important;
+                padding: 15px !important;
+            }
+            
+            /* 이미지 반응형 */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            /* 네비게이션 바 수정 */
+            .nav-footer {
+                width: auto !important;
+                max-width: 90% !important;
+                left: 5% !important;
+                right: 5% !important;
+                transform: none !important;
+            }
+            
+            /* 긴 단어 줄바꿈 */
+            * {
+                word-break: keep-all;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+        
+        /* 작은 모바일 화면 추가 최적화 */
+        @media (max-width: 480px) {
+            body {
+                font-size: 13px !important;
+            }
+            
+            h1 {
+                font-size: 22px !important;
+            }
+            
+            h2 {
+                font-size: 18px !important;
+            }
+            
+            h3 {
+                font-size: 16px !important;
+            }
+            
+            p, li {
+                font-size: 13px !important;
+            }
+            
+            .page {
+                padding: 15px 10px !important;
             }
         }
 </style>
