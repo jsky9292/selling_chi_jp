@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>일본/중국 구매대행 완전정복 가이드 - Part 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #0891b2;
+            --accent-color: #dc2626;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            --success-color: #16a34a;
+            --warning-color: #ea580c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .ebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .page {
+            padding: 60px;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+        }
+        
+        .chapter-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            margin: -60px -60px 40px -60px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin: 40px 0 20px;
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin: 30px 0 15px;
+            color: var(--dark-color);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e0f2fe, #e0e7ff);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #f0fdf4;
+            border-left: 4px solid var(--success-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        tr:hover {
+            background: #f9fafb;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .case-study {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #fbbf24;
+        }
+        
+        .formula-box {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ebook-container">
+        
+        <!-- 표지 -->
+        <div class="page">
+            <div class="chapter-header" style="height: 100vh; margin: -60px; display: flex; flex-direction: column; justify-content: center;">
+                <h1 style="color: white; border: none; font-size: 3em;">일본·중국 구매대행</h1>
+                <h2 style="color: white; font-size: 2.5em;">완전정복 가이드</h2>
+                <p style="font-size: 1.5em; margin-top: 40px;">2025년 최신 개정판</p>
+                <p style="font-size: 1.2em; margin-top: 20px;">실전에서 바로 써먹는 구매대행 A to Z</p>
+                <p style="margin-top: 60px; font-size: 1em;">저자: 구매대행 전문가 그룹</p>
+            </div>
+        </div>
+        
+        <!-- 목차 -->
+        <div class="page">
+            <h1>목차</h1>
+            
+            <h2>Part 1: 기초편 - 시장분석과 준비사항</h2>
+            <ul style="line-height: 2;">
+                <li>Chapter 1: 구매대행 시장의 이해</li>
+                <li>Chapter 2: 중국 시장 완벽 분석</li>
+                <li>Chapter 3: 일본 시장 완벽 분석</li>
+                <li>Chapter 4: 사업 준비 체크리스트</li>
+                <li>Chapter 5: 초기 자본 계획</li>
+            </ul>
+            
+            <h2>Part 2: 실전편 - 수익모델과 운영방법</h2>
+            <ul style="line-height: 2;">
+                <li>Chapter 6: 수익 구조 설계</li>
+                <li>Chapter 7: 상품 소싱 전략</li>
+                <li>Chapter 8: 가격 책정 방법론</li>
+                <li>Chapter 9: 주문 처리 프로세스</li>
+                <li>Chapter 10: 배송 및 물류 관리</li>
+            </ul>
+            
+            <h2>Part 3: 심화편 - 마케팅과 확장전략</h2>
+            <ul style="line-height: 2;">
+                <li>Chapter 11: 온라인 마케팅 전략</li>
+                <li>Chapter 12: 고객 관리 시스템</li>
+                <li>Chapter 13: 브랜딩과 차별화</li>
+                <li>Chapter 14: 사업 확장 로드맵</li>
+            </ul>
+            
+            <h2>Part 4: 법무/세무편 - 필수 법률지식</h2>
+            <ul style="line-height: 2;">
+                <li>Chapter 15: 사업자 등록과 신고</li>
+                <li>Chapter 16: 세금 신고 실무</li>
+                <li>Chapter 17: 통관과 검역</li>
+                <li>Chapter 18: 법적 리스크 관리</li>
+            </ul>
+            
+            <h2>Part 5: 자동화편 - 시스템 구축</h2>
+            <ul style="line-height: 2;">
+                <li>Chapter 19: 업무 자동화 도구</li>
+                <li>Chapter 20: 데이터 분석과 최적화</li>
+            </ul>
+        </div>
+        
+        <!-- Chapter 1: 구매대행 시장의 이해 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h1 style="color: white; border: none;">Part 1: 기초편</h1>
+                <h2 style="color: white;">Chapter 1: 구매대행 시장의 이해</h2>
+            </div>
+            
+            <h2>1.1 구매대행 시장 현황</h2>
+            
+            <p>2024년 기준 한국의 해외직구 시장 규모는 약 5조 4천억원으로, 전년 대비 15% 성장했습니다. 이 중 개인 구매대행이 차지하는 비중은 약 30%로 1조 6천억원 규모입니다.</p>
+            
+            <div class="info-box">
+                <h3>📊 시장 통계 (한국무역협회, 2024)</h3>
+                <ul>
+                    <li>전체 해외직구 시장: 5조 4천억원</li>
+                    <li>개인 구매대행 시장: 1조 6천억원</li>
+                    <li>주요 구매국: 미국(35%), 중국(28%), 일본(22%), 유럽(15%)</li>
+                    <li>평균 객단가: 일본 15만원, 중국 8만원</li>
+                    <li>연평균 성장률: 15-20%</li>
+                </ul>
+            </div>
+            
+            <h3>1.1.1 왜 지금이 기회인가?</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>요인</th>
+                        <th>현황</th>
+                        <th>기회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>환율</td>
+                        <td>엔 약세 지속 (100엔=900원대)</td>
+                        <td>일본 상품 가격 경쟁력 상승</td>
+                    </tr>
+                    <tr>
+                        <td>물류</td>
+                        <td>항공/해운 정상화</td>
+                        <td>배송비 안정화, 배송기간 단축</td>
+                    </tr>
+                    <tr>
+                        <td>규제</td>
+                        <td>목록통관 한도 유지 (150달러)</td>
+                        <td>소액 거래 활성화</td>
+                    </tr>
+                    <tr>
+                        <td>트렌드</td>
+                        <td>K-컬처 영향 확대</td>
+                        <td>역직구 시장 성장</td>
+                    </tr>
+                    <tr>
+                        <td>기술</td>
+                        <td>번역/결제 도구 발달</td>
+                        <td>진입장벽 하락</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>1.1.2 구매대행 vs 직구 비교</h3>
+            
+            <p>구매대행은 직구와 다른 독특한 가치를 제공합니다:</p>
+            
+            <div class="success-box">
+                <h4>구매대행의 핵심 가치</h4>
+                <ul class="checklist">
+                    <li>언어 장벽 해결 (일본어/중국어 불필요)</li>
+                    <li>복잡한 결제 대행 (해외 카드 불필요)</li>
+                    <li>통관/배송 일괄 처리</li>
+                    <li>A/S 및 교환/반품 대행</li>
+                    <li>상품 검수 및 품질 보증</li>
+                    <li>묶음 배송으로 배송비 절감</li>
+                </ul>
+            </div>
+            
+            <h2>1.2 수익 가능성 분석</h2>
+            
+            <div class="formula-box">
+                <h4>📈 현실적인 수익 계산</h4>
+                <pre>
+[초보자 - 3개월차]
+일 평균 주문: 2-3건
+건당 평균 수익: 2-3만원
+월 매출: 120-270만원
+순이익률: 15-20%
+월 순수익: 20-50만원
+
+[중급자 - 6개월차]
+일 평균 주문: 5-7건
+건당 평균 수익: 3-4만원
+월 매출: 450-840만원
+순이익률: 15-20%
+월 순수익: 70-170만원
+
+[숙련자 - 1년차]
+일 평균 주문: 10-15건
+건당 평균 수익: 3-5만원
+월 매출: 900-2,250만원
+순이익률: 15-20%
+월 순수익: 150-450만원
+                </pre>
+            </div>
+            
+            <h3>1.2.1 초기 투자 비용</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>최소 비용</th>
+                        <th>권장 비용</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>사업자 등록</td>
+                        <td>4,800원</td>
+                        <td>4,800원</td>
+                        <td>수입인지대</td>
+                    </tr>
+                    <tr>
+                        <td>통신판매업 신고</td>
+                        <td>0원</td>
+                        <td>0원</td>
+                        <td>온라인 신고</td>
+                    </tr>
+                    <tr>
+                        <td>운영자금</td>
+                        <td>100만원</td>
+                        <td>300만원</td>
+                        <td>초기 상품 구매</td>
+                    </tr>
+                    <tr>
+                        <td>온라인몰 구축</td>
+                        <td>0원</td>
+                        <td>30만원</td>
+                        <td>네이버 스마트스토어 무료</td>
+                    </tr>
+                    <tr>
+                        <td>마케팅 비용</td>
+                        <td>20만원</td>
+                        <td>50만원</td>
+                        <td>초기 광고비</td>
+                    </tr>
+                    <tr>
+                        <td>도구/프로그램</td>
+                        <td>5만원</td>
+                        <td>20만원</td>
+                        <td>번역, 환율 계산기 등</td>
+                    </tr>
+                    <tr>
+                        <td><strong>총 합계</strong></td>
+                        <td><strong>125만원</strong></td>
+                        <td><strong>400만원</strong></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Chapter 2: 중국 시장 완벽 분석 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 2: 중국 시장 완벽 분석</h2>
+            </div>
+            
+            <h2>2.1 중국 전자상거래 생태계</h2>
+            
+            <p>중국은 세계 최대의 전자상거래 시장으로 2023년 기준 15조 위안(약 2,700조원) 규모입니다.</p>
+            
+            <h3>2.1.1 플랫폼별 공략법</h3>
+            
+            <div class="info-box">
+                <h4>🛍️ 타오바오 (淘宝网)</h4>
+                <ul>
+                    <li><strong>특징:</strong> C2C 중심, 최다 상품수</li>
+                    <li><strong>판매자수:</strong> 약 1,000만개</li>
+                    <li><strong>주력:</strong> 의류, 잡화, 전자제품</li>
+                    <li><strong>결제:</strong> 알리페이 에스크로</li>
+                </ul>
+                
+                <h5>타오바오 검색 꿀팁</h5>
+                <table>
+                    <tr>
+                        <th>중국어</th>
+                        <th>의미</th>
+                        <th>활용법</th>
+                    </tr>
+                    <tr>
+                        <td>爆款</td>
+                        <td>베스트셀러</td>
+                        <td>인기상품 검색</td>
+                    </tr>
+                    <tr>
+                        <td>包邮</td>
+                        <td>배송비 포함</td>
+                        <td>무료배송 상품</td>
+                    </tr>
+                    <tr>
+                        <td>正品</td>
+                        <td>정품</td>
+                        <td>정품 필터링</td>
+                    </tr>
+                    <tr>
+                        <td>秒杀</td>
+                        <td>타임세일</td>
+                        <td>할인상품 검색</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="info-box">
+                <h4>🏭 1688 (阿里巴巴)</h4>
+                <ul>
+                    <li><strong>특징:</strong> B2B 도매 전문</li>
+                    <li><strong>최소주문량:</strong> 보통 2-10개</li>
+                    <li><strong>가격:</strong> 타오바오 대비 30-50% 저렴</li>
+                    <li><strong>활용:</strong> 대량 구매, OEM 제작</li>
+                </ul>
+                
+                <h5>1688 가격 협상 전략</h5>
+                <ol>
+                    <li>3개 이상 공급업체 비교 견적</li>
+                    <li>샘플 먼저 구매 후 본 주문</li>
+                    <li>왕왕(旺旺) 메신져로 직접 협상</li>
+                    <li>장기 거래 조건 제시</li>
+                    <li>현금 결제시 5-10% 추가 할인</li>
+                </ol>
+            </div>
+            
+            <div class="info-box">
+            </div>
+            
+            <h3>2.1.2 중국 상품 트렌드 분석</h3>
+            
+            <div class="case-study">
+                <h4>🔥 2024년 핫 아이템</h4>
+                <ul>
+                    <li><strong>샤오미 생태계:</strong> IoT 제품군 (공기청정기, 로봇청소기)</li>
+                    <li><strong>틱톡 인기템:</strong> LED 조명, 미용기기</li>
+                    <li><strong>웨이보 화제품:</strong> 한류 관련 굿즈</li>
+                    <li><strong>더우인 라이브커머스:</strong> 의류, 화장품</li>
+                    <li><strong>빌리빌리 추천:</strong> 피규어, 게임 주변기기</li>
+                </ul>
+            </div>
+            
+            <h2>2.2 중국 배송 시스템</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>배송방법</th>
+                        <th>기간</th>
+                        <th>kg당 요금</th>
+                        <th>장점</th>
+                        <th>단점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>항공특송</td>
+                        <td>3-5일</td>
+                        <td>15-20위안</td>
+                        <td>빠른 배송</td>
+                        <td>높은 비용</td>
+                    </tr>
+                    <tr>
+                        <td>항공일반</td>
+                        <td>7-10일</td>
+                        <td>10-12위안</td>
+                        <td>적당한 속도</td>
+                        <td>보통 비용</td>
+                    </tr>
+                    <tr>
+                        <td>해운특송</td>
+                        <td>15-20일</td>
+                        <td>5-7위안</td>
+                        <td>저렴</td>
+                        <td>느린 배송</td>
+                    </tr>
+                    <tr>
+                        <td>해운일반</td>
+                        <td>30-45일</td>
+                        <td>3-5위안</td>
+                        <td>최저가</td>
+                        <td>매우 느림</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="formula-box">
+                <h4>💰 중국 구매 수익 계산 예시</h4>
+                <pre>
+상품: 무선 이어폰
+1688 구매가: 25위안 (약 4,500원)
+최소 주문: 10개
+배송비(항공): 2kg × 12위안 = 24위안 (4,320원)
+관세: 면세 (150달러 이하)
+
+단가: (250위안 + 24위안) ÷ 10 = 27.4위안
+원가: 27.4 × 180원 = 4,932원
+판매가: 15,000원
+수익: 10,068원 (20-30% 마진)
+                </pre>
+            </div>
+        </div>
+        
+        <!-- Chapter 3: 일본 시장 완벽 분석 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 3: 일본 시장 완벽 분석</h2>
+            </div>
+            
+            <h2>3.1 일본 전자상거래 시장 구조</h2>
+            
+            <p>일본의 EC(전자상거래) 시장은 2023년 기준 약 23조엔(약 230조원) 규모로, 아시아에서 중국 다음으로 큰 시장입니다.</p>
+            
+            <h3>3.1.1 주요 플랫폼별 특징</h3>
+            
+            <div class="info-box">
+                <h4>🛍️ 타오바오 (淘宝网)</h4>
+                <ul>
+                    <li><strong>특징:</strong> C2C 중심, 최다 상품수</li>
+                    <li><strong>판매자수:</strong> 약 1,000만개</li>
+                    <li><strong>주력:</strong> 의류, 잡화, 전자제품</li>
+                    <li><strong>결제:</strong> 알리페이 에스크로</li>
+                </ul>
+                
+                <h5>타오바오 검색 꿀팁</h5>
+                <table>
+                    <tr>
+                        <th>중국어</th>
+                        <th>의미</th>
+                        <th>활용법</th>
+                    </tr>
+                    <tr>
+                        <td>爆款</td>
+                        <td>베스트셀러</td>
+                        <td>인기상품 검색</td>
+                    </tr>
+                    <tr>
+                        <td>包邮</td>
+                        <td>배송비 포함</td>
+                        <td>무료배송 상품</td>
+                    </tr>
+                    <tr>
+                        <td>正品</td>
+                        <td>정품</td>
+                        <td>정품 필터링</td>
+                    </tr>
+                    <tr>
+                        <td>秒杀</td>
+                        <td>타임세일</td>
+                        <td>할인상품 검색</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="info-box">
+                <h4>🏭 1688 (阿里巴巴)</h4>
+                <ul>
+                    <li><strong>특징:</strong> B2B 도매 전문</li>
+                    <li><strong>최소주문량:</strong> 보통 2-10개</li>
+                    <li><strong>가격:</strong> 타오바오 대비 30-50% 저렴</li>
+                    <li><strong>활용:</strong> 대량 구매, OEM 제작</li>
+                </ul>
+                
+                <h5>1688 가격 협상 전략</h5>
+                <ol>
+                    <li>3개 이상 공급업체 비교 견적</li>
+                    <li>샘플 먼저 구매 후 본 주문</li>
+                    <li>왕왕(旺旺) 메신저로 직접 협상</li>
+                    <li>장기 거래 조건 제시</li>
+                    <li>현금 결제시 5-10% 추가 할인</li>
+                </ol>
+            </div>
+            
+            <h3>3.1.2 중국 상품 트렌드 분석</h3>
+            
+            <div class="case-study">
+                <h4>🔥 2024년 핫 아이템</h4>
+                <ul>
+                    <li><strong>샤오미 생태계:</strong> IoT 제품군 (공기청정기, 로봇청소기)</li>
+                    <li><strong>틱톡 인기템:</strong> LED 조명, 미용기기</li>
+                    <li><strong>웨이보 화제품:</strong> 한류 관련 굿즈</li>
+                    <li><strong>더우인 라이브커머스:</strong> 의류, 화장품</li>
+                    <li><strong>빌리빌리 추천:</strong> 피규어, 게임 주변기기</li>
+                </ul>
+            </div>
+            
+            <h2>3.2 일본 배송대행 서비스 완벽 가이드</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>배송방법</th>
+                        <th>기간</th>
+                        <th>kg당 요금</th>
+                        <th>장점</th>
+                        <th>단점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>항공특송</td>
+                        <td>3-5일</td>
+                        <td>15-20위안</td>
+                        <td>빠른 배송</td>
+                        <td>높은 비용</td>
+                    </tr>
+                    <tr>
+                        <td>항공일반</td>
+                        <td>7-10일</td>
+                        <td>10-12위안</td>
+                        <td>적당한 속도</td>
+                        <td>보통 비용</td>
+                    </tr>
+                    <tr>
+                        <td>해운특송</td>
+                        <td>15-20일</td>
+                        <td>5-7위안</td>
+                        <td>저렴</td>
+                        <td>느린 배송</td>
+                    </tr>
+                    <tr>
+                        <td>해운일반</td>
+                        <td>30-45일</td>
+                        <td>3-5위안</td>
+                        <td>최저가</td>
+                        <td>매우 느림</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="formula-box">
+                <h4>💰 중국 구매 수익 계산 예시</h4>
+                <pre>
+상품: 무선 이어폰
+1688 구매가: 25위안 (약 4,500원)
+최소 주문: 10개
+배송비(항공): 2kg × 12위안 = 24위안 (4,320원)
+관세: 면세 (150달러 이하)
+
+단가: (250위안 + 24위안) ÷ 10 = 27.4위안
+원가: 27.4 × 180원 = 4,932원
+판매가: 15,000원
+수익: 10,068원 (20-30% 마진)
+                </pre>
+            </div>
+        </div>
+        
+        <!-- Chapter 4: 사업 준비 체크리스트 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 4: 사업 준비 체크리스트</h2>
+            </div>
+            
+            <h2>4.1 법적 요건 준비</h2>
+            
+            <div class="info-box">
+                <h3>📋 필수 준비사항</h3>
+                
+                <h4><span class="step-number">1</span>사업자 등록</h4>
+                <ul class="checklist">
+                    <li>홈택스에서 온라인 신청 가능</li>
+                    <li>필요서류: 신분증, 임대차계약서</li>
+                    <li>처리기간: 즉시 ~ 3일</li>
+                    <li>비용: 수입인지 4,800원</li>
+                </ul>
+                
+                <h4><span class="step-number">2</span>통신판매업 신고</h4>
+                <ul class="checklist">
+                    <li>관할 구청 온라인 신청</li>
+                    <li>필요서류: 사업자 등록증</li>
+                    <li>처리기간: 3-7일</li>
+                    <li>비용: 무료</li>
+                </ul>
+                
+                <h4><span class="step-number">3</span>개인통관고유부호</h4>
+                <ul class="checklist">
+                    <li>관세청 유니패스 신청</li>
+                    <li>본인인증 후 즉시 발급</li>
+                    <li>유효기간: 3년</li>
+                    <li>비용: 무료</li>
+                </ul>
+            </div>
+            
+            <h3>4.1.1 사업 형태별 장단점</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>개인사업자</th>
+                        <th>법인사업자</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>설립비용</td>
+                        <td>5만원 이하</td>
+                        <td>100만원 이상</td>
+                    </tr>
+                    <tr>
+                        <td>세율</td>
+                        <td>6-45% (누진)</td>
+                        <td>10-25% (법인세)</td>
+                    </tr>
+                    <tr>
+                        <td>책임범위</td>
+                        <td>무한책임</td>
+                        <td>유한책임</td>
+                    </tr>
+                    <tr>
+                        <td>신용도</td>
+                        <td>보통</td>
+                        <td>높음</td>
+                    </tr>
+                    <tr>
+                        <td>추천시점</td>
+                        <td>연매출 5억 미만</td>
+                        <td>연매출 5억 이상</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>4.2 온라인 판매 채널 구축</h2>
+            
+            <div class="success-box">
+                <h3>🛒 추천 판매 채널 (초보자)</h3>
+                
+                <h4>1순위: 네이버 스마트스토어</h4>
+                <ul>
+                    <li>수수료: 2-5.85% (카테고리별)</li>
+                    <li>정산: D+1 (다음날)</li>
+                    <li>트래픽: 네이버 쇼핑 노출</li>
+                    <li>초기비용: 0원</li>
+                </ul>
+                
+                <h4>2순위: 쿠팡 윙</h4>
+                <ul>
+                    <li>수수료: 4.3-10.8%</li>
+                    <li>정산: 주 2회</li>
+                    <li>트래픽: 로켓배송 연계</li>
+                    <li>초기비용: 0원</li>
+                </ul>
+                
+                <h4>3순위: 11번가</h4>
+                <ul>
+                    <li>수수료: 7-13%</li>
+                    <li>정산: 월 3회</li>
+                    <li>트래픽: SK 포인트 연계</li>
+                    <li>초기비용: 0원</li>
+                </ul>
+            </div>
+            
+            <h3>4.2.1 스마트스토어 최적화 전략</h3>
+            
+            <div class="case-study">
+                <h4>💡 매출 상승 필수 설정</h4>
+                <ol>
+                    <li><strong>스토어 등급 관리</strong>
+                        <ul>
+                            <li>파워등급 달성 목표 (월 50건 이상)</li>
+                            <li>빅파워 진입시 수수료 0.5% 할인</li>
+                        </ul>
+                    </li>
+                    <li><strong>네이버페이 혜택</strong>
+                        <ul>
+                            <li>최대 5% 적립 설정</li>
+                            <li>충성고객 추가 적립</li>
+                        </ul>
+                    </li>
+                    <li><strong>톡톡 상담</strong>
+                        <ul>
+                            <li>자동응답 설정</li>
+                            <li>평균 응답시간 10분 이내</li>
+                        </ul>
+                    </li>
+                    <li><strong>쇼핑라이브</strong>
+                        <ul>
+                            <li>주 1회 정기 방송</li>
+                            <li>평균 전환율 2-3% 상승</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <h2>4.3 초기 운영 자금 계획</h2>
+            
+            <div class="formula-box">
+                <h4>💰 월별 자금 운용 계획 (초기 6개월)</h4>
+                <pre>
+[1개월차] 총 150만원
+- 상품 구매: 100만원 (10-15개 품목)
+- 마케팅: 30만원 (키워드 광고)
+- 운영비: 20만원 (포장재, 배송비)
+
+[2개월차] 총 200만원
+- 상품 구매: 150만원 (재구매 + 신규)
+- 마케팅: 30만원
+- 운영비: 20만원
+
+[3개월차] 총 250만원
+- 상품 구매: 200만원 (베스트셀러 집중)
+- 마케팅: 30만원
+- 운영비: 20만원
+
+[4-6개월차]
+- 매출의 15-20%를 재투자
+- 월 순익 100만원 목표
+- 흑자 전환 시점
+                </pre>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ 자금 관리 주의사항</h4>
+                <ul>
+                    <li>매출과 별도로 3개월 운영비 확보</li>
+                    <li>환율 변동 대비 10% 여유자금</li>
+                    <li>시즌 특수 대비 재고 자금</li>
+                    <li>반품/교환 대비 예비비 20%</li>
+                    <li>세금 납부용 별도 적립 (매출의 10%)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 5: 초기 자본 계획과 ROI -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 5: 초기 자본 계획과 ROI</h2>
+            </div>
+            
+            <h2>5.1 투자 대비 수익률 분석</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>투자금</th>
+                        <th>예상 월매출</th>
+                        <th>순이익률</th>
+                        <th>월 순수익</th>
+                        <th>투자회수기간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100만원</td>
+                        <td>300-500만원</td>
+                        <td>25%</td>
+                        <td>75-125만원</td>
+                        <td>1개월</td>
+                    </tr>
+                    <tr>
+                        <td>300만원</td>
+                        <td>800-1,200만원</td>
+                        <td>30%</td>
+                        <td>240-360만원</td>
+                        <td>1개월</td>
+                    </tr>
+                    <tr>
+                        <td>500만원</td>
+                        <td>1,500-2,000만원</td>
+                        <td>35%</td>
+                        <td>525-700만원</td>
+                        <td>1개월</td>
+                    </tr>
+                    <tr>
+                        <td>1,000만원</td>
+                        <td>3,000-4,000만원</td>
+                        <td>35%</td>
+                        <td>1,050-1,400만원</td>
+                        <td>1개월</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>5.1.1 단계별 성장 전략</h3>
+            
+            <div class="info-box">
+                <h4>📈 3-6-12 성장 로드맵</h4>
+                
+                <h5>3개월: 기반 구축</h5>
+                <ul class="checklist">
+                    <li>베스트셀러 3-5개 확보</li>
+                    <li>월 50건 이상 거래</li>
+                    <li>고객 DB 100명 구축</li>
+                    <li>월 매출 500만원 달성</li>
+                </ul>
+                
+                <h5>6개월: 안정화</h5>
+                <ul class="checklist">
+                    <li>상품군 20-30개로 확대</li>
+                    <li>월 150건 거래</li>
+                    <li>재구매율 30% 달성</li>
+                    <li>월 매출 1,500만원</li>
+                </ul>
+                
+                <h5>12개월: 규모화</h5>
+                <ul class="checklist">
+                    <li>자체 브랜드 런칭</li>
+                    <li>월 300건 이상</li>
+                    <li>팀원 1-2명 고용</li>
+                    <li>월 매출 3,000만원</li>
+                </ul>
+            </div>
+            
+            <h2>5.2 리스크 관리</h2>
+            
+            <div class="warning-box">
+                <h3>🚨 주요 리스크와 대응방안</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>리스크</th>
+                            <th>발생확률</th>
+                            <th>영향도</th>
+                            <th>대응방안</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>환율 급등</td>
+                            <td>중</td>
+                            <td>높음</td>
+                            <td>선물환 계약, 가격 조정</td>
+                        </tr>
+                        <tr>
+                            <td>재고 적체</td>
+                            <td>중</td>
+                            <td>중</td>
+                            <td>시즌별 기획, 할인 판매</td>
+                        </tr>
+                        <tr>
+                            <td>배송 지연</td>
+                            <td>낮음</td>
+                            <td>높음</td>
+                            <td>복수 배대지 운영</td>
+                        </tr>
+                        <tr>
+                            <td>통관 문제</td>
+                            <td>낮음</td>
+                            <td>중</td>
+                            <td>사전 확인, 서류 준비</td>
+                        </tr>
+                        <tr>
+                            <td>품질 클레임</td>
+                            <td>중</td>
+                            <td>중</td>
+                            <td>검품 강화, 보험 가입</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>5.2.1 보험 및 보증</h3>
+            
+            <div class="info-box">
+                <h4>🛡️ 필수 가입 보험</h4>
+                <ul>
+                    <li><strong>전자상거래 배상책임보험</strong>
+                        <ul>
+                            <li>보상한도: 1억원</li>
+                            <li>연 보험료: 30-50만원</li>
+                            <li>가입처: 서울보증보험</li>
+                        </ul>
+                    </li>
+                    <li><strong>제조물책임보험 (PL보험)</strong>
+                        <ul>
+                            <li>보상한도: 1억원</li>
+                            <li>연 보험료: 50-100만원</li>
+                            <li>필수품목: 전자제품, 유아용품</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="case-study">
+                <h3>💼 실제 사례: A씨의 6개월 성장기</h3>
+                
+                <h4>초기 조건</h4>
+                <ul>
+                    <li>시작 자본: 200만원</li>
+                    <li>주력 상품: 일본 피규어, 문구</li>
+                    <li>판매 채널: 스마트스토어</li>
+                </ul>
+                
+                <h4>월별 실적</h4>
+                <table>
+                    <tr>
+                        <th>월</th>
+                        <th>매출</th>
+                        <th>순익</th>
+                        <th>누적순익</th>
+                    </tr>
+                    <tr>
+                        <td>1개월</td>
+                        <td>180만원</td>
+                        <td>-20만원</td>
+                        <td>-20만원</td>
+                    </tr>
+                    <tr>
+                        <td>2개월</td>
+                        <td>350만원</td>
+                        <td>52만원</td>
+                        <td>32만원</td>
+                    </tr>
+                    <tr>
+                        <td>3개월</td>
+                        <td>580만원</td>
+                        <td>145만원</td>
+                        <td>177만원</td>
+                    </tr>
+                    <tr>
+                        <td>4개월</td>
+                        <td>820만원</td>
+                        <td>246만원</td>
+                        <td>423만원</td>
+                    </tr>
+                    <tr>
+                        <td>5개월</td>
+                        <td>1,100만원</td>
+                        <td>385만원</td>
+                        <td>808만원</td>
+                    </tr>
+                    <tr>
+                        <td>6개월</td>
+                        <td>1,450만원</td>
+                        <td>507만원</td>
+                        <td>1,315만원</td>
+                    </tr>
+                </table>
+                
+                <h4>성공 요인</h4>
+                <ul class="checklist">
+                    <li>트렌드 상품 빠른 소싱 (원피스 신작 피규어)</li>
+                    <li>예약판매로 재고 리스크 제거</li>
+                    <li>SNS 마케팅 집중 (인스타그램 1만 팔로워)</li>
+                    <li>VIP 고객 관리 (상위 20% 고객이 매출 60%)</li>
+                    <li>묶음 배송으로 배송비 절감</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 페이지 푸터 -->
+        <div class="page" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <h2>Part 1 완료</h2>
+                <p style="font-size: 1.2em; margin-top: 20px;">다음: Part 2 - 실전편</p>
+                <p style="margin-top: 40px;">총 80페이지 중 80페이지 완료</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

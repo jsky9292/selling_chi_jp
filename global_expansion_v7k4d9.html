@@ -438,7 +438,7 @@ ROI: =(C1-D1-M1)/D1*100
 
 ■ 진행률 시각화
 진행 막대: =REPT("█",INT(D32/B1*20))&REPT("░",20-INT(D32/B1*20))
-퍼센트: =TEXT(D32/B1,"0%")
+%: =TEXT(D32/B1,"0%")
                 </pre>
                 <a href="#" class="download-btn">📥 엑셀 파일 다운로드</a>
             </div>
@@ -828,7 +828,7 @@ class ExchangeRateMonitor:
         self.api_key = "YOUR_API_KEY"  # exchangerate-api.com
         self.base_url = "https://v6.exchangerate-api.com/v6"
         self.target_rates = {
-            'JPY': {'target': 9.5, 'direction': 'below'},  # 엔화 9.5원 이하
+            'JPY': {'target': 9.5, 'direction': 'below'},  # 엔 9.5원 이하
             'CNY': {'target': 185, 'direction': 'below'}    # 위안 185원 이하
         }
         

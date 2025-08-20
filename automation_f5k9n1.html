@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>일본/중국 구매대행 완전정복 가이드 - Part 5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #0891b2;
+            --accent-color: #dc2626;
+            --dark-color: #1e293b;
+            --success-color: #16a34a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .ebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .page {
+            padding: 60px;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        .chapter-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            margin: -60px -60px 40px -60px;
+            text-align: center;
+        }
+        
+        .tool-card {
+            background: linear-gradient(135deg, #e0f2fe, #ddd6fe);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #7c3aed;
+        }
+        
+        .automation-flow {
+            background: #f8fafc;
+            padding: 20px;
+            border: 2px dashed #64748b;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .roi-calculator {
+            background: #ecfdf5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ebook-container">
+        
+        <!-- Chapter 19: 업무 자동화 도구 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h1 style="color: white; border: none;">Part 5: 자동화편</h1>
+                <h2 style="color: white;">Chapter 19: 업무 자동화 도구</h2>
+            </div>
+            
+            <h2>19.1 필수 자동화 도구</h2>
+            
+            <div class="tool-card">
+                <h3>🤖 주문 처리 자동화</h3>
+                
+                <h4>플랫폼 연동 도구</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>도구명</th>
+                            <th>기능</th>
+                            <th>가격</th>
+                            <th>효과</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>셀러킷</td>
+                            <td>멀티채널 통합관리</td>
+                            <td>월 3.9만원</td>
+                            <td>시간 70% 절감</td>
+                        </tr>
+                        <tr>
+                            <td>플레이오토</td>
+                            <td>재고/주문 자동화</td>
+                            <td>월 5만원</td>
+                            <td>실수 90% 감소</td>
+                        </tr>
+                        <tr>
+                            <td>이셀러스</td>
+                            <td>상품등록 자동화</td>
+                            <td>월 2.9만원</td>
+                            <td>등록시간 80% 단축</td>
+                        </tr>
+                        <tr>
+                            <td>사방넷</td>
+                            <td>통합 물류관리</td>
+                            <td>월 10만원</td>
+                            <td>배송오류 95% 감소</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>19.1.1 자동화 워크플로우</h3>
+            
+            <div class="automation-flow">
+                <h4>📋 일일 업무 자동화 시나리오</h4>
+                
+                <ol>
+                    <li><strong>오전 9시: 주문 수집</strong>
+                        <ul>
+                            <li>전 채널 주문 자동 수집</li>
+                            <li>중복 주문 필터링</li>
+                            <li>우선순위 자동 정렬</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>오전 10시: 해외 발주</strong>
+                        <ul>
+                            <li>재고 확인 후 자동 발주</li>
+                            <li>최저가 판매처 선택</li>
+                            <li>결제 자동 처리</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>오후 2시: 배송 처리</strong>
+                        <ul>
+                            <li>운송장 자동 발급</li>
+                            <li>고객 알림 발송</li>
+                            <li>추적 정보 업데이트</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>오후 5시: 리포트 생성</strong>
+                        <ul>
+                            <li>일일 매출 리포트</li>
+                            <li>재고 현황 보고서</li>
+                            <li>CS 이슈 정리</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <h2>19.2 가격 모니터링</h2>
+            
+            <div class="tool-card">
+                <h3>💰 실시간 가격 추적</h3>
+                
+                <h4>환율 자동 반영 시스템</h4>
+                <div class="code-block">
+                <pre>
+// 환율 API 연동 예시
+const updatePrices = async () => {
+    const exchangeRate = await getExchangeRate('JPY');
+    const products = await getProducts();
+    
+    products.forEach(product => {
+        const krwPrice = product.jpyPrice * exchangeRate;
+        const sellPrice = krwPrice * 1.3; // 30% 마진
+        updateProductPrice(product.id, sellPrice);
+    });
+};
+
+// 매일 오전 8시 실행
+schedule.daily('08:00', updatePrices);
+                </pre>
+                </div>
+                
+                <h4>경쟁사 가격 모니터링</h4>
+                <ul>
+                    <li>주요 경쟁사 5곳 실시간 추적</li>
+                    <li>가격 변동시 즉시 알림</li>
+                    <li>자동 가격 매칭 옵션</li>
+                    <li>최저가 보장 자동 적용</li>
+                </ul>
+            </div>
+            
+            <h3>19.2.1 동적 가격 책정</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>시간대</th>
+                        <th>수요</th>
+                        <th>가격조정</th>
+                        <th>전환율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00-06시</td>
+                        <td>최저</td>
+                        <td>-5%</td>
+                        <td>1.5%</td>
+                    </tr>
+                    <tr>
+                        <td>06-12시</td>
+                        <td>보통</td>
+                        <td>0%</td>
+                        <td>2.5%</td>
+                    </tr>
+                    <tr>
+                        <td>12-18시</td>
+                        <td>높음</td>
+                        <td>+3%</td>
+                        <td>3.0%</td>
+                    </tr>
+                    <tr>
+                        <td>18-24시</td>
+                        <td>최고</td>
+                        <td>+5%</td>
+                        <td>4.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Chapter 20: 데이터 분석과 최적화 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 20: 데이터 분석과 최적화</h2>
+            </div>
+            
+            <h2>20.1 핵심 성과 지표(KPI)</h2>
+            
+            <div class="roi-calculator">
+                <h3>📊 필수 추적 지표</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>KPI</th>
+                            <th>계산식</th>
+                            <th>목표값</th>
+                            <th>개선방법</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>전환율</td>
+                            <td>구매수/방문수×100</td>
+                            <td>3% 이상</td>
+                            <td>상품설명 개선</td>
+                        </tr>
+                        <tr>
+                            <td>객단가</td>
+                            <td>총매출/주문수</td>
+                            <td>10만원 이상</td>
+                            <td>번들상품 제공</td>
+                        </tr>
+                        <tr>
+                            <td>재구매율</td>
+                            <td>재구매고객/전체×100</td>
+                            <td>30% 이상</td>
+                            <td>CRM 강화</td>
+                        </tr>
+                        <tr>
+                            <td>반품률</td>
+                            <td>반품수/판매수×100</td>
+                            <td>5% 이하</td>
+                            <td>검품 강화</td>
+                        </tr>
+                        <tr>
+                            <td>재고회전율</td>
+                            <td>판매원가/평균재고</td>
+                            <td>월 4회 이상</td>
+                            <td>수요예측 개선</td>
+                        </tr>
+                        <tr>
+                            <td>ROAS</td>
+                            <td>광고매출/광고비</td>
+                            <td>400% 이상</td>
+                            <td>타겟팅 최적화</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>20.1.1 대시보드 구축</h3>
+            
+            <div class="tool-card">
+                <h4>📈 실시간 모니터링 대시보드</h4>
+                
+                <h5>Google Analytics 설정</h5>
+                <ul>
+                    <li>Enhanced E-commerce 활성화</li>
+                    <li>목표 전환 설정</li>
+                    <li>사용자 세그먼트 구성</li>
+                    <li>맞춤 보고서 생성</li>
+                </ul>
+                
+                <h5>주요 추적 이벤트</h5>
+                <ol>
+                    <li>상품 조회 (product_view)</li>
+                    <li>장바구니 추가 (add_to_cart)</li>
+                    <li>결제 시작 (begin_checkout)</li>
+                    <li>구매 완료 (purchase)</li>
+                    <li>재구매 (repeat_purchase)</li>
+                </ol>
+            </div>
+            
+            <h2>20.2 A/B 테스트</h2>
+            
+            <div class="automation-flow">
+                <h3>🔬 최적화 실험 가이드</h3>
+                
+                <h4>테스트 우선순위</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>테스트 항목</th>
+                            <th>영향도</th>
+                            <th>난이도</th>
+                            <th>권장기간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>상품 제목</td>
+                            <td>높음</td>
+                            <td>낮음</td>
+                            <td>1주</td>
+                        </tr>
+                        <tr>
+                            <td>가격 표시</td>
+                            <td>높음</td>
+                            <td>낮음</td>
+                            <td>2주</td>
+                        </tr>
+                        <tr>
+                            <td>상품 이미지</td>
+                            <td>매우높음</td>
+                            <td>중간</td>
+                            <td>2주</td>
+                        </tr>
+                        <tr>
+                            <td>CTA 버튼</td>
+                            <td>중간</td>
+                            <td>낮음</td>
+                            <td>1주</td>
+                        </tr>
+                        <tr>
+                            <td>배송 정보</td>
+                            <td>중간</td>
+                            <td>낮음</td>
+                            <td>1주</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>성공 사례</h4>
+                <ul>
+                    <li>"무료배송" → "✈️ 항공특송 무료" : 전환율 +23%</li>
+                    <li>가격 끝자리 900원 → 800원 : 구매율 +15%</li>
+                    <li>상품사진 9장 → 15장 : 체류시간 +40%</li>
+                    <li>리뷰 상단배치 : 신뢰도 +35%</li>
+                </ul>
+            </div>
+            
+            <h3>20.2.1 데이터 기반 의사결정</h3>
+            
+            <div class="roi-calculator">
+                <h4>💡 의사결정 프레임워크</h4>
+                
+                <ol>
+                    <li><strong>데이터 수집</strong>
+                        <ul>
+                            <li>최소 2주간 데이터</li>
+                            <li>통계적 유의성 확보</li>
+                            <li>외부 변수 통제</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>가설 설정</strong>
+                        <ul>
+                            <li>명확한 목표 설정</li>
+                            <li>측정 가능한 지표</li>
+                            <li>예상 결과 명시</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>실험 실행</strong>
+                        <ul>
+                            <li>A/B 그룹 랜덤 배정</li>
+                            <li>충분한 샘플 확보</li>
+                            <li>실시간 모니터링</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>결과 분석</strong>
+                        <ul>
+                            <li>통계적 검증</li>
+                            <li>비즈니스 임팩트 계산</li>
+                            <li>롤아웃 계획 수립</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- 마무리 -->
+        <div class="page">
+            <div class="chapter-header" style="height: 100vh; margin: -60px; display: flex; flex-direction: column; justify-content: center;">
+                <h1 style="color: white; border: none; font-size: 3em;">축하합니다!</h1>
+                <p style="font-size: 1.5em; margin-top: 30px;">
+                    일본/중국 구매대행 완전정복 가이드를<br>
+                    모두 마치셨습니다.
+                </p>
+                <p style="font-size: 1.2em; margin-top: 40px;">
+                    이제 당신은 성공적인 구매대행 사업을<br>
+                    시작할 모든 준비가 되었습니다.
+                </p>
+                <div style="margin-top: 60px; padding: 30px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <h3 style="color: white;">Remember:</h3>
+                    <p style="font-size: 1.1em; line-height: 1.8;">
+                        "시작이 반이다"<br>
+                        지금 바로 첫 걸음을 내딛으세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

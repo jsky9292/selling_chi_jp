@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>일본/중국 구매대행 완전정복 가이드 - Part 4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #0891b2;
+            --accent-color: #dc2626;
+            --dark-color: #1e293b;
+            --success-color: #16a34a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .ebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .page {
+            padding: 60px;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        .chapter-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            margin: -60px -60px 40px -60px;
+            text-align: center;
+        }
+        
+        .legal-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .tax-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        .tax-table th {
+            background: #059669;
+            color: white;
+            padding: 12px;
+        }
+        
+        .tax-table td {
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .document-checklist {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .formula-box {
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ebook-container">
+        
+        <!-- Chapter 15: 사업자 등록과 신고 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h1 style="color: white; border: none;">Part 4: 법무/세무편</h1>
+                <h2 style="color: white;">Chapter 15: 사업자 등록과 신고</h2>
+            </div>
+            
+            <h2>15.1 사업자 등록 완벽 가이드</h2>
+            
+            <div class="document-checklist">
+                <h3>📋 필수 준비서류</h3>
+                
+                <h4>개인사업자</h4>
+                <ul>
+                    <li>사업자 등록신청서 (홈택스 자동작성)</li>
+                    <li>신분증 사본</li>
+                    <li>사업장 임대차계약서</li>
+                    <li>임대차계약서가 없는 경우:
+                        <ul>
+                            <li>자가: 건물등기부등본</li>
+                            <li>무상임대: 무상임대확인서</li>
+                            <li>주택: 주민등록등본</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>온라인 신청 절차</h4>
+                <ol>
+                    <li>홈택스(www.hometax.go.kr) 접속</li>
+                    <li>사업자 등록 신청 메뉴 선택</li>
+                    <li>업종코드 입력: 47911 (전자상거래 소매업)</li>
+                    <li>상호명 입력 (중복확인 필수)</li>
+                    <li>사업장 주소 입력</li>
+                    <li>서류 첨부 및 제출</li>
+                    <li>3일 이내 승인 (즉시발급 가능)</li>
+                </ol>
+            </div>
+            
+            <h3>15.1.1 통신판매업 신고</h3>
+            
+            <table class="tax-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>신고처</th>
+                        <th>필요서류</th>
+                        <th>처리기간</th>
+                        <th>수수료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>통신판매업</td>
+                        <td>관할 구청</td>
+                        <td>사업자 등록증</td>
+                        <td>7일</td>
+                        <td>무료</td>
+                    </tr>
+                    <tr>
+                        <td>전자상거래</td>
+                        <td>온라인</td>
+                        <td>신분증</td>
+                        <td>즉시</td>
+                        <td>무료</td>
+                    </tr>
+                    <tr>
+                        <td>수입업</td>
+                        <td>관세청</td>
+                        <td>사업자 등록증</td>
+                        <td>3일</td>
+                        <td>무료</td>
+                    </tr>
+                    <tr>
+                        <td>개인통관부호</td>
+                        <td>유니패스</td>
+                        <td>본인인증</td>
+                        <td>즉시</td>
+                        <td>무료</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>15.2 필수 인허가 사항</h2>
+            
+            <div class="legal-box">
+                <h3>⚠️ 품목별 필수 인허가</h3>
+                
+                <h4>식품 수입판매</h4>
+                <ul>
+                    <li>수입식품등 수입판매업 신고</li>
+                    <li>신고처: 지방식약청</li>
+                    <li>처리기간: 7-14일</li>
+                    <li>구비서류: 사업자 등록증, 보관시설 증명</li>
+                </ul>
+                
+                <h4>화장품 수입판매</h4>
+                <ul>
+                    <li>화장품 책임판매업 등록</li>
+                    <li>신고처: 대한화장품협회</li>
+                    <li>교육이수: 8시간 (온라인 가능)</li>
+                    <li>등록비: 10만원</li>
+                </ul>
+                
+                <h4>의료기기 수입판매</h4>
+                <ul>
+                    <li>의료기기 판매업 신고</li>
+                    <li>신고처: 한국의료기기안전정보원</li>
+                    <li>품목별 허가 필요</li>
+                    <li>품질관리자 지정 필수</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 16: 세금 신고 실무 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 16: 세금 신고 실무</h2>
+            </div>
+            
+            <h2>16.1 부가가치세 신고</h2>
+            
+            <div class="formula-box">
+                <h3>💰 부가세 계산법</h3>
+                <pre>
+매출 부가세 = 총 매출액 × 10%
+매입 부가세 = 총 매입액 × 10%
+납부할 부가세 = 매출 부가세 - 매입 부가세
+
+예시 계산:
+분기 매출: 3,000만원
+매출 부가세: 300만원
+매입액: 2,000만원  
+매입 부가세: 200만원
+납부액: 100만원
+                </pre>
+            </div>
+            
+            <h3>16.1.1 분기별 신고 일정</h3>
+            
+            <table class="tax-table">
+                <thead>
+                    <tr>
+                        <th>분기</th>
+                        <th>과세기간</th>
+                        <th>신고기한</th>
+                        <th>납부기한</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1분기</td>
+                        <td>1.1 - 3.31</td>
+                        <td>4.25</td>
+                        <td>4.25</td>
+                    </tr>
+                    <tr>
+                        <td>2분기</td>
+                        <td>4.1 - 6.30</td>
+                        <td>7.25</td>
+                        <td>7.25</td>
+                    </tr>
+                    <tr>
+                        <td>3분기</td>
+                        <td>7.1 - 9.30</td>
+                        <td>10.25</td>
+                        <td>10.25</td>
+                    </tr>
+                    <tr>
+                        <td>4분기</td>
+                        <td>10.1 - 12.31</td>
+                        <td>1.25</td>
+                        <td>1.25</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>16.2 종합소득세</h2>
+            
+            <div class="document-checklist">
+                <h3>📊 소득세율표 (2024년 기준)</h3>
+                
+                <table class="tax-table">
+                    <thead>
+                        <tr>
+                            <th>과세표준</th>
+                            <th>세율</th>
+                            <th>누진공제</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1,400만원 이하</td>
+                            <td>6%</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>1,400만원 ~ 5,000만원</td>
+                            <td>15%</td>
+                            <td>126만원</td>
+                        </tr>
+                        <tr>
+                            <td>5,000만원 ~ 8,800만원</td>
+                            <td>24%</td>
+                            <td>576만원</td>
+                        </tr>
+                        <tr>
+                            <td>8,800만원 ~ 1.5억원</td>
+                            <td>35%</td>
+                            <td>1,544만원</td>
+                        </tr>
+                        <tr>
+                            <td>1.5억원 ~ 3억원</td>
+                            <td>38%</td>
+                            <td>1,994만원</td>
+                        </tr>
+                        <tr>
+                            <td>3억원 ~ 5억원</td>
+                            <td>40%</td>
+                            <td>2,594만원</td>
+                        </tr>
+                        <tr>
+                            <td>5억원 ~ 10억원</td>
+                            <td>42%</td>
+                            <td>3,594만원</td>
+                        </tr>
+                        <tr>
+                            <td>10억원 초과</td>
+                            <td>45%</td>
+                            <td>6,594만원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>16.2.1 절세 전략</h3>
+            
+            <div class="legal-box">
+                <h4>💡 합법적 절세 방법</h4>
+                
+                <ol>
+                    <li><strong>사업경비 처리</strong>
+                        <ul>
+                            <li>사무실 임대료</li>
+                            <li>인터넷/전화요금</li>
+                            <li>광고비</li>
+                            <li>포장재료비</li>
+                            <li>배송비</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>소득공제</strong>
+                        <ul>
+                            <li>국민연금: 납입액 전액</li>
+                            <li>건강보험: 납입액 전액</li>
+                            <li>개인연금: 연 400만원</li>
+                            <li>IRP: 연 700만원</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>세액공제</strong>
+                        <ul>
+                            <li>신용카드: 사용액의 15-30%</li>
+                            <li>기부금: 기부액의 15%</li>
+                            <li>교육비: 지출액의 15%</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Chapter 17: 통관과 검역 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 17: 통관과 검역</h2>
+            </div>
+            
+            <h2>17.1 수입통관 프로세스</h2>
+            
+            <div class="document-checklist">
+                <h3>🚢 통관 절차 단계별 가이드</h3>
+                
+                <ol>
+                    <li><strong>수입신고</strong>
+                        <ul>
+                            <li>유니패스 전자신고</li>
+                            <li>필요서류: Invoice, Packing List</li>
+                            <li>HS Code 확인</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>세액 산출</strong>
+                        <ul>
+                            <li>관세 = CIF가격 × 관세율</li>
+                            <li>부가세 = (CIF + 관세) × 10%</li>
+                            <li>개별소비세 = 해당품목만</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>검사/검역</strong>
+                        <ul>
+                            <li>서류심사: 70%</li>
+                            <li>X-ray 검사: 20%</li>
+                            <li>현품검사: 10%</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>세금납부</strong>
+                        <ul>
+                            <li>납부기한: 15일</li>
+                            <li>분할납부: 가능 (6개월)</li>
+                            <li>담보제공: 필요시</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <h3>17.1.1 관세율표</h3>
+            
+            <table class="tax-table">
+                <thead>
+                    <tr>
+                        <th>품목</th>
+                        <th>HS Code</th>
+                        <th>관세율</th>
+                        <th>부가세</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>의류</td>
+                        <td>61-62</td>
+                        <td>13%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>가방</td>
+                        <td>4202</td>
+                        <td>8%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>신발</td>
+                        <td>64</td>
+                        <td>13%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>화장품</td>
+                        <td>3304</td>
+                        <td>8%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>장난감</td>
+                        <td>9503</td>
+                        <td>0%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>전자제품</td>
+                        <td>85</td>
+                        <td>0-8%</td>
+                        <td>10%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>17.2 검역 및 인증</h2>
+            
+            <div class="legal-box">
+                <h3>🔍 품목별 필수 인증</h3>
+                
+                <h4>KC 인증 (전기전자제품)</h4>
+                <ul>
+                    <li>대상: 전기용품, 생활용품</li>
+                    <li>비용: 50-200만원</li>
+                    <li>기간: 2-4주</li>
+                    <li>유효기간: 5년</li>
+                </ul>
+                
+                <h4>식품 수입신고</h4>
+                <ul>
+                    <li>대상: 모든 식품</li>
+                    <li>검사: 서류/관능/정밀검사</li>
+                    <li>비용: 10-50만원</li>
+                    <li>기간: 5-10일</li>
+                </ul>
+                
+                <h4>화장품 수입통관</h4>
+                <ul>
+                    <li>사전 성분 신고</li>
+                    <li>한글 표시사항 부착</li>
+                    <li>기능성: 별도 심사</li>
+                    <li>비용: 품목당 5-10만원</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 18: 법적 리스크 관리 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 18: 법적 리스크 관리</h2>
+            </div>
+            
+            <h2>18.1 소비자보호법</h2>
+            
+            <div class="document-checklist">
+                <h3>⚖️ 전자상거래 의무사항</h3>
+                
+                <h4>필수 고지사항</h4>
+                <ul>
+                    <li>사업자 정보 (상호, 대표자, 주소, 연락처)</li>
+                    <li>통신판매업 신고번호</li>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>청약철회 방법 (14일)</li>
+                    <li>배송/반품/교환 정책</li>
+                    <li>분쟁해결 절차</li>
+                </ul>
+                
+                <h4>상품정보 제공 의무</h4>
+                <ul>
+                    <li>품명 및 모델명</li>
+                    <li>원산지</li>
+                    <li>제조사/수입자</li>
+                    <li>KC 인증정보</li>
+                    <li>A/S 책임자와 전화번호</li>
+                    <li>품질보증기준</li>
+                </ul>
+            </div>
+            
+            <h3>18.1.1 청약철회 규정</h3>
+            
+            <table class="tax-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>기간</th>
+                        <th>조건</th>
+                        <th>예외사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>일반상품</td>
+                        <td>7일</td>
+                        <td>단순변심</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>통신판매</td>
+                        <td>14일</td>
+                        <td>무조건</td>
+                        <td>훼손시 불가</td>
+                    </tr>
+                    <tr>
+                        <td>내용불일치</td>
+                        <td>3개월</td>
+                        <td>허위광고</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>하자</td>
+                        <td>1년</td>
+                        <td>제품하자</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>18.2 지적재산권</h2>
+            
+            <div class="legal-box">
+                <h3>⚠️ 위조품 판매 처벌</h3>
+                
+                <h4>형사처벌</h4>
+                <ul>
+                    <li>상표법 위반: 7년 이하 징역 또는 1억원 이하 벌금</li>
+                    <li>저작권법 위반: 5년 이하 징역 또는 5천만원 이하 벌금</li>
+                    <li>부정경쟁방지법: 3년 이하 징역 또는 3천만원 이하 벌금</li>
+                </ul>
+                
+                <h4>민사책임</h4>
+                <ul>
+                    <li>손해배상: 실손해액 또는 법정손해배상</li>
+                    <li>부당이득 반환</li>
+                    <li>신용회복 조치</li>
+                    <li>침해품 폐기</li>
+                </ul>
+                
+                <h4>행정제재</h4>
+                <ul>
+                    <li>영업정지: 6개월</li>
+                    <li>과징금: 매출액의 3%</li>
+                    <li>사이트 폐쇄</li>
+                    <li>관세법 위반 추징</li>
+                </ul>
+            </div>
+            
+            <h3>18.2.1 정품 확인 방법</h3>
+            
+            <div class="document-checklist">
+                <h4>✅ 정품 인증 체크리스트</h4>
+                <ol>
+                    <li>공식 판매처 확인</li>
+                    <li>정품 인증서 요구</li>
+                    <li>시리얼 넘버 확인</li>
+                    <li>제조사 홈페이지 조회</li>
+                    <li>가격 적정성 검토</li>
+                    <li>판매자 신원 확인</li>
+                    <li>결제 영수증 보관</li>
+                </ol>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

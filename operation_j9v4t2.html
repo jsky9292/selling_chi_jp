@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>일본/중국 구매대행 완전정복 가이드 - Part 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #0891b2;
+            --accent-color: #dc2626;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            --success-color: #16a34a;
+            --warning-color: #ea580c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .ebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .page {
+            padding: 60px;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        .chapter-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            margin: -60px -60px 40px -60px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin: 40px 0 20px;
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin: 30px 0 15px;
+            color: var(--dark-color);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e0f2fe, #e0e7ff);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #f0fdf4;
+            border-left: 4px solid var(--success-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .profit-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .profit-table th {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .profit-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .strategy-card {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #fbbf24;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 30px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ebook-container">
+        
+        <!-- Chapter 6: 수익 구조 설계 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h1 style="color: white; border: none;">Part 2: 실전편</h1>
+                <h2 style="color: white;">Chapter 6: 수익 구조 설계</h2>
+            </div>
+            
+            <h2>6.1 수익 모델 선택</h2>
+            
+            <div class="info-box">
+                <h3>💰 4가지 핵심 수익 모델</h3>
+                
+                <h4>1. 단순 구매대행 (Basic Model)</h4>
+                <ul>
+                    <li>수수료: 상품가의 10-15%</li>
+                    <li>장점: 재고 부담 없음, 리스크 최소</li>
+                    <li>단점: 낮은 마진율</li>
+                    <li>월 목표: 200-300만원</li>
+                </ul>
+                
+                <h4>2. 재고 보유형 (Stock Model)</h4>
+                <ul>
+                    <li>마진율: 30-50%</li>
+                    <li>장점: 높은 수익률, 즉시 배송</li>
+                    <li>단점: 재고 리스크, 초기 자본 필요</li>
+                    <li>월 목표: 500-1,000만원</li>
+                </ul>
+                
+                <h4>3. 예약판매형 (Pre-order Model)</h4>
+                <ul>
+                    <li>마진율: 25-35%</li>
+                    <li>장점: 재고 리스크 제로</li>
+                    <li>단점: 긴 배송 기간</li>
+                    <li>월 목표: 300-500만원</li>
+                </ul>
+                
+                <h4>4. 하이브리드형 (Hybrid Model)</h4>
+                <ul>
+                    <li>마진율: 35-45%</li>
+                    <li>장점: 리스크 분산, 안정적 수익</li>
+                    <li>단점: 복잡한 운영</li>
+                    <li>월 목표: 700-1,500만원</li>
+                </ul>
+            </div>
+            
+            <h3>6.1.1 모델별 상세 수익 분석</h3>
+            
+            <table class="profit-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>단순대행</th>
+                        <th>재고보유</th>
+                        <th>예약판매</th>
+                        <th>하이브리드</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>초기자본</td>
+                        <td>50만원</td>
+                        <td>500만원</td>
+                        <td>100만원</td>
+                        <td>300만원</td>
+                    </tr>
+                    <tr>
+                        <td>회전율</td>
+                        <td>월 2회</td>
+                        <td>월 4회</td>
+                        <td>월 1.5회</td>
+                        <td>월 3회</td>
+                    </tr>
+                    <tr>
+                        <td>평균객단가</td>
+                        <td>10만원</td>
+                        <td>7만원</td>
+                        <td>15만원</td>
+                        <td>10만원</td>
+                    </tr>
+                    <tr>
+                        <td>월거래수</td>
+                        <td>30건</td>
+                        <td>100건</td>
+                        <td>40건</td>
+                        <td>80건</td>
+                    </tr>
+                    <tr>
+                        <td>월매출</td>
+                        <td>300만원</td>
+                        <td>700만원</td>
+                        <td>600만원</td>
+                        <td>800만원</td>
+                    </tr>
+                    <tr>
+                        <td>순이익률</td>
+                        <td>10%</td>
+                        <td>35%</td>
+                        <td>25%</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>월순익</td>
+                        <td>30만원</td>
+                        <td>245만원</td>
+                        <td>150만원</td>
+                        <td>240만원</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>6.2 가격 책정 전략</h2>
+            
+            <div class="strategy-card">
+                <h3>📊 스마트 프라이싱 공식</h3>
+                <pre style="background: white; padding: 15px; border-radius: 5px;">
+판매가 = (상품가 + 국제배송비 + 국내배송비 + 수수료) × 마진율
+
+예시: 일본 피규어
+- 상품가: 3,000엔 (36,000원)
+- 국제배송: 500엔 (6,000원)
+- 국내배송: 3,000원
+- 수수료: 4,500원
+- 원가합계: 49,500원
+- 목표마진: 40%
+- 판매가: 69,300원 → 69,900원 (끝자리 조정)
+                </pre>
+            </div>
+            
+            <h3>6.2.1 경쟁력 있는 가격 설정</h3>
+            
+            <div class="success-box">
+                <h4>✅ 가격 경쟁력 확보 전략</h4>
+                <ol>
+                    <li><strong>묶음 구매 할인</strong>
+                        <ul>
+                            <li>2개: 5% 할인</li>
+                            <li>3개: 8% 할인</li>
+                            <li>5개 이상: 12% 할인</li>
+                        </ul>
+                    </li>
+                    <li><strong>시즌별 가격 조정</strong>
+                        <ul>
+                            <li>성수기: 정가 유지</li>
+                            <li>비수기: 10-15% 할인</li>
+                            <li>재고정리: 20-30% 할인</li>
+                        </ul>
+                    </li>
+                    <li><strong>VIP 등급제</strong>
+                        <ul>
+                            <li>브론즈 (10만원): 3% 할인</li>
+                            <li>실버 (50만원): 5% 할인</li>
+                            <li>골드 (100만원): 8% 할인</li>
+                            <li>플래티넘 (200만원): 12% 할인</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Chapter 7: 상품 소싱 전략 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 7: 상품 소싱 전략</h2>
+            </div>
+            
+            <h2>7.1 트렌드 분석 방법</h2>
+            
+            <div class="info-box">
+                <h3>🔍 실시간 트렌드 파악 도구</h3>
+                
+                <h4>일본 트렌드</h4>
+                <ul>
+                    <li><strong>Yahoo! 리얼타임 검색:</strong> 실시간 급상승 키워드</li>
+                    <li><strong>Twitter 트렌드:</strong> 일본 현지 화제</li>
+                    <li><strong>메루카리 랭킹:</strong> 인기 판매 상품</li>
+                    <li><strong>아마존 JP 베스트셀러:</strong> 카테고리별 1위</li>
+                </ul>
+                
+                <h4>중국 트렌드</h4>
+                <ul>
+                    <li><strong>웨이보 핫서치:</strong> 실시간 이슈</li>
+                    <li><strong>더우인(TikTok):</strong> 바이럴 상품</li>
+                    <li><strong>타오바오 라이브:</strong> 실시간 판매 랭킹</li>
+                    <li><strong>샤오홍슈:</strong> 뷰티/패션 트렌드</li>
+                </ul>
+            </div>
+            
+            <h3>7.1.1 시즌별 필수 소싱 캘린더</h3>
+            
+            <table class="profit-table">
+                <thead>
+                    <tr>
+                        <th>시기</th>
+                        <th>일본 추천상품</th>
+                        <th>중국 추천상품</th>
+                        <th>마진율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-2월</td>
+                        <td>복주머니, 한정 과자</td>
+                        <td>춘절 용품, 홍빠오</td>
+                        <td>45%</td>
+                    </tr>
+                    <tr>
+                        <td>3-4월</td>
+                        <td>벚꽃 상품, 신학기 용품</td>
+                        <td>봄 패션, 화장품</td>
+                        <td>35%</td>
+                    </tr>
+                    <tr>
+                        <td>5-6월</td>
+                        <td>여름 한정판, 수영복</td>
+                        <td>여름 가전, 선풍기</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>7-8월</td>
+                        <td>불꽃놀이 용품, 축제 굿즈</td>
+                        <td>캠핑 용품</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <td>9-10월</td>
+                        <td>할로윈 코스튬, 단풍 상품</td>
+                        <td>가을 패션</td>
+                        <td>35%</td>
+                    </tr>
+                    <tr>
+                        <td>11-12월</td>
+                        <td>크리스마스, 연말 한정</td>
+                        <td>난방 용품, 겨울 의류</td>
+                        <td>50%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>7.2 우량 공급처 발굴</h2>
+            
+            <div class="strategy-card">
+                <h3>💎 검증된 공급처 평가 기준</h3>
+                
+                <h4>일본 셀러 평가</h4>
+                <ul>
+                    <li>평점 4.5 이상 (5점 만점)</li>
+                    <li>판매 이력 1년 이상</li>
+                    <li>부정 평가율 5% 미만</li>
+                    <li>48시간 내 발송률 95% 이상</li>
+                </ul>
+                
+                <h4>중국 셀러 평가</h4>
+                <ul>
+                    <li>다이아몬드 등급 이상</li>
+                    <li>거래 완료 1,000건 이상</li>
+                    <li>반품률 10% 미만</li>
+                    <li>실명 인증 완료</li>
+                </ul>
+            </div>
+            
+            <h3>7.2.1 독점 공급계약 체결</h3>
+            
+            <div class="warning-box">
+                <h4>⚖️ 계약시 필수 확인사항</h4>
+                <ul>
+                    <li>최소 주문 수량 (MOQ)</li>
+                    <li>독점 판매 지역 범위</li>
+                    <li>가격 보호 조항</li>
+                    <li>품질 보증 기간</li>
+                    <li>반품/교환 정책</li>
+                    <li>계약 해지 조건</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 8: 주문 처리 프로세스 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 8: 주문 처리 프로세스</h2>
+            </div>
+            
+            <h2>8.1 주문 처리 자동화</h2>
+            
+            <div class="timeline">
+                <h3>⏱️ 표준 주문 처리 타임라인</h3>
+                
+                <div class="timeline-item">
+                    <h4>0-2시간: 주문 접수</h4>
+                    <ul>
+                        <li>자동 주문 확인 메일 발송</li>
+                        <li>재고 확인 및 할당</li>
+                        <li>결제 검증</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2-12시간: 현지 주문</h4>
+                    <ul>
+                        <li>해외 사이트 주문 진행</li>
+                        <li>배대지 주소 입력</li>
+                        <li>추적번호 확보</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1-3일: 배대지 도착</h4>
+                    <ul>
+                        <li>검품 사진 촬영</li>
+                        <li>포장 상태 확인</li>
+                        <li>합배송 준비</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>3-7일: 국제 배송</h4>
+                    <ul>
+                        <li>통관 서류 준비</li>
+                        <li>실시간 위치 추적</li>
+                        <li>고객 안내</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>7-10일: 국내 배송</h4>
+                    <ul>
+                        <li>재포장 및 검수</li>
+                        <li>송장 번호 전달</li>
+                        <li>배송 완료 확인</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>8.2 CS 대응 매뉴얼</h2>
+            
+            <div class="info-box">
+                <h3>📞 상황별 대응 스크립트</h3>
+                
+                <h4>배송 지연</h4>
+                <p>"고객님, 불편을 드려 죄송합니다. 현재 상품이 [위치]에 있으며, [예상일]까지 도착 예정입니다. 지연 보상으로 다음 구매시 5% 할인 쿠폰을 드리겠습니다."</p>
+                
+                <h4>품질 불만</h4>
+                <p>"제품에 문제가 있어 정말 죄송합니다. 사진을 보내주시면 즉시 확인 후 교환/환불 처리해드리겠습니다. 반송 비용은 저희가 부담하겠습니다."</p>
+                
+                <h4>가격 문의</h4>
+                <p>"현재 환율과 배송비를 포함한 최저가로 제공중입니다. 2개 이상 구매시 추가 할인이 가능하니 참고 부탁드립니다."</p>
+            </div>
+            
+            <h3>8.2.1 리뷰 관리 전략</h3>
+            
+            <div class="success-box">
+                <h4>⭐ 5점 리뷰 유도 방법</h4>
+                <ol>
+                    <li>배송 완료 3일 후 만족도 조사</li>
+                    <li>포토리뷰 작성시 3,000원 적립금</li>
+                    <li>베스트 리뷰 선정시 1만원 쿠폰</li>
+                    <li>리뷰 작성률 목표: 30% 이상</li>
+                    <li>부정 리뷰 24시간 내 대응</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Chapter 9: 배송 및 물류 관리 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 9: 배송 및 물류 관리</h2>
+            </div>
+            
+            <h2>9.1 국제 물류 최적화</h2>
+            
+            <table class="profit-table">
+                <thead>
+                    <tr>
+                        <th>배송방법</th>
+                        <th>무게</th>
+                        <th>비용</th>
+                        <th>기간</th>
+                        <th>추천상품</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EMS</td>
+                        <td>~2kg</td>
+                        <td>3,500엔</td>
+                        <td>3-5일</td>
+                        <td>고가품, 긴급</td>
+                    </tr>
+                    <tr>
+                        <td>항공소포</td>
+                        <td>~5kg</td>
+                        <td>4,000엔</td>
+                        <td>5-7일</td>
+                        <td>일반 상품</td>
+                    </tr>
+                    <tr>
+                        <td>SAL</td>
+                        <td>~10kg</td>
+                        <td>5,000엔</td>
+                        <td>10-14일</td>
+                        <td>비긴급 상품</td>
+                    </tr>
+                    <tr>
+                        <td>선편</td>
+                        <td>~30kg</td>
+                        <td>8,000엔</td>
+                        <td>30-45일</td>
+                        <td>대량, 비긴급</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>9.1.1 배송비 절감 노하우</h3>
+            
+            <div class="strategy-card">
+                <h4>💰 배송비 50% 절감 방법</h4>
+                <ol>
+                    <li><strong>합배송 극대화</strong>
+                        <ul>
+                            <li>주 2회 정기 발송</li>
+                            <li>최소 5건 이상 묶음</li>
+                            <li>절감액: 건당 5,000원</li>
+                        </ul>
+                    </li>
+                    <li><strong>부피 최소화</strong>
+                        <ul>
+                            <li>진공 포장 활용</li>
+                            <li>패키지 제거</li>
+                            <li>절감률: 30-40%</li>
+                        </ul>
+                    </li>
+                    <li><strong>배대지 협상</strong>
+                        <ul>
+                            <li>월 100건 이상시 10% 할인</li>
+                            <li>장기 계약시 15% 할인</li>
+                            <li>성수기 제외 20% 할인</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <h2>9.2 통관 실무</h2>
+            
+            <div class="warning-box">
+                <h3>🚫 통관 금지 품목</h3>
+                <ul>
+                    <li>의약품 (처방전 필요)</li>
+                    <li>식품 (수입신고 필요)</li>
+                    <li>화장품 (기능성 제외)</li>
+                    <li>전파인증 미취득 전자제품</li>
+                    <li>위조품, 짝퉁</li>
+                    <li>도검류, 위험물</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h3>📋 목록통관 vs 일반통관</h3>
+                
+                <table>
+                    <tr>
+                        <th>구분</th>
+                        <th>목록통관</th>
+                        <th>일반통관</th>
+                    </tr>
+                    <tr>
+                        <td>금액</td>
+                        <td>USD 150 이하</td>
+                        <td>USD 150 초과</td>
+                    </tr>
+                    <tr>
+                        <td>관세</td>
+                        <td>면제</td>
+                        <td>과세</td>
+                    </tr>
+                    <tr>
+                        <td>통관시간</td>
+                        <td>1-2일</td>
+                        <td>3-5일</td>
+                    </tr>
+                    <tr>
+                        <td>서류</td>
+                        <td>간소화</td>
+                        <td>상세 필요</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Chapter 10: 수익 극대화 전략 -->
+        <div class="page">
+            <div class="chapter-header">
+                <h2 style="color: white;">Chapter 10: 수익 극대화 전략</h2>
+            </div>
+            
+            <h2>10.1 크로스셀링 & 업셀링</h2>
+            
+            <div class="success-box">
+                <h3>🎯 매출 30% 상승 전략</h3>
+                
+                <h4>크로스셀링 (Cross-selling)</h4>
+                <ul>
+                    <li>"함께 구매시 10% 할인"</li>
+                    <li>연관 상품 자동 추천</li>
+                    <li>세트 상품 구성</li>
+                    <li>평균 객단가 25% 상승</li>
+                </ul>
+                
+                <h4>업셀링 (Up-selling)</h4>
+                <ul>
+                    <li>프리미엄 버전 제안</li>
+                    <li>한정판/특별판 안내</li>
+                    <li>대량 구매 할인</li>
+                    <li>평균 객단가 40% 상승</li>
+                </ul>
+            </div>
+            
+            <h3>10.1.1 실제 적용 사례</h3>
+            
+            <div class="strategy-card">
+                <h4>📦 베스트 세트 상품 구성</h4>
+                
+                <h5>일본 캐릭터 세트</h5>
+                <ul>
+                    <li>피규어 + 키링 + 스티커</li>
+                    <li>개별 구매: 45,000원</li>
+                    <li>세트 가격: 39,900원</li>
+                    <li>구매 전환율: 35% 상승</li>
+                </ul>
+                
+                <h5>중국 미용기기 세트</h5>
+                <ul>
+                    <li>LED마스크 + 갈바닉 + 에센스</li>
+                    <li>개별 구매: 180,000원</li>
+                    <li>세트 가격: 149,000원</li>
+                    <li>구매 전환율: 45% 상승</li>
+                </ul>
+            </div>
+            
+            <h2>10.2 재구매율 향상</h2>
+            
+            <div class="info-box">
+                <h3>🔄 재구매율 50% 달성 방법</h3>
+                
+                <ol>
+                    <li><strong>멤버십 프로그램</strong>
+                        <ul>
+                            <li>첫 구매: 5% 할인</li>
+                            <li>2회 구매: 8% 할인</li>
+                            <li>5회 이상: 12% 할인</li>
+                            <li>생일 쿠폰: 15% 할인</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>정기 구독 서비스</strong>
+                        <ul>
+                            <li>월 1회 큐레이션 박스</li>
+                            <li>구독자 전용 20% 할인</li>
+                            <li>무료 배송 혜택</li>
+                            <li>신상품 우선 구매권</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>리텐션 마케팅</strong>
+                        <ul>
+                            <li>구매 후 7일: 사용 팁 제공</li>
+                            <li>구매 후 30일: 만족도 조사</li>
+                            <li>구매 후 60일: 재구매 쿠폰</li>
+                            <li>구매 후 90일: VIP 초대</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="profit-table" style="margin-top: 30px;">
+                <h3>📊 재구매 고객 가치 분석</h3>
+                <table class="profit-table">
+                    <thead>
+                        <tr>
+                            <th>구매 횟수</th>
+                            <th>고객 비율</th>
+                            <th>평균 객단가</th>
+                            <th>LTV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1회</td>
+                            <td>60%</td>
+                            <td>8만원</td>
+                            <td>8만원</td>
+                        </tr>
+                        <tr>
+                            <td>2-3회</td>
+                            <td>25%</td>
+                            <td>12만원</td>
+                            <td>30만원</td>
+                        </tr>
+                        <tr>
+                            <td>4-5회</td>
+                            <td>10%</td>
+                            <td>15만원</td>
+                            <td>67만원</td>
+                        </tr>
+                        <tr>
+                            <td>6회 이상</td>
+                            <td>5%</td>
+                            <td>20만원</td>
+                            <td>150만원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
