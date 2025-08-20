@@ -14,13 +14,13 @@
         }
         
         :root {
-            --kakao-yellow: #FEE500;
-            --kakao-brown: #3A2929;
-            --kakao-black: #000000;
-            --kakao-light-yellow: #FFF9C4;
-            --kakao-gray: #F5F5F5;
-            --kakao-dark-brown: #2D1F1F;
-            --kakao-orange: #FF6B35;
+            --primary-yellow: #FEE500;
+            --primary-brown: #3A2929;
+            --primary-black: #000000;
+            --light-yellow: #FFF9C4;
+            --light-gray: #F5F5F5;
+            --dark-brown: #2D1F1F;
+            --accent-orange: #FF6B35;
             --text-primary: #1A1A1A;
             --text-secondary: #666666;
             --border-color: #E0E0E0;
@@ -49,10 +49,10 @@
             position: relative;
         }
         
-        /* 카카오 스타일 헤더 */
-        .kakao-header {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+        /* 현대적 스타일 헤더 */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 25px 0;
             text-align: center;
             margin: -50px -60px 40px -60px;
@@ -61,7 +61,7 @@
             border-radius: 0 0 20px 20px;
         }
         
-        .kakao-header::before {
+        .main-header::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -70,15 +70,15 @@
             height: 200%;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1.5" fill="rgba(58,41,41,0.1)"/></svg>') repeat;
             background-size: 40px 40px;
-            animation: kakaoFloat 12s linear infinite;
+            animation: mainFloat 12s linear infinite;
         }
         
-        @keyframes kakaoFloat {
+        @keyframes mainFloat {
             0% { transform: translate(0, 0); }
             100% { transform: translate(40px, 40px); }
         }
         
-        .kakao-logo {
+        .main-logo {
             font-size: 28px;
             font-weight: 800;
             letter-spacing: -0.5px;
@@ -89,10 +89,10 @@
         
         h1 {
             font-size: 42px;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 4px solid var(--kakao-yellow);
+            border-bottom: 4px solid var(--primary-yellow);
             font-weight: 800;
             position: relative;
         }
@@ -104,13 +104,13 @@
             left: 0;
             width: 100px;
             height: 8px;
-            background: var(--kakao-orange);
+            background: var(--accent-orange);
             border-radius: 4px;
         }
         
         h2 {
             font-size: 32px;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin: 40px 0 25px;
             font-weight: 700;
             display: flex;
@@ -123,7 +123,7 @@
             content: '';
             width: 8px;
             height: 32px;
-            background: linear-gradient(135deg, var(--kakao-yellow), var(--kakao-orange));
+            background: linear-gradient(135deg, var(--primary-yellow), var(--accent-orange));
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(254,229,0,0.3);
         }
@@ -134,8 +134,8 @@
             margin: 30px 0 20px;
             font-weight: 600;
             padding: 18px 0 18px 25px;
-            border-left: 5px solid var(--kakao-yellow);
-            background: linear-gradient(90deg, var(--kakao-light-yellow), rgba(255,249,196,0.3));
+            border-left: 5px solid var(--primary-yellow);
+            background: linear-gradient(90deg, var(--light-yellow), rgba(255,249,196,0.3));
             border-radius: 0 10px 10px 0;
         }
         
@@ -161,10 +161,10 @@
             line-height: 1.8;
         }
         
-        /* 카카오 스타일 하이라이트 박스 */
-        .kakao-highlight-box {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+        /* 현대적 스타일 하이라이트 박스 */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 35px;
             border-radius: 20px;
             margin: 35px 0;
@@ -174,7 +174,7 @@
             border: 2px solid #FFD700;
         }
         
-        .kakao-highlight-box::before {
+        .highlight-box::before {
             content: '';
             position: absolute;
             top: 15px;
@@ -185,22 +185,22 @@
             background-size: contain;
         }
         
-        .kakao-highlight-box h4 {
-            color: var(--kakao-brown);
+        .highlight-box h4 {
+            color: var(--primary-brown);
             font-size: 24px;
             margin-bottom: 15px;
             font-weight: 700;
         }
         
-        .kakao-highlight-box h4::before {
+        .highlight-box h4::before {
             content: '💡';
             font-size: 22px;
         }
         
         /* 알림 박스들 */
-        .kakao-info-box {
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFF8E1 100%);
-            border: 2px solid var(--kakao-yellow);
+        .info-box {
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFF8E1 100%);
+            border: 2px solid var(--primary-yellow);
             border-radius: 15px;
             padding: 30px;
             margin: 30px 0;
@@ -208,13 +208,13 @@
             box-shadow: 0 5px 15px rgba(254,229,0,0.2);
         }
         
-        .kakao-info-box::before {
+        .info-box::before {
             content: '💡';
             position: absolute;
             top: -15px;
             left: 25px;
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             width: 35px;
             height: 35px;
             border-radius: 50%;
@@ -228,7 +228,7 @@
         .warning-box {
             background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
             border: 2px solid #FF9800;
-            border-left: 6px solid var(--kakao-orange);
+            border-left: 6px solid var(--accent-orange);
             border-radius: 12px;
             padding: 28px;
             margin: 28px 0;
@@ -240,7 +240,7 @@
             position: absolute;
             top: -15px;
             left: 20px;
-            background: var(--kakao-orange);
+            background: var(--accent-orange);
             color: white;
             width: 35px;
             height: 35px;
@@ -279,7 +279,7 @@
             box-shadow: 0 3px 10px rgba(76,175,80,0.4);
         }
         
-        /* 카카오 스타일 테이블 */
+        /* 현대적 스타일 테이블 */
         .table-wrapper {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -294,7 +294,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(254,229,0,0.15);
-            border: 2px solid var(--kakao-light-yellow);
+            border: 2px solid var(--light-yellow);
         }
         
         @media (max-width: 768px) {
@@ -313,8 +313,8 @@
         }
         
         th {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 20px 18px;
             text-align: left;
             font-weight: 700;
@@ -334,12 +334,12 @@
         }
         
         tr:hover {
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             transition: background 0.3s ease;
         }
         
-        /* 카카오 스타일 스텝 박스 */
-        .kakao-step-box {
+        /* 현대적 스타일 스텝 박스 */
+        .step-box {
             background: white;
             border: 2px solid var(--border-color);
             border-radius: 15px;
@@ -350,20 +350,20 @@
             transition: all 0.3s ease;
         }
         
-        .kakao-step-box:hover {
-            border-color: var(--kakao-yellow);
+        .step-box:hover {
+            border-color: var(--primary-yellow);
             box-shadow: 0 8px 30px rgba(254,229,0,0.2);
             transform: translateY(-2px);
         }
         
-        .kakao-step-number {
+        .step-number {
             position: absolute;
             left: 25px;
             top: 30px;
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, var(--kakao-yellow), #FFD700);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow), #FFD700);
+            color: var(--primary-brown);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -374,10 +374,10 @@
             border: 2px solid #FFD700;
         }
         
-        .kakao-step-title {
+        .step-title {
             font-size: 22px;
             font-weight: 700;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin-bottom: 12px;
         }
         
@@ -393,28 +393,28 @@
         }
         
         li strong {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-weight: 700;
         }
         
         /* 목차 스타일 */
-        .kakao-toc {
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFF8E1 100%);
-            border: 3px solid var(--kakao-yellow);
+        .table-of-contents {
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFF8E1 100%);
+            border: 3px solid var(--primary-yellow);
             border-radius: 20px;
             padding: 40px;
             margin-bottom: 50px;
             box-shadow: 0 10px 30px rgba(254,229,0,0.2);
         }
         
-        .kakao-toc h2 {
+        .table-of-contents h2 {
             font-size: 30px;
             margin-bottom: 30px;
             text-align: center;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
         }
         
-        .kakao-toc-item {
+        .table-of-contents-item {
             padding: 15px 25px;
             border-bottom: 1px solid var(--border-color);
             font-size: 16px;
@@ -425,43 +425,43 @@
             border-radius: 8px;
         }
         
-        .kakao-toc-item:hover {
+        .table-of-contents-item:hover {
             background: white;
             margin: 0 -15px;
             padding: 15px 40px;
             box-shadow: 0 3px 10px rgba(254,229,0,0.3);
         }
         
-        .kakao-toc-item:last-child {
+        .table-of-contents-item:last-child {
             border-bottom: none;
         }
         
-        .kakao-toc-main {
+        .table-of-contents-main {
             font-weight: 700;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 18px;
         }
         
-        .kakao-toc-sub {
+        .table-of-contents-sub {
             margin-left: 25px;
             color: var(--text-secondary);
         }
         
         /* 표지 스타일 */
-        .kakao-cover {
+        .cover-page {
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             position: relative;
             overflow: hidden;
         }
         
-        .kakao-cover::before {
+        .cover-page::before {
             content: '';
             position: absolute;
             top: 0;
@@ -470,20 +470,20 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="3" fill="rgba(58,41,41,0.1)"/></svg>') repeat;
             background-size: 80px 80px;
-            animation: kakaoCoverMove 25s linear infinite;
+            animation: coverMove 25s linear infinite;
         }
         
-        @keyframes kakaoCoverMove {
+        @keyframes coverMove {
             0% { transform: translate(0, 0); }
             100% { transform: translate(80px, 80px); }
         }
         
-        .kakao-cover-content {
+        .cover-page-content {
             position: relative;
             z-index: 2;
         }
         
-        .kakao-cover-badge {
+        .cover-page-badge {
             background: rgba(58,41,41,0.15);
             padding: 15px 35px;
             border-radius: 30px;
@@ -494,7 +494,7 @@
             border: 2px solid rgba(58,41,41,0.2);
         }
         
-        .kakao-cover-title {
+        .cover-page-title {
             font-size: 68px;
             font-weight: 900;
             margin-bottom: 30px;
@@ -502,14 +502,14 @@
             letter-spacing: -2px;
         }
         
-        .kakao-cover-subtitle {
+        .cover-page-subtitle {
             font-size: 30px;
             margin-bottom: 50px;
             font-weight: 400;
             line-height: 1.4;
         }
         
-        .kakao-cover-stats {
+        .cover-page-stats {
             display: flex;
             justify-content: center;
             gap: 50px;
@@ -517,7 +517,7 @@
             flex-wrap: wrap;
         }
         
-        .kakao-cover-stat {
+        .cover-page-stat {
             text-align: center;
             padding: 25px;
             background: rgba(58,41,41,0.1);
@@ -527,20 +527,20 @@
             border: 2px solid rgba(58,41,41,0.2);
         }
         
-        .kakao-cover-stat-number {
+        .cover-page-stat-number {
             font-size: 36px;
             font-weight: 800;
             display: block;
             margin-bottom: 10px;
         }
         
-        .kakao-cover-stat-label {
+        .cover-page-stat-label {
             font-size: 15px;
             opacity: 0.9;
             font-weight: 500;
         }
         
-        .kakao-cover-author {
+        .cover-page-author {
             font-size: 22px;
             margin-top: 70px;
             opacity: 0.9;
@@ -554,15 +554,15 @@
             right: 60px;
             font-size: 14px;
             color: var(--text-secondary);
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             padding: 10px 18px;
             border-radius: 25px;
-            border: 2px solid var(--kakao-yellow);
+            border: 2px solid var(--primary-yellow);
             font-weight: 600;
         }
         
         /* 케이스 스터디 */
-        .kakao-case-study {
+        .case-study {
             background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
             border: 3px solid #2196F3;
             border-radius: 18px;
@@ -572,7 +572,7 @@
             box-shadow: 0 8px 25px rgba(33,150,243,0.2);
         }
         
-        .kakao-case-study::before {
+        .case-study::before {
             content: '📚';
             position: absolute;
             top: -18px;
@@ -589,7 +589,7 @@
             box-shadow: 0 4px 15px rgba(33,150,243,0.4);
         }
         
-        .kakao-case-title {
+        .case-title {
             font-size: 24px;
             font-weight: 700;
             color: #1565C0;
@@ -606,8 +606,8 @@
                 padding: 40px;
             }
             
-            .kakao-header::before,
-            .kakao-cover::before {
+            .main-header::before,
+            .cover-page::before {
                 display: none;
             }
             
@@ -624,15 +624,15 @@
                 padding: 30px 20px;
             }
             
-            .kakao-cover-title {
+            .cover-page-title {
                 font-size: 45px;
             }
             
-            .kakao-cover-subtitle {
+            .cover-page-subtitle {
                 font-size: 22px;
             }
             
-            .kakao-cover-stats {
+            .cover-page-stats {
                 gap: 25px;
             }
             
@@ -645,107 +645,107 @@
 <body>
     <div class="container">
         <!-- 표지 -->
-        <div class="page kakao-cover">
-            <div class="kakao-cover-content">
-                <div class="kakao-cover-badge">🎯 2025년 최신 완전판</div>
-                <h1 class="kakao-cover-title">일본·중국 구매대행<br>완전정복 바이블</h1>
-                <p class="kakao-cover-subtitle">
+        <div class="page cover-page">
+            <div class="cover-page-content">
+                <div class="cover-page-badge">🎯 2025년 최신 완전판</div>
+                <h1 class="cover-page-title">일본·중국 구매대행<br>완전정복 바이블</h1>
+                <p class="cover-page-subtitle">
                     초보자부터 전문가까지<br>
                     월 100만원에서 500만원까지<br>
-                    <strong>국내 유일 카카오 스타일 가이드북</strong>
+                    <strong>국내 유일 현대적 스타일 가이드북</strong>
                 </p>
                 
-                <div class="kakao-cover-stats">
-                    <div class="kakao-cover-stat">
-                        <span class="kakao-cover-stat-number">46,222건</span>
-                        <span class="kakao-cover-stat-label">실거래 데이터</span>
+                <div class="cover-page-stats">
+                    <div class="cover-page-stat">
+                        <span class="cover-page-stat-number">46,222건</span>
+                        <span class="cover-page-stat-label">실거래 데이터</span>
                     </div>
-                    <div class="kakao-cover-stat">
-                        <span class="kakao-cover-stat-number">500+</span>
-                        <span class="kakao-cover-stat-label">실전 템플릿</span>
+                    <div class="cover-page-stat">
+                        <span class="cover-page-stat-number">500+</span>
+                        <span class="cover-page-stat-label">실전 템플릿</span>
                     </div>
-                    <div class="kakao-cover-stat">
-                        <span class="kakao-cover-stat-number">12주</span>
-                        <span class="kakao-cover-stat-label">완성 커리큘럼</span>
+                    <div class="cover-page-stat">
+                        <span class="cover-page-stat-number">12주</span>
+                        <span class="cover-page-stat-label">완성 커리큘럼</span>
                     </div>
                 </div>
                 
-                <p class="kakao-cover-author">
+                <p class="cover-page-author">
                     by 비드바이 코리아 × 구매대행 전문가팀<br>
                     2025 프리미엄 에디션
                 </p>
             </div>
         </div>
 
-        <!-- 카카오 헤더 + 목차 -->
+        <!-- SNS 헤더 + 목차 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">💬 카카오 구매대행 마스터 과정</div>
+            <div class="main-header">
+                <div class="main-logo">💬 SNS 구매대행 마스터 과정</div>
             </div>
             
             <h1>📋 목차</h1>
-            <div class="kakao-toc">
-                <h2>🗂️ 카카오 스타일 완전 학습 가이드</h2>
+            <div class="table-of-contents">
+                <h2>🗂️ 현대적 스타일 완전 학습 가이드</h2>
                 
-                <div class="kakao-toc-item kakao-toc-main">
+                <div class="table-of-contents-item table-of-contents-main">
                     <span>🌟 제1장: 구매대행 시장의 이해</span>
                     <span>3</span>
                 </div>
-                <div class="kakao-toc-item kakao-toc-sub">1.1 일본 vs 중국 시장 완벽 비교</div>
-                <div class="kakao-toc-item kakao-toc-sub">1.2 2025년 시장 전망과 기회</div>
-                <div class="kakao-toc-item kakao-toc-sub">1.3 필수 용어와 기초 지식</div>
-                <div class="kakao-toc-item kakao-toc-sub">1.4 2024년 실제 거래 데이터 인사이트</div>
+                <div class="table-of-contents-item table-of-contents-sub">1.1 일본 vs 중국 시장 완벽 비교</div>
+                <div class="table-of-contents-item table-of-contents-sub">1.2 2025년 시장 전망과 기회</div>
+                <div class="table-of-contents-item table-of-contents-sub">1.3 필수 용어와 기초 지식</div>
+                <div class="table-of-contents-item table-of-contents-sub">1.4 2024년 실제 거래 데이터 인사이트</div>
                 
-                <div class="kakao-toc-item kakao-toc-main">
+                <div class="table-of-contents-item table-of-contents-main">
                     <span>🗾 제2장: 일본 구매대행 마스터</span>
                     <span>8</span>
                 </div>
-                <div class="kakao-toc-item kakao-toc-sub">2.1 야후옥션 완벽 정복</div>
-                <div class="kakao-toc-item kakao-toc-sub">2.2 메루카리 공략법</div>
-                <div class="kakao-toc-item kakao-toc-sub">2.3 라쿠텐 & 아마존JP</div>
-                <div class="kakao-toc-item kakao-toc-sub">2.4 일본 배대지 선택과 활용</div>
-                <div class="kakao-toc-item kakao-toc-sub">2.5 실전 수익 모델 구축</div>
+                <div class="table-of-contents-item table-of-contents-sub">2.1 야후옥션 완벽 정복</div>
+                <div class="table-of-contents-item table-of-contents-sub">2.2 메루카리 공략법</div>
+                <div class="table-of-contents-item table-of-contents-sub">2.3 라쿠텐 & 아마존JP</div>
+                <div class="table-of-contents-item table-of-contents-sub">2.4 일본 배대지 선택과 활용</div>
+                <div class="table-of-contents-item table-of-contents-sub">2.5 실전 수익 모델 구축</div>
                 
-                <div class="kakao-toc-item kakao-toc-main">
+                <div class="table-of-contents-item table-of-contents-main">
                     <span>🇨🇳 제3장: 중국 구매대행 마스터</span>
                     <span>15</span>
                 </div>
-                <div class="kakao-toc-item kakao-toc-sub">3.1 타오바오 완전 정복</div>
-                <div class="kakao-toc-item kakao-toc-sub">3.2 1688 도매 전략</div>
-                <div class="kakao-toc-item kakao-toc-sub">3.3 알리바바 B2B 거래</div>
-                <div class="kakao-toc-item kakao-toc-sub">3.4 중국 구매대행사 활용</div>
-                <div class="kakao-toc-item kakao-toc-sub">3.5 통관과 세금 완전 가이드</div>
+                <div class="table-of-contents-item table-of-contents-sub">3.1 타오바오 완전 정복</div>
+                <div class="table-of-contents-item table-of-contents-sub">3.2 1688 도매 전략</div>
+                <div class="table-of-contents-item table-of-contents-sub">3.3 알리바바 B2B 거래</div>
+                <div class="table-of-contents-item table-of-contents-sub">3.4 중국 구매대행사 활용</div>
+                <div class="table-of-contents-item table-of-contents-sub">3.5 통관과 세금 완전 가이드</div>
                 
-                <div class="kakao-toc-item kakao-toc-main">
+                <div class="table-of-contents-item table-of-contents-main">
                     <span>💰 제4장: 수익 극대화 전략</span>
                     <span>22</span>
                 </div>
-                <div class="kakao-toc-item kakao-toc-sub">4.1 빅데이터 기반 상품 선정</div>
-                <div class="kakao-toc-item kakao-toc-sub">4.2 가격 책정과 마진 관리</div>
-                <div class="kakao-toc-item kakao-toc-sub">4.3 판매 채널 구축</div>
-                <div class="kakao-toc-item kakao-toc-sub">4.4 시즌별 상품 전략</div>
+                <div class="table-of-contents-item table-of-contents-sub">4.1 빅데이터 기반 상품 선정</div>
+                <div class="table-of-contents-item table-of-contents-sub">4.2 가격 책정과 마진 관리</div>
+                <div class="table-of-contents-item table-of-contents-sub">4.3 판매 채널 구축</div>
+                <div class="table-of-contents-item table-of-contents-sub">4.4 시즌별 상품 전략</div>
                 
-                <div class="kakao-toc-item kakao-toc-main">
+                <div class="table-of-contents-item table-of-contents-main">
                     <span>🚀 제5장: 실전 운영 가이드</span>
                     <span>28</span>
                 </div>
-                <div class="kakao-toc-item kakao-toc-sub">5.1 세금과 통관 실무</div>
-                <div class="kakao-toc-item kakao-toc-sub">5.2 CS와 클레임 처리</div>
-                <div class="kakao-toc-item kakao-toc-sub">5.3 자동화와 확장</div>
-                <div class="kakao-toc-item kakao-toc-sub">5.4 성공 로드맵</div>
+                <div class="table-of-contents-item table-of-contents-sub">5.1 세금과 통관 실무</div>
+                <div class="table-of-contents-item table-of-contents-sub">5.2 CS와 클레임 처리</div>
+                <div class="table-of-contents-item table-of-contents-sub">5.3 자동화와 확장</div>
+                <div class="table-of-contents-item table-of-contents-sub">5.4 성공 로드맵</div>
             </div>
             <div class="page-number">2</div>
         </div>
 
         <!-- 제1장: 구매대행 시장의 이해 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">🌟 제1장: 구매대행 시장의 이해</div>
+            <div class="main-header">
+                <div class="main-logo">🌟 제1장: 구매대행 시장의 이해</div>
             </div>
             
             <h1>🌍 구매대행 시장의 이해</h1>
             
-            <div class="kakao-highlight-box">
+            <div class="highlight-box">
                 <h4>💡 왜 지금이 구매대행의 최적 시기인가?</h4>
                 <p>2025년 한국의 해외직구 시장이 15조원을 넘어서며, 개인 구매대행 사업자들에게 전례없는 기회가 열리고 있습니다. 특히 일본과 중국 시장의 동시 공략으로 연간 1,000만원 이상의 수익 창출이 현실적으로 가능해졌습니다. SNS 채널을 활용한 마케팅까지 더해지면 그 가능성은 무한대입니다.</p>
             </div>
@@ -806,7 +806,7 @@
                 </tbody>
             </table>
             
-            <div class="kakao-info-box">
+            <div class="info-box">
                 <h4>🎯 디지털 시대의 투 트랙 전략</h4>
                 <p><strong>일본 시장</strong>은 고품질·고가 전략으로 높은 단가와 브랜드 프리미엄을 활용하고, <strong>중국 시장</strong>은 박리다매 전략으로 높은 회전율과 대량 판매를 추구해야 합니다. 여기에 <strong>SNS 채널</strong>을 활용하면 고객과의 직접 소통으로 신뢰도를 높일 수 있습니다.</p>
                 <ul>
@@ -822,17 +822,17 @@
 
         <!-- 플랫폼 분석 페이지 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">🏢 주요 플랫폼 완전 분석</div>
+            <div class="main-header">
+                <div class="main-logo">🏢 주요 플랫폼 완전 분석</div>
             </div>
             
             <h3>🏢 주요 플랫폼 상세 분석</h3>
             
             <h4>🇯🇵 일본 주요 플랫폼 완전 분석</h4>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">1</span>
-                <div class="kakao-step-title">야후옥션 (Yahoo Auctions Japan)</div>
+            <div class="step-box">
+                <span class="step-number">1</span>
+                <div class="step-title">야후옥션 (Yahoo Auctions Japan)</div>
                 <p><strong>일본 최대 경매 사이트</strong> - 연간 거래액 1.2조엔</p>
                 <ul>
                     <li><strong>주력 상품:</strong> 희귀 상품, 중고 명품, 빈티지 제품</li>
@@ -844,9 +844,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">2</span>
-                <div class="kakao-step-title">메루카리 (Mercari)</div>
+            <div class="step-box">
+                <span class="step-number">2</span>
+                <div class="step-title">메루카리 (Mercari)</div>
                 <p><strong>일본 최대 중고거래 플랫폼</strong> - 월 활성 사용자 2,000만명</p>
                 <ul>
                     <li><strong>주력 상품:</strong> 의류, 화장품, 생활용품, 트렌드 아이템</li>
@@ -858,9 +858,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">3</span>
-                <div class="kakao-step-title">라쿠텐 (Rakuten)</div>
+            <div class="step-box">
+                <span class="step-number">3</span>
+                <div class="step-title">라쿠텐 (Rakuten)</div>
                 <p><strong>일본 최대 종합 쇼핑몰</strong> - 5만개 입점업체</p>
                 <ul>
                     <li><strong>주력 상품:</strong> 정품 브랜드, 신제품, 한정판</li>
@@ -874,9 +874,9 @@
             
             <h4>🇨🇳 중국 주요 플랫폼 완전 분석</h4>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">1</span>
-                <div class="kakao-step-title">타오바오 (Taobao)</div>
+            <div class="step-box">
+                <span class="step-number">1</span>
+                <div class="step-title">타오바오 (Taobao)</div>
                 <p><strong>중국 최대 C2C 마켓플레이스</strong> - 10억개 상품, 8억 사용자</p>
                 <ul>
                     <li><strong>주력 상품:</strong> 의류, 액세서리, 생활용품, 트렌드 아이템</li>
@@ -888,9 +888,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">2</span>
-                <div class="kakao-step-title">1688.com</div>
+            <div class="step-box">
+                <span class="step-number">2</span>
+                <div class="step-title">1688.com</div>
                 <p><strong>중국 최대 B2B 도매 플랫폼</strong> - 알리바바 그룹 운영</p>
                 <ul>
                     <li><strong>주력 상품:</strong> 도매 상품, OEM/ODM, 공장 직판</li>
@@ -908,7 +908,7 @@
                 <ul>
                     <li>개인정보보호법 준수 (고객 정보 보안)</li>
                     <li>전자상거래법 준수 (쿨링오프 제도 안내)</li>
-                    <li>카카오 비즈니스 채널 정책 준수</li>
+                    <li>SNS 비즈니스 채널 정책 준수</li>
                     <li>허위 광고 금지 (과장된 할인율 표시 금지)</li>
                     <li>24시간 내 응답 원칙 (고객 신뢰도 유지)</li>
                 </ul>
@@ -919,13 +919,13 @@
 
         <!-- 2025년 시장 전망 페이지 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">📈 2025년 시장 전망과 기회</div>
+            <div class="main-header">
+                <div class="main-logo">📈 2025년 시장 전망과 기회</div>
             </div>
             
             <h2>1.2 2025년 시장 전망과 기회</h2>
             
-            <div class="kakao-highlight-box">
+            <div class="highlight-box">
                 <h4>🚀 2025년 구매대행 × SNS 메가트렌드</h4>
                 <p>포스트 코로나 시대와 함께 개인 부업에 대한 니즈가 급증하면서, 구매대행 시장이 폭발적으로 성장하고 있습니다. 특히 SNS 비즈니스 채널의 발달과 AI AI 챗봇의 도입으로 개인도 전문적인 운영이 가능해졌습니다. 2025년은 '1인 기업 시대'의 원년이 될 것입니다.</p>
             </div>
@@ -1017,8 +1017,8 @@
             </table>
             </div>
             
-            <div class="kakao-case-study">
-                <div class="kakao-case-title">💰 실전 성공 사례: SNS 채널 활용 빈티지 게임기 전문 셀러 김○○님</div>
+            <div class="case-study">
+                <div class="case-title">💰 실전 성공 사례: SNS 채널 활용 빈티지 게임기 전문 셀러 김○○님</div>
                 <p><strong>시작:</strong> 2024년 3월, 초기 자본 200만원</p>
                 <p><strong>전략:</strong> 일본 야후옥션에서 패미컴, 게임보이 등 레트로 게임기 전문 소싱 + SNS 채널 운영</p>
                 <p><strong>SNS 활용:</strong></p>
@@ -1042,8 +1042,8 @@
 
         <!-- 필수 용어집 페이지 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">📚 필수 용어와 기초 지식</div>
+            <div class="main-header">
+                <div class="main-logo">📚 필수 용어와 기초 지식</div>
             </div>
             
             <h2>1.3 필수 용어와 기초 지식</h2>
@@ -1110,9 +1110,9 @@
             
             <h4>💰 세금 관련 용어 (법적 필수)</h4>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📋</span>
-                <div class="kakao-step-title">세금 계산 핵심 용어 (온라인 고객 상담 필수)</div>
+            <div class="step-box">
+                <span class="step-number">📋</span>
+                <div class="step-title">세금 계산 핵심 용어 (온라인 고객 상담 필수)</div>
                 <ul>
                     <li><strong>관세 (Customs Duty):</strong> 수입품에 부과되는 세금, 품목별 0-8% (의류 13%, 가방 8%)</li>
                     <li><strong>부가세 (VAT):</strong> 상품가격의 10%, 관세 포함 금액에 부과</li>
@@ -1230,7 +1230,7 @@
             </table>
             </div>
             
-            <div class="kakao-info-box">
+            <div class="info-box">
                 <h4>💬 SNS 채널 운영 핵심 용어</h4>
                 <ul>
                     <li><strong>친구추가:</strong> 채널 구독 (구독자 = 잠재고객)</li>
@@ -1238,7 +1238,7 @@
                     <li><strong>SNS 알림:</strong> 주문/배송 상태 자동 안내</li>
                     <li><strong>AI 챗봇:</strong> 자동 상담 및 FAQ 처리</li>
                     <li><strong>템플릿:</strong> 반복 메시지 자동화</li>
-                    <li><strong>SNS페이:</strong> 카카오페이 간편결제</li>
+                    <li><strong>SNS페이:</strong> SNS페이 간편결제</li>
                 </ul>
             </div>
             
@@ -1247,13 +1247,13 @@
 
         <!-- 빅데이터 인사이트 페이지 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">📊 2024년 실제 거래 데이터 인사이트</div>
+            <div class="main-header">
+                <div class="main-logo">📊 2024년 실제 거래 데이터 인사이트</div>
             </div>
             
             <h2>1.4 2024년 실제 거래 데이터 완전 분석</h2>
             
-            <div class="kakao-highlight-box">
+            <div class="highlight-box">
                 <h4>🔥 독점 공개: 비드바이 코리아 실거래 데이터</h4>
                 <p>2024년 1월~12월 실제 거래된 2024년 실제 거래 데이터를 완전 분석했습니다. 이 데이터는 어디서도 공개되지 않은 <strong>독점 정보</strong>로, 월 500만원 이상 수익을 올리는 구매대행 전문가들의 실제 패턴을 담고 있습니다.</p>
             </div>
@@ -1386,8 +1386,8 @@
             
             <h3>🔍 숨겨진 검색 키워드 대공개 (월 100만원 차이)</h3>
             
-            <div class="kakao-case-study">
-                <div class="kakao-case-title">🇯🇵 일본 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
+            <div class="case-study">
+                <div class="case-title">🇯🇵 일본 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
                 
                 <h4>야후옥션 전용 키워드</h4>
             <div class="table-wrapper">
@@ -1470,8 +1470,8 @@
             </div>
             </div>
             
-            <div class="kakao-case-study">
-                <div class="kakao-case-title">🇨🇳 중국 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
+            <div class="case-study">
+                <div class="case-title">🇨🇳 중국 플랫폼별 꿀검색 키워드 (현역 바이어 제공)</div>
                 
                 <h4>타오바오 전용 키워드</h4>
             <div class="table-wrapper">
@@ -1564,17 +1564,17 @@
 
         <!-- 플랫폼별 숨겨진 기능 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">🔧 플랫폼별 숨겨진 기능 대공개</div>
+            <div class="main-header">
+                <div class="main-logo">🔧 플랫폼별 숨겨진 기능 대공개</div>
             </div>
             
             <h2>🗾 일본 플랫폼 숨겨진 기능 완전 공략</h2>
             
             <h3>야후옥션 히든 기능 (수익률 30% 증가)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">💎</span>
-                <div class="kakao-step-title">자동 입찰 시스템 (オートビッド) 완전 정복</div>
+            <div class="step-box">
+                <span class="step-number">💎</span>
+                <div class="step-title">자동 입찰 시스템 (オートビッド) 완전 정복</div>
                 <p><strong>URL 직접 접근:</strong> https://auctions.yahoo.co.jp/jp/config/autobid</p>
                 <ul>
                     <li><strong>설정 방법:</strong> 마이페이지 → オプション → 自動入札設定</li>
@@ -1585,9 +1585,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🔍</span>
-                <div class="kakao-step-title">야후옥션 고급 검색 필터 (숨겨진 옵션)</div>
+            <div class="step-box">
+                <span class="step-number">🔍</span>
+                <div class="step-title">야후옥션 고급 검색 필터 (숨겨진 옵션)</div>
                 <p><strong>직접 URL 조합법:</strong></p>
                 <ul>
                     <li><strong>가격대 필터:</strong> &aucminprice=1000&aucmaxprice=5000</li>
@@ -1600,9 +1600,9 @@
                 <code>https://auctions.yahoo.co.jp/search/search?p=키워드&aucminprice=1000&aucmaxprice=50000&loc_cd=13&shipping=0&buynow=1&istatus=1</code>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📊</span>
-                <div class="kakao-step-title">야후옥션 가격 트렌드 분석 (무료 도구)</div>
+            <div class="step-box">
+                <span class="step-number">📊</span>
+                <div class="step-title">야후옥션 가격 트렌드 분석 (무료 도구)</div>
                 <ul>
                     <li><strong>aucfan.com:</strong> 과거 낙찰가 통계 (무료 10회/일)</li>
                     <li><strong>사용법:</strong> 상품명 입력 → 6개월 평균가 확인 → 20% 이하 입찰</li>
@@ -1613,9 +1613,9 @@
             
             <h3>메루카리 숨겨진 기능 (재고 확보율 90% 달성)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">⚡</span>
-                <div class="kakao-step-title">메루카리 실시간 알림 시스템 구축</div>
+            <div class="step-box">
+                <span class="step-number">⚡</span>
+                <div class="step-title">메루카리 실시간 알림 시스템 구축</div>
                 <p><strong>공식 API는 없지만 우회 방법 존재:</strong></p>
                 <ul>
                     <li><strong>IFTTT 연동:</strong> mercari.com RSS 피드 → SNS 알림</li>
@@ -1631,11 +1631,11 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">💬</span>
-                <div class="kakao-step-title">메루카리 판매자 협상 템플릿 (일본어)</div>
+            <div class="step-box">
+                <span class="step-number">💬</span>
+                <div class="step-title">메루카리 판매자 협상 템플릿 (일본어)</div>
                 <p><strong>가격 협상 성공률 80% 템플릿:</strong></p>
-                <div class="kakao-info-box">
+                <div class="info-box">
                     <p><strong>첫 메시지 (관심 표현):</strong></p>
                     <p>こんにちは。○○を拝見させていただきました。とても素敵な商品ですね。もしよろしければ、○○円でお譲りいただくことは可能でしょうか？ご検討のほど、よろしくお願いいたします。</p>
                     
@@ -1650,9 +1650,9 @@
             
             <h3>라쿠텐 숨겨진 할인 시스템 (포인트 극대화)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🎁</span>
-                <div class="kakao-step-title">라쿠텐 포인트 해킹 (합법적 방법)</div>
+            <div class="step-box">
+                <span class="step-number">🎁</span>
+                <div class="step-title">라쿠텐 포인트 해킹 (합법적 방법)</div>
                 <ul>
                     <li><strong>SPU(슈퍼 포인트 업) 16배 달성법:</strong>
                         <ol>
@@ -1670,9 +1670,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🏆</span>
-                <div class="kakao-step-title">라쿠텐 슈퍼세일 완전 공략</div>
+            <div class="step-box">
+                <span class="step-number">🏆</span>
+                <div class="step-title">라쿠텐 슈퍼세일 완전 공략</div>
                 <p><strong>연 4회 슈퍼세일 시기:</strong> 3월, 6월, 9월, 12월</p>
                 <ul>
                     <li><strong>사전 준비 (1개월 전):</strong>
@@ -1703,17 +1703,17 @@
 
         <!-- 중국 플랫폼 히든 기능 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">🇨🇳 중국 플랫폼 히든 기능 마스터</div>
+            <div class="main-header">
+                <div class="main-logo">🇨🇳 중국 플랫폼 히든 기능 마스터</div>
             </div>
             
             <h2>🇨🇳 중국 플랫폼 숨겨진 기능 완전 공략</h2>
             
             <h3>타오바오 숨겨진 할인 시스템 (추가 30% 절약)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🔥</span>
-                <div class="kakao-step-title">타오바오 히든 쿠폰 발굴법 (월 50만원 절약)</div>
+            <div class="step-box">
+                <span class="step-number">🔥</span>
+                <div class="step-title">타오바오 히든 쿠폰 발굴법 (월 50만원 절약)</div>
                 <p><strong>숨겨진 쿠폰 찾는 3가지 방법:</strong></p>
                 <ul>
                     <li><strong>방법 1: 알리마마 플랫폼 직접 접근</strong>
@@ -1740,9 +1740,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📱</span>
-                <div class="kakao-step-title">타오바오 라이브 커머스 완전 정복</div>
+            <div class="step-box">
+                <span class="step-number">📱</span>
+                <div class="step-title">타오바오 라이브 커머스 완전 정복</div>
                 <p><strong>라이브 룸에서만 주는 특가 혜택:</strong></p>
                 <ul>
                     <li><strong>접속 방법:</strong> 타오바오 앱 → 하단 "淘宝直播" 클릭</li>
@@ -1763,9 +1763,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🤖</span>
-                <div class="kakao-step-title">타오바오 AI 추천 시스템 역이용 (매출 3배 증가)</div>
+            <div class="step-box">
+                <span class="step-number">🤖</span>
+                <div class="step-title">타오바오 AI 추천 시스템 역이용 (매출 3배 증가)</div>
                 <p><strong>알고리즘을 역이용한 트렌드 선점:</strong></p>
                 <ul>
                     <li><strong>"猜你喜欢" (추천상품) 분석:</strong>
@@ -1787,9 +1787,9 @@
             
             <h3>1688.com 도매 협상 완전 가이드 (MOQ 50% 절감)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">💼</span>
-                <div class="kakao-step-title">1688 협상 필승 전략 (현지 바이어 노하우)</div>
+            <div class="step-box">
+                <span class="step-number">💼</span>
+                <div class="step-title">1688 협상 필승 전략 (현지 바이어 노하우)</div>
                 <p><strong>협상 단계별 가이드:</strong></p>
                 <ul>
                     <li><strong>1단계: 관계 형성 (关系建立)</strong>
@@ -1816,9 +1816,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🏭</span>
-                <div class="kakao-step-title">공장 직거래 발굴법 (중간상 제거)</div>
+            <div class="step-box">
+                <span class="step-number">🏭</span>
+                <div class="step-title">공장 직거래 발굴법 (중간상 제거)</div>
                 <p><strong>진짜 공장 구별하는 5가지 방법:</strong></p>
                 <ul>
                     <li><strong>1. 회사명 확인:</strong> "...制造厂" "...生产厂" 등 제조업체 표시</li>
@@ -1836,10 +1836,10 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📋</span>
-                <div class="kakao-step-title">1688 품질 검증 체크리스트 (불량률 1% 미만 달성)</div>
-                <div class="kakao-info-box">
+            <div class="step-box">
+                <span class="step-number">📋</span>
+                <div class="step-title">1688 품질 검증 체크리스트 (불량률 1% 미만 달성)</div>
+                <div class="info-box">
                     <h4>주문 전 필수 확인 사항</h4>
                     <ul>
                         <li>□ 공급업체 설립연도 (3년 이상 권장)</li>
@@ -1868,17 +1868,17 @@
 
         <!-- 실전 도구와 사이트 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">🛠️ 실전 도구와 사이트 대공개</div>
+            <div class="main-header">
+                <div class="main-logo">🛠️ 실전 도구와 사이트 대공개</div>
             </div>
             
             <h2>🛠️ 프로 바이어 필수 도구 모음집</h2>
             
             <h3>💰 가격 추적 및 비교 도구</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📊</span>
-                <div class="kakao-step-title">실시간 가격 모니터링 시스템 구축</div>
+            <div class="step-box">
+                <span class="step-number">📊</span>
+                <div class="step-title">실시간 가격 모니터링 시스템 구축</div>
                 <p><strong>무료 도구:</strong></p>
                 <ul>
                     <li><strong>Keepa (아마존):</strong> https://keepa.com
@@ -1914,9 +1914,9 @@
             
             <h3>🌐 번역 및 커뮤니케이션 도구</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🗣️</span>
-                <div class="kakao-step-title">AI 번역 + 현지인 검증 시스템</div>
+            <div class="step-box">
+                <span class="step-number">🗣️</span>
+                <div class="step-title">AI 번역 + 현지인 검증 시스템</div>
                 <p><strong>단계별 번역 전략:</strong></p>
                 <ul>
                     <li><strong>1단계: AI 초벌 번역</strong>
@@ -1943,9 +1943,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📱</span>
-                <div class="kakao-step-title">실시간 소통 도구 (응답률 95% 달성)</div>
+            <div class="step-box">
+                <span class="step-number">📱</span>
+                <div class="step-title">실시간 소통 도구 (응답률 95% 달성)</div>
                 <p><strong>플랫폼별 메신저 활용:</strong></p>
                 <ul>
                     <li><strong>일본:</strong>
@@ -1975,11 +1975,11 @@
             
             <h3>📦 배송 및 물류 최적화 도구</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🚚</span>
-                <div class="kakao-step-title">배송비 최적화 계산기 (월 30만원 절약)</div>
+            <div class="step-box">
+                <span class="step-number">🚚</span>
+                <div class="step-title">배송비 최적화 계산기 (월 30만원 절약)</div>
                 <p><strong>자체 개발 배송비 계산 공식:</strong></p>
-                <div class="kakao-info-box">
+                <div class="info-box">
                     <h4>일본 → 한국 배송비 계산</h4>
                     <p><strong>기본 공식:</strong> (무게 × 1,200원) + (부피 × 800원) 중 큰 값</p>
                     <p><strong>할인 적용:</strong></p>
@@ -2009,9 +2009,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📋</span>
-                <div class="kakao-step-title">재고 관리 및 주문 추적 시스템</div>
+            <div class="step-box">
+                <span class="step-number">📋</span>
+                <div class="step-title">재고 관리 및 주문 추적 시스템</div>
                 <p><strong>구글 스프레드시트 기반 재고 관리:</strong></p>
                 <ul>
                     <li><strong>기본 템플릿 구성:</strong>
@@ -2057,17 +2057,17 @@
 
         <!-- SNS 마케팅 완전 가이드 -->
         <div class="page">
-            <div class="kakao-header">
-                <div class="kakao-logo">💬 SNS 마케팅 완전 가이드</div>
+            <div class="main-header">
+                <div class="main-logo">💬 SNS 마케팅 완전 가이드</div>
             </div>
             
             <h2>💬 SNS 채널 구매대행 마케팅 마스터</h2>
             
             <h3>📱 SNS 비즈니스 채널 구축 (0→1000명 1개월 달성)</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🚀</span>
-                <div class="kakao-step-title">채널 개설부터 첫 매출까지 완벽 로드맵</div>
+            <div class="step-box">
+                <span class="step-number">🚀</span>
+                <div class="step-title">채널 개설부터 첫 매출까지 완벽 로드맵</div>
                 <p><strong>1주차: 채널 개설 및 기본 설정</strong></p>
                 <ul>
                     <li><strong>채널명 선정 꿀팁:</strong>
@@ -2117,11 +2117,11 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">💬</span>
-                <div class="kakao-step-title">AI 챗봇 자동화 시스템 구축 (24시간 무인 운영)</div>
+            <div class="step-box">
+                <span class="step-number">💬</span>
+                <div class="step-title">AI 챗봇 자동화 시스템 구축 (24시간 무인 운영)</div>
                 <p><strong>기본 AI 챗봇 시나리오 설계:</strong></p>
-                <div class="kakao-info-box">
+                <div class="info-box">
                     <h4>🤖 자동응답 시나리오</h4>
                     <p><strong>첫 인사:</strong></p>
                     <p>"안녕하세요! 일본/중국 구매대행 전문 [채널명]입니다 😊<br>
@@ -2164,9 +2164,9 @@
             
             <h3>📊 SNS 마케팅 성과 측정 및 최적화</h3>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">📈</span>
-                <div class="kakao-step-title">데이터 기반 마케팅 최적화 (전환율 300% 증가)</div>
+            <div class="step-box">
+                <span class="step-number">📈</span>
+                <div class="step-title">데이터 기반 마케팅 최적화 (전환율 300% 증가)</div>
                 <p><strong>핵심 지표 추적:</strong></p>
                 <ul>
                     <li><strong>채널 성과 지표:</strong>
@@ -2207,9 +2207,9 @@
                 </ul>
             </div>
             
-            <div class="kakao-step-box">
-                <span class="kakao-step-number">🎯</span>
-                <div class="kakao-step-title">고객 세분화 및 맞춤 마케팅</div>
+            <div class="step-box">
+                <span class="step-number">🎯</span>
+                <div class="step-title">고객 세분화 및 맞춤 마케팅</div>
                 <p><strong>고객 그룹별 마케팅 전략:</strong></p>
                 <ul>
                     <li><strong>신규 고객 (첫 구매):</strong>
@@ -2245,7 +2245,7 @@
         <!-- 네비게이션 버튼 -->
         <style>
             .nav-footer {
-                background: var(--kakao-yellow);
+                background: var(--primary-yellow);
                 padding: 15px;
                 border-radius: 10px;
                 margin-top: 30px;
@@ -2253,7 +2253,7 @@
             }
             
             .nav-footer h3 {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 margin-bottom: 10px;
                 font-size: 1em;
             }
@@ -2267,8 +2267,8 @@
             }
             
             .nav-btn {
-                background: var(--kakao-brown);
-                color: var(--kakao-yellow);
+                background: var(--primary-brown);
+                color: var(--primary-yellow);
                 padding: 8px 15px;
                 border-radius: 20px;
                 text-decoration: none;
@@ -2281,12 +2281,12 @@
             }
             
             .nav-btn:hover {
-                background: var(--kakao-dark-brown);
+                background: var(--dark-brown);
                 transform: scale(1.05);
             }
             
             .nav-center {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-weight: 500;
                 font-size: 0.8em;
                 display: none;
@@ -2301,7 +2301,7 @@
             
             .progress-info p {
                 margin: 0;
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-size: 0.75em;
             }
             
@@ -2314,7 +2314,7 @@
                     left: 50%;
                     transform: translateX(-50%);
                     margin: 0;
-                    background: var(--kakao-yellow);
+                    background: var(--primary-yellow);
                     border-radius: 20px;
                     box-shadow: 0 -2px 15px rgba(0,0,0,0.2);
                     z-index: 1000;
@@ -2483,8 +2483,8 @@
             }
             
             /* 박스 요소들 너비 제한 */
-            .kakao-highlight-box,
-            .kakao-info-box,
+            .highlight-box,
+            .info-box,
             .warning-box,
             .success-box,
             .tip-box,
@@ -2583,7 +2583,7 @@
         
         // 스크롤 시 네비게이션 버튼 표시
         window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('[style*="background: var(--kakao-yellow)"]');
+            const navbar = document.querySelector('[style*="background: var(--primary-yellow)"]');
             if (window.scrollY > 100) {
                 navbar.style.position = 'sticky';
                 navbar.style.bottom = '0';

@@ -6,13 +6,13 @@
     <title>구매대행 완전정복 가이드 Part 5 - 프로급 도구편</title>
     <style>
         :root {
-            --kakao-yellow: #FEE500;
-            --kakao-brown: #3A2929;
-            --kakao-black: #000000;
-            --kakao-light-yellow: #FFF9C4;
-            --kakao-gray: #F5F5F5;
-            --kakao-dark-gray: #9E9E9E;
-            --kakao-orange: #FF6B35;
+            --primary-yellow: #FEE500;
+            --primary-brown: #3A2929;
+            --primary-black: #000000;
+            --light-yellow: #FFF9C4;
+            --light-gray: #F5F5F5;
+            --dark-gray: #9E9E9E;
+            --accent-orange: #FF6B35;
             --tool-purple: #673AB7;
             --data-indigo: #3F51B5;
             --script-teal: #009688;
@@ -27,8 +27,8 @@
         body {
             font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--kakao-brown);
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            color: var(--primary-brown);
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFFFFF 100%);
             min-height: 100vh;
         }
 
@@ -39,7 +39,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
             padding: 40px 0;
             text-align: center;
             margin-bottom: 40px;
@@ -48,7 +48,7 @@
         }
 
         .header h1 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 10px;
@@ -56,7 +56,7 @@
         }
 
         .header .subtitle {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.2em;
             opacity: 0.8;
         }
@@ -67,7 +67,7 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-left: 6px solid var(--kakao-yellow);
+            border-left: 6px solid var(--primary-yellow);
         }
 
         .tool-section {
@@ -83,18 +83,18 @@
         }
 
         .section h2 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--kakao-yellow);
+            border-bottom: 2px solid var(--primary-yellow);
         }
 
         .section h3 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.4em;
             margin: 25px 0 15px 0;
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             padding: 10px 15px;
             border-radius: 8px;
         }
@@ -128,8 +128,8 @@
             position: absolute;
             top: -10px;
             left: 20px;
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 12px;
@@ -169,7 +169,7 @@
 
         .feature-card {
             background: white;
-            border: 2px solid var(--kakao-yellow);
+            border: 2px solid var(--primary-yellow);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -182,8 +182,8 @@
         }
 
         .download-btn {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 12px 24px;
             border: none;
             border-radius: 25px;
@@ -201,7 +201,7 @@
         }
 
         .checklist {
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
@@ -219,8 +219,8 @@
 
         .checklist li::before {
             content: "✓";
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -262,7 +262,7 @@
         }
 
         .price-tag {
-            background: var(--kakao-orange);
+            background: var(--accent-orange);
             color: white;
             padding: 5px 10px;
             border-radius: 15px;
@@ -292,8 +292,8 @@
         }
 
         .final-section {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 40px;
             border-radius: 20px;
             text-align: center;
@@ -304,7 +304,7 @@
         .footer {
             text-align: center;
             padding: 40px 0;
-            background: var(--kakao-brown);
+            background: var(--primary-brown);
             color: white;
             border-radius: 20px;
             margin-top: 50px;
@@ -566,7 +566,7 @@ RFM 점수:
 
                 <div class="tool-card">
                     <h4>💬 고객소통 도구</h4>
-                    <p><strong>카카오 비즈니스</strong> <span class="premium-tag">유료</span></p>
+                    <p><strong>SNS 비즈니스</strong> <span class="premium-tag">유료</span></p>
                     <p>월 19,800원부터 시작하는 전문 서비스</p>
                     <ul>
                         <li>SNS 특가 상품 등록</li>
@@ -882,9 +882,9 @@ class ExchangeRateMonitor:
         
         return alerts
     
-    def send_kakao_alert(self, message):
-        """SNS 알림 발송 (카카오 비즈니스 API 필요)"""
-        # 카카오 비즈니스 API 구현
+    def send_sns_alert(self, message):
+        """SNS 알림 발송 (SNS 비즈니스 API 필요)"""
+        # SNS 비즈니스 API 구현
         pass
     
     def log_rates(self, rates):
@@ -921,7 +921,7 @@ class ExchangeRateMonitor:
                     print(f"현재: {alert['current']:.2f}원")
                     print(f"목표: {alert['target']:.2f}원")
                     # 실제 알림 발송
-                    # self.send_kakao_alert(alert['message'])
+                    # self.send_sns_alert(alert['message'])
             
             # 10분마다 체크
             time.sleep(600)
@@ -940,11 +940,11 @@ import requests
 import json
 from datetime import datetime, timedelta
 
-class KakaoBusinessBot:
+class SNSBusinessBot:
     def __init__(self, api_key, sender_key):
         self.api_key = api_key
         self.sender_key = sender_key
-        self.base_url = "https://kapi.kakao.com/v2/api/talk/memo"
+        self.base_url = "https://api.example.com/v2/api/talk/memo"
     
     def send_order_confirmation(self, customer_info, order_info):
         """주문 확인 SNS 알림 발송"""
@@ -1037,7 +1037,7 @@ class KakaoBusinessBot:
 🎉 신규 고객 환영 이벤트!
 
 첫 주문 25% 할인 + 적립금 5,000원
-카카오 팔로우 완료 감사합니다!
+SNS 팔로우 완료 감사합니다!
 
 지금 바로 쇼핑하세요!
             """
@@ -1055,7 +1055,7 @@ class KakaoBusinessBot:
             }
             
             for customer in customers:
-                self._send_message(template_object, customer['kakao_id'])
+                self._send_message(template_object, customer['sns_id'])
     
     def _send_message(self, template_object, receiver_id=None):
         """실제 메시지 발송"""
@@ -1079,7 +1079,7 @@ class KakaoBusinessBot:
             return None
 
 # 사용 예시
-bot = KakaoBusinessBot("YOUR_API_KEY", "YOUR_SENDER_KEY")
+bot = SNSBusinessBot("YOUR_API_KEY", "YOUR_SENDER_KEY")
 
 # 주문 확인 메시지
 order_data = {
@@ -1152,7 +1152,7 @@ bot.send_order_confirmation(customer_data, order_data)
 - Google Analytics (웹사이트 데이터)
 - Google Sheets (매출 데이터)
 - BigQuery (통합 데이터)
-- 카카오 비즈니스 API
+- SNS 비즈니스 API
 
 ■ 자동 업데이트 설정
 - 실시간: 주문 현황, 재고 알림
@@ -1514,7 +1514,7 @@ ORDER BY monetary DESC, frequency DESC;
         <!-- 네비게이션 추가 -->
         <style>
             .nav-footer {
-                background: var(--kakao-yellow);
+                background: var(--primary-yellow);
                 padding: 15px;
                 border-radius: 20px;
                 margin-top: 30px;
@@ -1522,7 +1522,7 @@ ORDER BY monetary DESC, frequency DESC;
             }
             
             .nav-footer h3 {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 margin-bottom: 10px;
                 font-size: 1em;
             }
@@ -1536,8 +1536,8 @@ ORDER BY monetary DESC, frequency DESC;
             }
             
             .nav-btn {
-                background: var(--kakao-brown);
-                color: var(--kakao-yellow);
+                background: var(--primary-brown);
+                color: var(--primary-yellow);
                 padding: 8px 15px;
                 border-radius: 20px;
                 text-decoration: none;
@@ -1550,12 +1550,12 @@ ORDER BY monetary DESC, frequency DESC;
             }
             
             .nav-btn:hover {
-                background: var(--kakao-dark-brown);
+                background: var(--dark-brown);
                 transform: scale(1.05);
             }
             
             .nav-center {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-weight: 500;
                 font-size: 0.8em;
                 display: none;
@@ -1570,7 +1570,7 @@ ORDER BY monetary DESC, frequency DESC;
             
             .progress-info p {
                 margin: 0;
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-size: 0.75em;
             }
             
@@ -1583,7 +1583,7 @@ ORDER BY monetary DESC, frequency DESC;
                     left: 50%;
                     transform: translateX(-50%);
                     margin: 0;
-                    background: var(--kakao-yellow);
+                    background: var(--primary-yellow);
                     border-radius: 20px;
                     box-shadow: 0 -2px 15px rgba(0,0,0,0.2);
                     z-index: 1000;
@@ -1772,8 +1772,8 @@ ORDER BY monetary DESC, frequency DESC;
             }
             
             /* 박스 요소들 너비 제한 */
-            .kakao-highlight-box,
-            .kakao-info-box,
+            .highlight-box,
+            .info-box,
             .warning-box,
             .success-box,
             .tip-box,

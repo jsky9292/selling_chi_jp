@@ -6,11 +6,11 @@
     <title>구매대행 마스터 가이드 2025 - 월 100만원 부업 완전정복</title>
     <style>
         :root {
-            --kakao-yellow: #FEE500;
-            --kakao-brown: #3A2929;
-            --kakao-black: #000000;
-            --kakao-light-yellow: #FFF9C4;
-            --kakao-dark-yellow: #F7D600;
+            --primary-yellow: #FEE500;
+            --primary-brown: #3A2929;
+            --primary-black: #000000;
+            --light-yellow: #FFF9C4;
+            --dark-yellow: #F7D600;
             --text-color: #333333;
             --bg-color: #FFFFFF;
             --border-color: #E6E6E6;
@@ -28,7 +28,7 @@
             font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFFFFF 100%);
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -41,8 +41,8 @@
         }
 
         .main-header {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, var(--kakao-dark-yellow) 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            color: var(--primary-brown);
             padding: 60px 40px;
             text-align: center;
             border-radius: 20px;
@@ -83,7 +83,7 @@
             z-index: 1;
             letter-spacing: -2px;
             line-height: 1.1;
-            background: linear-gradient(135deg, var(--kakao-brown) 0%, #5A4040 100%);
+            background: linear-gradient(135deg, var(--primary-brown) 0%, #5A4040 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -95,7 +95,7 @@
             margin-bottom: 15px;
             position: relative;
             z-index: 1;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             letter-spacing: -0.5px;
         }
 
@@ -116,7 +116,7 @@
             padding: 30px;
             margin: 40px 0;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid var(--kakao-yellow);
+            border: 2px solid var(--primary-yellow);
         }
 
         .stats-grid {
@@ -133,7 +133,7 @@
         .stat-number {
             font-size: 2.5em;
             font-weight: 900;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin-bottom: 10px;
         }
 
@@ -150,7 +150,7 @@
         .section-title {
             font-size: 2.2em;
             font-weight: 700;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             text-align: center;
             margin-bottom: 40px;
             position: relative;
@@ -164,7 +164,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: var(--kakao-yellow);
+            background: var(--primary-yellow);
             border-radius: 2px;
         }
 
@@ -189,7 +189,7 @@
         .chapter-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(254, 229, 0, 0.4);
-            border-color: var(--kakao-yellow);
+            border-color: var(--primary-yellow);
         }
 
         .chapter-card::before {
@@ -208,8 +208,8 @@
         }
 
         .chapter-number {
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -224,7 +224,7 @@
         .chapter-title {
             font-size: 1.4em;
             font-weight: 700;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin-bottom: 15px;
         }
 
@@ -251,7 +251,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-weight: bold;
             font-size: 1.1em;
         }
@@ -267,15 +267,15 @@
         }
 
         .page-count {
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             padding: 5px 12px;
             border-radius: 15px;
             font-weight: 600;
         }
 
         .start-reading-btn {
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             border: none;
             padding: 15px 30px;
             border-radius: 25px;
@@ -289,7 +289,7 @@
         }
 
         .start-reading-btn:hover {
-            background: var(--kakao-dark-yellow);
+            background: var(--dark-yellow);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(254, 229, 0, 0.5);
         }
@@ -300,13 +300,13 @@
             padding: 30px;
             margin: 40px 0;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid var(--kakao-yellow);
+            border: 2px solid var(--primary-yellow);
         }
 
         .progress-title {
             font-size: 1.3em;
             font-weight: 700;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             margin-bottom: 20px;
             text-align: center;
         }
@@ -320,7 +320,7 @@
         }
 
         .progress-fill {
-            background: linear-gradient(90deg, var(--kakao-yellow), var(--kakao-dark-yellow));
+            background: linear-gradient(90deg, var(--primary-yellow), var(--dark-yellow));
             height: 100%;
             width: 0%;
             transition: width 0.3s ease;
@@ -330,12 +330,12 @@
         .progress-text {
             text-align: center;
             font-weight: 600;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
         }
 
         .highlight-banner {
-            background: linear-gradient(135deg, var(--kakao-brown) 0%, #2D1F1F 100%);
-            color: var(--kakao-yellow);
+            background: linear-gradient(135deg, var(--primary-brown) 0%, #2D1F1F 100%);
+            color: var(--primary-yellow);
             padding: 30px;
             border-radius: 15px;
             text-align: center;
@@ -364,8 +364,8 @@
         }
 
         .nav-btn {
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             border: none;
             width: 60px;
             height: 60px;
@@ -514,8 +514,8 @@
             }
             
             /* 박스 요소들 너비 제한 */
-            .kakao-highlight-box,
-            .kakao-info-box,
+            .highlight-box,
+            .info-box,
             .warning-box,
             .success-box,
             .tip-box,

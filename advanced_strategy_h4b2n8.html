@@ -6,13 +6,13 @@
     <title>구매대행 완전정복 가이드 Part 3 - 고급 전략편</title>
     <style>
         :root {
-            --kakao-yellow: #FEE500;
-            --kakao-brown: #3A2929;
-            --kakao-black: #000000;
-            --kakao-light-yellow: #FFF9C4;
-            --kakao-gray: #F5F5F5;
-            --kakao-dark-gray: #9E9E9E;
-            --kakao-orange: #FF6B35;
+            --primary-yellow: #FEE500;
+            --primary-brown: #3A2929;
+            --primary-black: #000000;
+            --light-yellow: #FFF9C4;
+            --light-gray: #F5F5F5;
+            --dark-gray: #9E9E9E;
+            --accent-orange: #FF6B35;
         }
 
         * {
@@ -24,8 +24,8 @@
         body {
             font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--kakao-brown);
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFFFF 100%);
+            color: var(--primary-brown);
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFFFFF 100%);
             min-height: 100vh;
         }
 
@@ -36,7 +36,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
             padding: 40px 0;
             text-align: center;
             margin-bottom: 40px;
@@ -45,7 +45,7 @@
         }
 
         .header h1 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 10px;
@@ -53,7 +53,7 @@
         }
 
         .header .subtitle {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.2em;
             opacity: 0.8;
         }
@@ -64,37 +64,37 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-left: 6px solid var(--kakao-yellow);
+            border-left: 6px solid var(--primary-yellow);
         }
 
         .section h2 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--kakao-yellow);
+            border-bottom: 2px solid var(--primary-yellow);
         }
 
         .section h3 {
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             font-size: 1.4em;
             margin: 25px 0 15px 0;
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             padding: 10px 15px;
             border-radius: 8px;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, var(--kakao-light-yellow) 0%, #FFFACD 100%);
-            border: 2px solid var(--kakao-yellow);
+            background: linear-gradient(135deg, var(--light-yellow) 0%, #FFFACD 100%);
+            border: 2px solid var(--primary-yellow);
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
         }
 
         .profit-card {
-            background: linear-gradient(135deg, var(--kakao-yellow) 0%, #FFD700 100%);
-            color: var(--kakao-brown);
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, #FFD700 100%);
+            color: var(--primary-brown);
             padding: 25px;
             border-radius: 15px;
             margin: 20px 0;
@@ -110,7 +110,7 @@
         .profit-amount {
             font-size: 2.2em;
             font-weight: bold;
-            color: var(--kakao-brown);
+            color: var(--primary-brown);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
@@ -120,18 +120,18 @@
 
         .step-item {
             counter-increment: step-counter;
-            background: var(--kakao-gray);
+            background: var(--light-gray);
             margin: 15px 0;
             padding: 20px;
             border-radius: 10px;
-            border-left: 5px solid var(--kakao-yellow);
+            border-left: 5px solid var(--primary-yellow);
             position: relative;
         }
 
         .step-item::before {
             content: counter(step-counter);
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -154,7 +154,7 @@
 
         .platform-card {
             background: white;
-            border: 2px solid var(--kakao-yellow);
+            border: 2px solid var(--primary-yellow);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -180,7 +180,7 @@
         }
 
         .checklist {
-            background: var(--kakao-light-yellow);
+            background: var(--light-yellow);
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
@@ -198,8 +198,8 @@
 
         .checklist li::before {
             content: "✓";
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -237,8 +237,8 @@
         }
 
         .advanced-table th {
-            background: var(--kakao-yellow);
-            color: var(--kakao-brown);
+            background: var(--primary-yellow);
+            color: var(--primary-brown);
             padding: 15px;
             text-align: center;
             font-weight: bold;
@@ -251,7 +251,7 @@
         }
 
         .advanced-table tr:nth-child(even) {
-            background: var(--kakao-gray);
+            background: var(--light-gray);
         }
 
         .code-box {
@@ -280,7 +280,7 @@
         .footer {
             text-align: center;
             padding: 40px 0;
-            background: var(--kakao-brown);
+            background: var(--primary-brown);
             color: white;
             border-radius: 20px;
             margin-top: 50px;
@@ -1240,7 +1240,7 @@
         <!-- 네비게이션 추가 -->
         <style>
             .nav-footer {
-                background: var(--kakao-yellow);
+                background: var(--primary-yellow);
                 padding: 15px;
                 border-radius: 20px;
                 margin-top: 30px;
@@ -1248,7 +1248,7 @@
             }
             
             .nav-footer h3 {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 margin-bottom: 10px;
                 font-size: 1em;
             }
@@ -1262,8 +1262,8 @@
             }
             
             .nav-btn {
-                background: var(--kakao-brown);
-                color: var(--kakao-yellow);
+                background: var(--primary-brown);
+                color: var(--primary-yellow);
                 padding: 8px 15px;
                 border-radius: 20px;
                 text-decoration: none;
@@ -1276,12 +1276,12 @@
             }
             
             .nav-btn:hover {
-                background: var(--kakao-dark-brown);
+                background: var(--dark-brown);
                 transform: scale(1.05);
             }
             
             .nav-center {
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-weight: 500;
                 font-size: 0.8em;
                 display: none;
@@ -1296,7 +1296,7 @@
             
             .progress-info p {
                 margin: 0;
-                color: var(--kakao-brown);
+                color: var(--primary-brown);
                 font-size: 0.75em;
             }
             
@@ -1309,7 +1309,7 @@
                     left: 50%;
                     transform: translateX(-50%);
                     margin: 0;
-                    background: var(--kakao-yellow);
+                    background: var(--primary-yellow);
                     border-radius: 20px;
                     box-shadow: 0 -2px 15px rgba(0,0,0,0.2);
                     z-index: 1000;
@@ -1498,8 +1498,8 @@
             }
             
             /* 박스 요소들 너비 제한 */
-            .kakao-highlight-box,
-            .kakao-info-box,
+            .highlight-box,
+            .info-box,
             .warning-box,
             .success-box,
             .tip-box,
